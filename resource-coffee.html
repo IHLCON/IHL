@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Industry Legal Resources — International House of Law</title>
+  <meta name="description" content="Legal resources for the coffee industry: brand protection, distribution contracts, compliance, market entry, dispute resolution, and ESG. IHL helps coffee businesses grow globally.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#0A1628;--navy-light:#132038;--navy-mid:#1B2D4A;--gold:#C4A35A;--gold-light:#D4B97A;--gold-pale:#F5ECD7;--cream:#FAF8F4;--white:#FFFFFF;--gray-50:#F7F7F5;--gray-100:#EDECE8;--gray-200:#D8D6D0;--gray-400:#9E9B93;--gray-600:#6B6860;--text:#1A1815;--text-light:#3D3B36;
+      --font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+      --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+      --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;}
+    body{font-family:var(--font-body);color:var(--text);background:var(--cream);line-height:1.7;overflow-x:hidden;}
+    img{max-width:100%;height:auto;display:block;}
+    a{color:inherit;text-decoration:none;}
+    h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.15;color:var(--navy);}
+    h1{font-size:clamp(2.8rem,6vw,5.2rem);letter-spacing:-0.02em;}
+    h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-0.01em;}
+    h3{font-size:clamp(1.3rem,2vw,1.8rem);}
+    p{font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--text-light);max-width:680px;}
+    .container{width:100%;max-width:1340px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity 0.85s var(--ease-out-expo),transform 0.85s var(--ease-out-expo);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-delay-1{transition-delay:0.1s;}.reveal-delay-2{transition-delay:0.2s;}.reveal-delay-3{transition-delay:0.3s;}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background 0.4s ease,box-shadow 0.4s ease,padding 0.4s ease;padding:1.5rem 0;}
+    .nav.scrolled{background:rgba(10,22,40,0.97);box-shadow:0 1px 40px rgba(0,0,0,0.15);padding:0.8rem 0;backdrop-filter:blur(20px);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{display:flex;align-items:center;gap:0.75rem;}
+    .nav-logo-img{height:90px;width:auto;flex-shrink:0;}
+    .nav-logo-text{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--white);letter-spacing:0.12em;text-transform:uppercase;}
+    .nav-logo-sub{font-family:var(--font-body);font-size:0.65rem;color:var(--gold-light);letter-spacing:0.2em;text-transform:uppercase;margin-top:-2px;}
+    .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;}
+    .nav-links>li{position:relative;}
+    .nav-links a{font-family:var(--font-body);font-size:0.82rem;font-weight:400;color:rgba(255,255,255,0.7);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s ease;position:relative;}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s var(--ease-out-expo);}
+    .nav-links a:hover{color:var(--white);}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active{color:var(--gold);}
+    .nav-cta{font-size:0.8rem!important;letter-spacing:0.1em!important;padding:0.65rem 1.6rem;border:1px solid var(--gold);color:var(--gold)!important;transition:background 0.3s ease,color 0.3s ease!important;}
+    .nav-cta:hover{background:var(--gold);color:var(--navy)!important;}
+    .nav-cta::after{display:none!important;}
+    .nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--navy);border:1px solid rgba(196,163,90,0.15);min-width:220px;padding:0.5rem 0;list-style:none;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.18s ease,visibility 0.18s ease;}
+    .nav-links>li.nav-open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;}
+    .nav-dropdown-menu li a{display:block;padding:0.7rem 1.4rem;font-size:0.78rem;color:rgba(255,255,255,0.65);white-space:nowrap;letter-spacing:0.08em;}
+    .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(196,163,90,0.06);}
+    .nav-dropdown-menu li a::after{display:none;}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav-toggle span{display:block;width:26px;height:2px;background:var(--white);transition:transform 0.3s ease,opacity 0.3s ease;}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-toggle.open span:nth-child(2){opacity:0;}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+    /* HERO */
+    .hero{position:relative;min-height:62vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.18;filter:grayscale(20%);}
+    .hero-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.96) 0%,rgba(10,22,40,0.65) 60%,rgba(10,22,40,0.88) 100%),linear-gradient(to bottom,transparent 50%,var(--navy) 100%);z-index:1;}
+    .hero-pattern{position:absolute;inset:0;z-index:1;opacity:0.04;background-image:linear-gradient(rgba(196,163,90,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.3) 1px,transparent 1px);background-size:60px 60px;}
+    .hero-content{position:relative;z-index:2;padding:10rem 0 5rem;}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
+    .hero-eyebrow-line{width:48px;height:1px;background:var(--gold);}
+    .hero-eyebrow-text{font-family:var(--font-body);font-size:0.78rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);}
+    .hero h1{color:var(--white);margin-bottom:1rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
+    .hero h1 em{font-style:italic;color:var(--gold-light);}
+    .hero-subtitle{font-family:var(--font-display);font-size:clamp(1.1rem,1.8vw,1.5rem);color:rgba(255,255,255,0.6);font-style:italic;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.7s forwards;}
+    .hero-description{color:rgba(255,255,255,0.65);font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.85;max-width:640px;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.9s forwards;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+    /* INTRO BAND */
+    .intro-band{background:var(--white);padding:4rem 0;border-bottom:1px solid var(--gray-100);}
+    .intro-band-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+    .intro-band h2{margin-bottom:1.2rem;}
+    .intro-band p{margin-bottom:0;}
+    .intro-pillars{display:flex;flex-direction:column;gap:1rem;}
+    .pillar{display:flex;align-items:flex-start;gap:1rem;padding:1.2rem 1.5rem;background:var(--gray-50);border-left:3px solid var(--gold);}
+    .pillar-icon{width:20px;height:20px;flex-shrink:0;color:var(--gold);margin-top:2px;}
+    .pillar-text{font-size:0.88rem;color:var(--text-light);line-height:1.5;}
+    .pillar-text strong{color:var(--navy);display:block;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.2rem;}
+
+    /* SERVICES */
+    .services-section{padding:7rem 0;background:var(--cream);}
+    .section-header{margin-bottom:5rem;}
+    .eyebrow{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:1.2rem;}
+    .eyebrow-line{width:36px;height:1px;background:var(--gold);}
+    .eyebrow-text{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);}
+
+    .service-cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-100);}
+    .service-card{background:var(--white);padding:3rem 3.5rem;position:relative;overflow:hidden;transition:background 0.3s ease;}
+    .service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s var(--ease-out-expo);}
+    .service-card:hover::before{height:100%;}
+    .service-card:hover{background:var(--gray-50);}
+    .card-number{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:rgba(196,163,90,0.15);line-height:1;margin-bottom:0.5rem;}
+    .card-tag{font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .service-card h3{font-size:1.5rem;margin-bottom:1rem;color:var(--navy);}
+    .service-card p{font-size:0.92rem;line-height:1.8;color:var(--text-light);max-width:100%;margin-bottom:1.2rem;}
+    .card-bullets{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .card-bullets li{font-size:0.86rem;color:var(--text-light);display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;}
+    .card-bullets li::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:0.5rem;}
+
+    /* FAQ */
+    .faq-section{padding:6rem 0;background:var(--navy);}
+    .faq-section .eyebrow-text,.faq-section h2{color:var(--white);}
+    .faq-section .section-header p{color:rgba(255,255,255,0.5);}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem;}
+    .faq-item{padding:2rem 2.5rem;border:1px solid rgba(196,163,90,0.15);background:rgba(255,255,255,0.03);}
+    .faq-item h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--white);margin-bottom:0.8rem;line-height:1.35;}
+    .faq-item p{font-size:0.88rem;color:rgba(255,255,255,0.5);max-width:100%;line-height:1.75;}
+
+    /* CTA */
+    .cta-section{background:var(--cream);padding:6rem 0;border-top:1px solid var(--gray-100);}
+    .cta-inner{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;}
+    .cta-inner h2{margin-bottom:0.8rem;}
+    .cta-inner p{color:var(--text-light);max-width:560px;}
+    .cta-btn{display:inline-flex;align-items:center;gap:0.7rem;padding:1.1rem 3rem;background:var(--navy);color:var(--white);font-family:var(--font-body);font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;transition:background 0.3s ease,transform 0.3s ease;}
+    .cta-btn:hover{background:var(--navy-mid);transform:translateY(-2px);}
+    .cta-btn svg{width:16px;height:16px;transition:transform 0.3s ease;}
+    .cta-btn:hover svg{transform:translateX(3px);}
+
+    /* FOOTER */
+    .footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:4rem 0 2rem;border-top:1px solid rgba(196,163,90,0.15);}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;}
+    .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.88rem;line-height:1.7;max-width:300px;margin-top:1rem;}
+    .footer h4{font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:0.7rem;}
+    .footer-links a{font-size:0.88rem;color:rgba(255,255,255,0.45);transition:color 0.3s ease;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:0.8rem;margin-bottom:1rem;font-size:0.88rem;}
+    .footer-contact-item svg{width:16px;height:16px;margin-top:3px;flex-shrink:0;color:var(--gold);}
+    .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .intro-band-inner{grid-template-columns:1fr;gap:2.5rem;}
+      .faq-grid{grid-template-columns:1fr;}
+      .cta-inner{grid-template-columns:1fr;gap:2rem;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;backdrop-filter:blur(20px);}
+      .nav-links.mobile-open{display:flex;}
+      .nav-links a{font-size:1.1rem;color:rgba(255,255,255,0.8);}
+      .nav-toggle{display:flex;z-index:1001;}
+      .nav-dropdown-menu{display:none!important;}
+      .service-cards{grid-template-columns:1fr;}
+      .service-card{padding:2.5rem 2rem;}
+      .footer-grid{grid-template-columns:1fr;}
+      .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+      .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
+    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
+    .footer-social-link svg{width:15px;height:15px;}
+</style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <div>
+          <div class="nav-logo-text">International House of Law</div>
+          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="resources.html" class="active">Resources</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80" alt="Coffee industry legal resources" loading="eager">
+    </div>
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="hero-eyebrow-text">Industry Resources — Coffee</span>
+      </div>
+      <h1>Let's Keep Your Coffee Business <em>Growing</em></h1>
+      <div class="hero-subtitle">Without the legal stress</div>
+      <p class="hero-description">The coffee industry is full of opportunities — but also legal hurdles. When you expand internationally, the legal landscape becomes just as important as quality and taste. IHL is your partner across every market you enter.</p>
+    </div>
+  </section>
+
+  <div class="intro-band">
+    <div class="container">
+      <div class="intro-band-inner">
+        <div class="reveal">
+          <h2>Coffee Entrepreneurs Face Unique Legal Challenges</h2>
+          <p>From sourcing agreements across multiple jurisdictions to compliance with food safety regulations in each export market, coffee businesses navigate a complex legal terrain. IHL combines international legal expertise with deep commercial understanding to keep your business moving forward.</p>
+        </div>
+        <div class="intro-pillars reveal reveal-delay-1">
+          <div class="pillar">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            <div class="pillar-text"><strong>Global Reach</strong>Multi-jurisdictional legal support from sourcing to distribution</div>
+          </div>
+          <div class="pillar">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="pillar-text"><strong>Brand Protection</strong>Trademark and IP strategy across all key markets</div>
+          </div>
+          <div class="pillar">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div class="pillar-text"><strong>ESG Compliance</strong>Sustainability frameworks for the modern coffee business</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">How We Help</span>
+        </div>
+        <h2>Six Ways IHL Supports Your Coffee Business</h2>
+        <p>Specialised legal support covering every dimension of operating a coffee business across international markets.</p>
+      </div>
+
+      <div class="service-cards">
+
+        <div class="service-card reveal">
+          <div class="card-number">01</div>
+          <div class="card-tag">Intellectual Property</div>
+          <h3>Brand &amp; IP Protection</h3>
+          <p>Your brand identity — from roast names to packaging designs — is one of your most valuable assets in a crowded global market. We secure and defend it proactively.</p>
+          <ul class="card-bullets">
+            <li>Secure trademarks, designs, and patents across international markets</li>
+            <li>Regular IP portfolio audits to identify gaps and risks</li>
+            <li>Defence strategies against competitor infringement</li>
+            <li>Licensing and franchising structure setup and negotiation</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="card-number">02</div>
+          <div class="card-tag">Contracts</div>
+          <h3>Distribution &amp; Contract Support</h3>
+          <p>Clear, enforceable distribution contracts are the backbone of any international coffee operation. We draft agreements that protect your commercial interests at every link in the chain.</p>
+          <ul class="card-bullets">
+            <li>Draft and review distribution contracts across jurisdictions</li>
+            <li>Address payment delays, warranty obligations, and quality disputes</li>
+            <li>Delivery schedules and liability allocation</li>
+            <li>Dispute resolution through negotiation, mediation, or arbitration</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-number">03</div>
+          <div class="card-tag">Regulatory</div>
+          <h3>Compliance &amp; Product Standards</h3>
+          <p>Coffee businesses exporting to Europe, North America, or Asia face a patchwork of product regulations. We keep you compliant in every market without disrupting operations.</p>
+          <ul class="card-bullets">
+            <li>Safety certifications and energy efficiency requirements</li>
+            <li>Recycling and sustainability standards guidance</li>
+            <li>Labelling and consumer protection compliance</li>
+            <li>Multi-market regulatory navigation and ongoing monitoring</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="card-number">04</div>
+          <div class="card-tag">Expansion</div>
+          <h3>Market Entry Strategy</h3>
+          <p>Each new market comes with its own legal expectations, trade conditions, and cultural norms. We provide the guidance to enter with confidence and establish sustainable operations.</p>
+          <ul class="card-bullets">
+            <li>Local trade and food safety regulation review</li>
+            <li>Contract adaptation to cultural and legal expectations</li>
+            <li>Risk identification in partnerships and commercial agreements</li>
+            <li>Tax and compliance obligation structuring for each jurisdiction</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-number">05</div>
+          <div class="card-tag">Dispute Resolution</div>
+          <h3>International Dispute Resolution</h3>
+          <p>When commercial relationships break down across borders, experienced international legal support is essential. We resolve disputes efficiently while protecting your business relationships where possible.</p>
+          <ul class="card-bullets">
+            <li>Breach of contract resolution across multiple jurisdictions</li>
+            <li>Customs and trade restriction disputes</li>
+            <li>Pricing and exclusivity disagreements</li>
+            <li>Joint-venture and partnership conflict management</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="card-number">06</div>
+          <div class="card-tag">Sustainability</div>
+          <h3>Sustainability &amp; ESG</h3>
+          <p>Consumers, investors, and regulators increasingly expect coffee businesses to demonstrate ethical sourcing and environmental responsibility. We build the legal frameworks that make your ESG commitments credible and enforceable.</p>
+          <ul class="card-bullets">
+            <li>Ethical sourcing agreement drafting and review</li>
+            <li>ESG policy development: emissions, recycling, and labour</li>
+            <li>Transparent reporting preparation and compliance</li>
+            <li>Sustainability clause integration into commercial contracts</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Common Questions</span>
+        </div>
+        <h2>Coffee Industry Legal FAQ</h2>
+        <p>Key legal questions for coffee businesses navigating international markets and growth.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <h4>How can I protect my brand from being copied in international markets?</h4>
+          <p>Trademark registration in each target market is the foundation. We develop a proactive IP strategy that covers registration, monitoring, and enforcement — so you can act quickly if a competitor copies your brand identity or product names.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <h4>What should I do if a distributor breaches our contract?</h4>
+          <p>Document everything immediately and seek legal advice before taking action. We assess your options — from direct negotiation to formal arbitration — and pursue the path most likely to recover your losses and preserve the relationship if appropriate.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <h4>What compliance requirements apply to coffee equipment exports?</h4>
+          <p>Equipment exports are subject to safety certifications, energy efficiency standards, and labelling requirements that vary significantly by market. We review the specific regulations in each destination country and ensure your products meet all requirements before export.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <h4>How can I safely expand into a new international market?</h4>
+          <p>Market entry requires a structured review of local trade regulations, entity setup options, contract requirements, and compliance obligations. We build a market entry plan that identifies risks early and structures your presence for long-term stability.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>Why is ESG important for coffee companies today?</h4>
+          <p>ESG commitments are increasingly required by major buyers, investors, and regulators — particularly in the EU. Beyond compliance, strong ESG credentials differentiate your brand and open access to premium markets. We help you build frameworks that are both credible and commercially viable.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <h4>Can IHL help with sourcing agreements from producing countries?</h4>
+          <p>Yes. Sourcing agreements across multiple jurisdictions require careful attention to payment terms, quality standards, force majeure provisions, and ethical sourcing clauses. We draft agreements that protect your supply chain while reflecting your sustainability commitments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div>
+          <h2>Ready to Grow Your Coffee Business with Confidence?</h2>
+          <p>IHL supports coffee entrepreneurs and established operators across international markets. From your first export to complex multi-market expansion, we provide the legal and strategic guidance to keep your business growing.</p>
+        </div>
+        <a href="contact.html" class="cta-btn">
+          Get in Touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <div>
+              <div class="nav-logo-text">International House of Law</div>
+              <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+            </div>
+          </a>
+          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@ihlcon" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+            <a href="https://nl.linkedin.com/company/international-house-of-law" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="updates.html">News &amp; Updates</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Segbroeklaan 110, The Hague<br>Suite 500, Vancouver, BC</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+31 070 22 50 574</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>info@ihlcon.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 International House of Law. All rights reserved.</span>
+        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(el => obs.observe(el));
+
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 80); }, {passive:true});
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('mobile-open');
+      document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { navToggle.classList.remove('open'); navLinks.classList.remove('mobile-open'); document.body.style.overflow = ''; });
+    });
+
+    document.querySelectorAll('.nav-links > li').forEach(function(li) {
+      var menu = li.querySelector('.nav-dropdown-menu');
+      if (!menu) return;
+      var timer;
+      function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
+      function scheduleClose(e) {
+        if (e && li.contains(e.relatedTarget)) return;
+        timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
+      }
+      li.addEventListener('mouseenter', openMenu);
+      li.addEventListener('mouseleave', scheduleClose);
+      menu.addEventListener('mouseenter', openMenu);
+      menu.addEventListener('mouseleave', scheduleClose);
+    });
+  </script>
+</body>
+</html>

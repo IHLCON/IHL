@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team — IHL</title>
+  <meta name="description" content="A multidisciplinary team of lawyers, advisors, and specialists united by a shared commitment to exceptional legal service across international borders.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════
+       CSS CUSTOM PROPERTIES
+    ═══════════════════════════════════════════ */
+    :root {
+      --navy:        #0A1628;
+      --navy-light:  #132038;
+      --navy-mid:    #1B2D4A;
+      --gold:        #C4A35A;
+      --gold-light:  #D4B97A;
+      --gold-pale:   #F5ECD7;
+      --cream:       #FAF8F4;
+      --white:       #FFFFFF;
+      --gray-50:     #F7F7F5;
+      --gray-100:    #EDECE8;
+      --gray-200:    #D8D6D0;
+      --gray-400:    #9E9B93;
+      --gray-600:    #6B6860;
+      --gray-800:    #3A3833;
+      --text:        #1A1815;
+      --text-light:  #3D3B36;
+
+      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       TYPOGRAPHY
+    ═══════════════════════════════════════════ */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--navy);
+    }
+
+    h1 { font-size: clamp(2.8rem, 6vw, 5.2rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -0.01em; }
+    h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+
+    p {
+      font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+      color: var(--text-light);
+      max-width: 680px;
+    }
+
+    /* ═══════════════════════════════════════════
+       UTILITY
+    ═══════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 4rem);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL ANIMATIONS
+    ═══════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal-left.visible,
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ═══════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+      padding: 1.5rem 0;
+    }
+    .nav.scrolled {
+      background: rgba(10, 22, 40, 0.97);
+      box-shadow: 0 1px 40px rgba(0,0,0,0.15);
+      padding: 0.8rem 0;
+      backdrop-filter: blur(20px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo-img {
+      height: 90px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-logo-sub {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      color: var(--gold-light);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s var(--ease-out-expo);
+    }
+    .nav-links a:hover {
+      color: var(--white);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-links a.active {
+      color: var(--gold);
+    }
+
+    /* Nav Dropdown */
+    
+    .nav-cta {
+      font-size: 0.8rem !important;
+      letter-spacing: 0.1em !important;
+      padding: 0.65rem 1.6rem;
+      border: 1px solid var(--gold);
+      color: var(--gold) !important;
+      transition: background 0.3s ease, color 0.3s ease !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--navy) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    /* Dropdown menus */
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--navy);
+      border: 1px solid rgba(196,163,90,0.15);
+      min-width: 220px;
+      padding: 0.5rem 0;
+      list-style: none;
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.18s ease, visibility 0.18s ease;
+    }
+    .nav-links > li.nav-open .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-dropdown-menu li a {
+      display: block;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      white-space: nowrap;
+      letter-spacing: 0.08em;
+    }
+    .nav-dropdown-menu li a:hover {
+      color: var(--gold);
+      background: rgba(196,163,90,0.06);
+    }
+    .nav-dropdown-menu li a::after { display: none; }
+
+
+
+    /* Mobile hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ═══════════════════════════════════════════
+       HERO SECTION
+    ═══════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+      filter: grayscale(30%);
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.7) 50%, rgba(10,22,40,0.85) 100%),
+        linear-gradient(to bottom, transparent 60%, var(--navy) 100%);
+      z-index: 1;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.04;
+      background-image:
+        linear-gradient(rgba(196,163,90,0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,163,90,0.3) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 10rem 0 6rem;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;
+    }
+    .hero-eyebrow-line {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .hero-eyebrow-text {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      color: var(--white);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out-expo) 0.5s forwards;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out-expo) 0.7s forwards;
+    }
+    .hero-tag {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      padding: 0.5rem 1.2rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-description {
+      color: rgba(255,255,255,0.65);
+      font-size: clamp(1rem, 1.2vw, 1.15rem);
+      line-height: 1.85;
+      max-width: 720px;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out-expo) 0.9s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out-expo) 1.1s forwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.4rem;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(196,163,90,0.3);
+    }
+    .btn-primary svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .btn-primary:hover svg {
+      transform: translateX(3px);
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out-expo) 1.5s forwards;
+    }
+    .hero-scroll-indicator span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════════
+       TEAM SECTION
+    ═══════════════════════════════════════════ */
+    .team-section {
+      padding: 7rem 0 5rem;
+      background: var(--cream);
+    }
+
+    .team-section-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+    .team-section-header .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-label-line {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .section-label-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* Group label inside team section */
+    .team-group-label {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .team-group-label h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .team-group-label-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200);
+    }
+
+    /* Founder Cards — large 2-col */
+    .founder-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    /* Counsel Cards — 3-col */
+    .counsel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    /* Individual Card */
+    .team-card {
+      background: var(--navy);
+      border: 1px solid rgba(196,163,90,0.12);
+      padding: 2.5rem 2.2rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s ease;
+    }
+    .team-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      border-color: rgba(196,163,90,0.28);
+    }
+    .team-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Founder card is slightly taller / more spacious */
+    .team-card--founder {
+      padding: 3rem 2.8rem 2.5rem;
+    }
+
+    /* Team member photo */
+    .team-avatar {
+      width: calc(100% + 5rem);          /* bleed past card padding */
+      margin: -2.5rem -2.5rem 1.8rem;   /* pull to card edges */
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .team-card--founder .team-avatar {
+      aspect-ratio: 3 / 2;
+    }
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(10%);
+      transition: transform 0.7s var(--ease-out-expo), filter 0.5s ease;
+      display: block;
+    }
+    .team-card:hover .team-avatar img {
+      transform: scale(1.06);
+      filter: grayscale(0%);
+    }
+    /* Gold accent line at bottom of photo */
+    .team-avatar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.5s var(--ease-out-expo);
+    }
+    .team-card:hover .team-avatar::after {
+      width: 100%;
+    }
+
+    .team-card-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .team-card-title {
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+
+    .team-card-divider {
+      width: 32px;
+      height: 1px;
+      background: rgba(196,163,90,0.35);
+      margin-bottom: 1.2rem;
+    }
+
+    .team-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.2rem;
+    }
+
+    .team-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.3s ease;
+    }
+    .team-linkedin:hover {
+      color: var(--gold);
+    }
+    .team-linkedin svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* Background decorative element on founder cards */
+    .team-card--founder .team-card-bg {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,163,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       JOIN SECTION
+    ═══════════════════════════════════════════ */
+    .join-section {
+      padding: 7rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .join-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image:
+        linear-gradient(rgba(196,163,90,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .join-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    .join-section h2 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .join-section p {
+      color: rgba(255,255,255,0.55);
+      margin: 0 auto 2.8rem;
+      font-size: clamp(1rem, 1.2vw, 1.15rem);
+      line-height: 1.85;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1.1rem 3rem;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(196,163,90,0.3);
+    }
+    .cta-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .cta-btn:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      padding: 4rem 0 2rem;
+      border-top: 1px solid rgba(196,163,90,0.15);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .nav-logo {
+      margin-bottom: 1.2rem;
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      max-width: 300px;
+    }
+
+    .footer h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li { margin-bottom: 0.7rem; }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+    }
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .counsel-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10,22,40,0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        backdrop-filter: blur(20px);
+      }
+      .nav-links.mobile-open {
+        display: flex;
+      }
+      .nav-links a {
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.8);
+      }
+      .nav-toggle {
+        display: flex;
+        z-index: 1001;
+      }
+
+      .hero-content {
+        padding: 8rem 0 5rem;
+      }
+      .hero-tags {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .founder-grid {
+        grid-template-columns: 1fr;
+      }
+      .counsel-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .nav-dropdown-menu {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-primary {
+        justify-content: center;
+      }
+    }
+      .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
+    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
+    .footer-social-link svg{width:15px;height:15px;}
+</style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <div>
+          <div class="nav-logo-text">International House of Law</div>
+          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+        </div>
+      </a>
+
+            <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html" class="active">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80" alt="Professional legal team" loading="eager">
+    </div>
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="hero-eyebrow-text">About IHL</span>
+      </div>
+
+      <h1>Our <em>Team</em></h1>
+
+      <div class="hero-tags">
+        <span class="hero-tag">Experience</span>
+        <span class="hero-tag">Expertise</span>
+        <span class="hero-tag">Integrity</span>
+      </div>
+
+      <p class="hero-description">
+        A multidisciplinary team of lawyers, advisors, and specialists united by a shared commitment to exceptional legal service across international borders.
+      </p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">
+          Contact Us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TEAM SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="team-section" id="team">
+    <div class="container">
+
+      <div class="team-section-header reveal">
+        <div class="section-label">
+          <span class="section-label-line"></span>
+          <span class="section-label-text">The People Behind IHL</span>
+        </div>
+        <h2>Meet the Team</h2>
+      </div>
+
+      <!-- LEADERSHIP -->
+      <div class="team-group-label reveal">
+        <h3>Leadership</h3>
+        <div class="team-group-label-rule"></div>
+      </div>
+
+      <div class="founder-grid">
+
+        <!-- Dr. Mohsen Mohebi -->
+        <div class="team-card team-card--founder reveal reveal-delay-1">
+          <div class="team-card-bg"></div>
+          <div class="team-avatar">
+            <img src="images/team/mohsen-mohebi.png" alt="Dr. Mohsen Mohebi" loading="lazy">
+          </div>
+          <div class="team-card-name">Dr. Mohsen Mohebi</div>
+          <div class="team-card-title">Founding Partner</div>
+          <div class="team-card-divider"></div>
+          <p style="color: rgba(255,255,255,0.45); max-width: 100%; font-size: 0.9rem; line-height: 1.8;">
+            Founding Partner of International House of Law, bringing decades of expertise in international arbitration, cross-border dispute resolution, and international law advisory across multiple jurisdictions.
+          </p>
+          <div class="team-card-footer">
+            <a href="https://www.linkedin.com/in/mohsen-mohebi-932605114/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Hosein S. Mohebi -->
+        <div class="team-card team-card--founder reveal reveal-delay-2">
+          <div class="team-card-bg"></div>
+          <div class="team-avatar">
+            <img src="images/team/hosein-mohebi.png" alt="Hosein S. Mohebi, LL.M." loading="lazy">
+          </div>
+          <div class="team-card-name">Hosein S. Mohebi, LL.M.</div>
+          <div class="team-card-title">Director</div>
+          <div class="team-card-divider"></div>
+          <p style="color: rgba(255,255,255,0.45); max-width: 100%; font-size: 0.9rem; line-height: 1.8;">
+            Founding Partner and Director of International House of Law, leading the firm's strategic development and international practice with deep expertise in international commercial law, dispute resolution, and global business advisory.
+          </p>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/hosein-mohebi" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SENIOR COUNSEL -->
+      <div class="team-group-label reveal">
+        <h3>Counsel</h3>
+        <div class="team-group-label-rule"></div>
+      </div>
+
+      <div class="counsel-grid">
+
+        <!-- Dr. Atie Babaie -->
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">
+            <img src="images/team/atie-babaie.jpg" alt="Dr. Atie Babaie" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="team-card-name">Dr. Atie Babaie</div>
+          <div class="team-card-title">Of Counsel</div>
+          <div class="team-card-divider"></div>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/atiebabaie/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Dr. Hamidreza Aslani -->
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar">
+            <img src="images/team/hamidreza-aslani.jpg" alt="Dr. Hamidreza Aslani" loading="lazy">
+          </div>
+          <div class="team-card-name">Dr. Hamidreza Aslani</div>
+          <div class="team-card-title">Counsel &ndash; International Dispute Resolution</div>
+          <div class="team-card-divider"></div>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/dr-hamid-reza-aslani-5a7721336" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Dr. Azar Safari -->
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-avatar">
+            <img src="images/team/azar-safari.jpg" alt="Dr. Azar Safari" loading="lazy">
+          </div>
+          <div class="team-card-name">Dr. Azar Safari</div>
+          <div class="team-card-title">Sustainability Counsel</div>
+          <div class="team-card-divider"></div>
+        </div>
+
+        <!-- Lavanya Viswanathan -->
+        <div class="team-card reveal reveal-delay-5">
+          <div class="team-avatar">
+            <img src="images/team/lavanya-viswanathan.png" alt="Lavanya Viswanathan" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="team-card-name">Lavanya Viswanathan</div>
+          <div class="team-card-title">Of Counsel</div>
+          <div class="team-card-divider"></div>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/lavanya-viswanathan-76907bb7" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       JOIN SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="join-section">
+    <div class="join-pattern"></div>
+    <div class="container">
+      <div class="reveal">
+        <h2>Join Our Team</h2>
+        <p>We welcome legal professionals, researchers, and trainees seeking growth in an international environment. IHL offers a collaborative, intellectually rigorous setting at the forefront of international law.</p>
+        <a href="careers.html" class="cta-btn">
+          View Opportunities
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <div>
+          <div class="nav-logo-text">International House of Law</div>
+          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+        </div>
+          </a>
+          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@ihlcon" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+            <a href="https://nl.linkedin.com/company/international-house-of-law" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="updates.html">News &amp; Updates</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>The Hague, Netherlands<br>Vancouver, Canada</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+31 070 22 50 574</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>info@ihlcon.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 International House of Law. All rights reserved.</span>
+        <span>Mon &ndash; Fri: 09:00 &ndash; 17:00 CET</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    // ── Scroll Reveal ──
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ── Sticky Nav ──
+    const nav = document.getElementById('mainNav');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      nav.classList.toggle('scrolled', currentScroll > 80);
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ── Mobile Nav Toggle ──
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('mobile-open');
+      document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('mobile-open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── Smooth scroll for anchor links ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Robust dropdown: listeners on both <li> and the menu itself,
+    // relatedTarget guard prevents false-positive mouseleave from absolutely-
+    // positioned children that overflow the parent's layout box.
+    document.querySelectorAll('.nav-links > li').forEach(function(li) {
+      var menu = li.querySelector('.nav-dropdown-menu');
+      if (!menu) return;
+      var timer;
+      function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
+      function scheduleClose(e) {
+        // Ignore if the cursor is simply moving between li and its dropdown
+        if (e && li.contains(e.relatedTarget)) return;
+        timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
+      }
+      li.addEventListener('mouseenter', openMenu);
+      li.addEventListener('mouseleave', scheduleClose);
+      menu.addEventListener('mouseenter', openMenu);
+      menu.addEventListener('mouseleave', scheduleClose);
+    });
+  </script>
+
+</body>
+</html>

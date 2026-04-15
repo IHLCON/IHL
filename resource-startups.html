@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Legal Resources — International House of Law</title>
+  <meta name="description" content="Legal resources for startups: contracts, IP protection, investor agreements, global expansion, compliance, and exit strategies. IHL helps startups grow safely.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#0A1628;--navy-light:#132038;--navy-mid:#1B2D4A;--gold:#C4A35A;--gold-light:#D4B97A;--gold-pale:#F5ECD7;--cream:#FAF8F4;--white:#FFFFFF;--gray-50:#F7F7F5;--gray-100:#EDECE8;--gray-200:#D8D6D0;--gray-400:#9E9B93;--gray-600:#6B6860;--text:#1A1815;--text-light:#3D3B36;
+      --font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+      --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+      --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;}
+    body{font-family:var(--font-body);color:var(--text);background:var(--cream);line-height:1.7;overflow-x:hidden;}
+    img{max-width:100%;height:auto;display:block;}
+    a{color:inherit;text-decoration:none;}
+    h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.15;color:var(--navy);}
+    h1{font-size:clamp(2.8rem,6vw,5.2rem);letter-spacing:-0.02em;}
+    h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-0.01em;}
+    h3{font-size:clamp(1.3rem,2vw,1.8rem);}
+    p{font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--text-light);max-width:680px;}
+    .container{width:100%;max-width:1340px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity 0.85s var(--ease-out-expo),transform 0.85s var(--ease-out-expo);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-delay-1{transition-delay:0.1s;}.reveal-delay-2{transition-delay:0.2s;}.reveal-delay-3{transition-delay:0.3s;}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background 0.4s ease,box-shadow 0.4s ease,padding 0.4s ease;padding:1.5rem 0;}
+    .nav.scrolled{background:rgba(10,22,40,0.97);box-shadow:0 1px 40px rgba(0,0,0,0.15);padding:0.8rem 0;backdrop-filter:blur(20px);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{display:flex;align-items:center;gap:0.75rem;}
+    .nav-logo-img{height:90px;width:auto;flex-shrink:0;}
+    .nav-logo-text{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--white);letter-spacing:0.12em;text-transform:uppercase;}
+    .nav-logo-sub{font-family:var(--font-body);font-size:0.65rem;color:var(--gold-light);letter-spacing:0.2em;text-transform:uppercase;margin-top:-2px;}
+    .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;}
+    .nav-links>li{position:relative;}
+    .nav-links a{font-family:var(--font-body);font-size:0.82rem;font-weight:400;color:rgba(255,255,255,0.7);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s ease;position:relative;}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s var(--ease-out-expo);}
+    .nav-links a:hover{color:var(--white);}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active{color:var(--gold);}
+    .nav-cta{font-size:0.8rem!important;letter-spacing:0.1em!important;padding:0.65rem 1.6rem;border:1px solid var(--gold);color:var(--gold)!important;transition:background 0.3s ease,color 0.3s ease!important;}
+    .nav-cta:hover{background:var(--gold);color:var(--navy)!important;}
+    .nav-cta::after{display:none!important;}
+    .nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--navy);border:1px solid rgba(196,163,90,0.15);min-width:220px;padding:0.5rem 0;list-style:none;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.18s ease,visibility 0.18s ease;}
+    .nav-links>li.nav-open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;}
+    .nav-dropdown-menu li a{display:block;padding:0.7rem 1.4rem;font-size:0.78rem;color:rgba(255,255,255,0.65);white-space:nowrap;letter-spacing:0.08em;}
+    .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(196,163,90,0.06);}
+    .nav-dropdown-menu li a::after{display:none;}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav-toggle span{display:block;width:26px;height:2px;background:var(--white);transition:transform 0.3s ease,opacity 0.3s ease;}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-toggle.open span:nth-child(2){opacity:0;}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+    /* HERO */
+    .hero{position:relative;min-height:62vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.15;filter:grayscale(20%);}
+    .hero-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.96) 0%,rgba(10,22,40,0.7) 60%,rgba(10,22,40,0.88) 100%),linear-gradient(to bottom,transparent 50%,var(--navy) 100%);z-index:1;}
+    .hero-pattern{position:absolute;inset:0;z-index:1;opacity:0.04;background-image:linear-gradient(rgba(196,163,90,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.3) 1px,transparent 1px);background-size:60px 60px;}
+    .hero-content{position:relative;z-index:2;padding:10rem 0 5rem;}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
+    .hero-eyebrow-line{width:48px;height:1px;background:var(--gold);}
+    .hero-eyebrow-text{font-family:var(--font-body);font-size:0.78rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);}
+    .hero h1{color:var(--white);margin-bottom:1rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
+    .hero h1 em{font-style:italic;color:var(--gold-light);}
+    .hero-subtitle{font-family:var(--font-display);font-size:clamp(1.1rem,1.8vw,1.5rem);color:rgba(255,255,255,0.6);font-style:italic;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.7s forwards;}
+    .hero-description{color:rgba(255,255,255,0.65);font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.85;max-width:640px;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.9s forwards;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+    /* STAT STRIP */
+    .stat-strip{background:var(--navy-light);border-top:1px solid rgba(196,163,90,0.12);border-bottom:1px solid rgba(196,163,90,0.12);}
+    .stat-strip-inner{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;}
+    .stat-item{padding:2.5rem 2rem;border-right:1px solid rgba(255,255,255,0.06);}
+    .stat-item:last-child{border-right:none;}
+    .stat-number{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--gold);line-height:1;margin-bottom:0.4rem;}
+    .stat-label{font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);}
+
+    /* SERVICES SECTION */
+    .services-section{padding:7rem 0;background:var(--cream);}
+    .section-header{margin-bottom:5rem;}
+    .eyebrow{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:1.2rem;}
+    .eyebrow-line{width:36px;height:1px;background:var(--gold);}
+    .eyebrow-text{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);}
+    .section-header h2{margin-bottom:1rem;}
+    .section-header p{max-width:600px;}
+
+    .services-list{display:flex;flex-direction:column;gap:0;}
+    .service-item{display:grid;grid-template-columns:80px 1fr;gap:0;border-top:1px solid rgba(10,22,40,0.08);transition:background 0.3s ease;}
+    .service-item:last-child{border-bottom:1px solid rgba(10,22,40,0.08);}
+    .service-item:hover{background:var(--white);}
+    .service-number{padding:3rem 0 3rem 0;font-family:var(--font-display);font-size:clamp(2rem,3vw,2.8rem);font-weight:300;color:rgba(196,163,90,0.25);line-height:1;align-self:start;padding-top:3.2rem;}
+    .service-body{padding:3rem 3rem 3rem 0;}
+    .service-body h3{margin-bottom:1rem;color:var(--navy);}
+    .service-body p{font-size:0.95rem;line-height:1.85;max-width:100%;color:var(--text-light);margin-bottom:1.2rem;}
+    .service-bullets{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-top:0.8rem;}
+    .service-bullets li{font-size:0.88rem;color:var(--text-light);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5;}
+    .service-bullets li::before{content:'';display:block;width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:0.45rem;}
+    .service-tag{display:inline-block;padding:0.25rem 0.8rem;background:var(--gold-pale);color:var(--navy);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.8rem;}
+
+    /* INSIGHT STAT */
+    .insight-stat{background:var(--navy);color:var(--white);padding:0.6rem 1.2rem;display:inline-flex;align-items:center;gap:0.8rem;margin-top:1rem;font-size:0.82rem;}
+    .insight-stat strong{color:var(--gold);font-family:var(--font-display);font-size:1.3rem;font-weight:400;}
+
+    /* FAQ */
+    .faq-section{padding:6rem 0;background:var(--white);}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.5rem;}
+    .faq-item{padding:2rem 2.5rem;border-left:2px solid var(--gold);background:var(--gray-50);}
+    .faq-item h4{font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:0.8rem;line-height:1.3;}
+    .faq-item p{font-size:0.9rem;color:var(--text-light);max-width:100%;line-height:1.75;}
+
+    /* CTA */
+    .cta-section{background:var(--navy);padding:6rem 0;position:relative;overflow:hidden;}
+    .cta-pattern{position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(rgba(196,163,90,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.4) 1px,transparent 1px);background-size:80px 80px;}
+    .cta-inner{position:relative;z-index:1;text-align:center;max-width:680px;margin:0 auto;}
+    .cta-inner h2{color:var(--white);margin-bottom:1.2rem;}
+    .cta-inner p{color:rgba(255,255,255,0.55);margin:0 auto 2.5rem;max-width:520px;}
+    .cta-btn{display:inline-flex;align-items:center;gap:0.7rem;padding:1.1rem 3rem;background:var(--gold);color:var(--navy);font-family:var(--font-body);font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:background 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease;}
+    .cta-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 40px rgba(196,163,90,0.3);}
+    .cta-btn svg{width:16px;height:16px;transition:transform 0.3s ease;}
+    .cta-btn:hover svg{transform:translateX(3px);}
+
+    /* FOOTER */
+    .footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:4rem 0 2rem;border-top:1px solid rgba(196,163,90,0.15);}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;}
+    .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.88rem;line-height:1.7;max-width:300px;margin-top:1rem;}
+    .footer h4{font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:0.7rem;}
+    .footer-links a{font-size:0.88rem;color:rgba(255,255,255,0.45);transition:color 0.3s ease;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:0.8rem;margin-bottom:1rem;font-size:0.88rem;}
+    .footer-contact-item svg{width:16px;height:16px;margin-top:3px;flex-shrink:0;color:var(--gold);}
+    .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .faq-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;backdrop-filter:blur(20px);}
+      .nav-links.mobile-open{display:flex;}
+      .nav-links a{font-size:1.1rem;color:rgba(255,255,255,0.8);}
+      .nav-toggle{display:flex;z-index:1001;}
+      .nav-dropdown-menu{display:none!important;}
+      .stat-strip-inner{grid-template-columns:1fr;}
+      .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.06);}
+      .service-item{grid-template-columns:50px 1fr;}
+      .service-bullets{grid-template-columns:1fr;}
+      .service-body{padding:2rem 1rem 2rem 0;}
+      .footer-grid{grid-template-columns:1fr;}
+      .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+      .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
+    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
+    .footer-social-link svg{width:15px;height:15px;}
+</style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <div>
+          <div class="nav-logo-text">International House of Law</div>
+          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="resources.html" class="active">Resources</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&q=80" alt="Startup legal resources" loading="eager">
+    </div>
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="hero-eyebrow-text">Industry Resources — Startups</span>
+      </div>
+      <h1>Startups Are Full of <em>Potential</em></h1>
+      <div class="hero-subtitle">But also face significant legal hurdles</div>
+      <p class="hero-description">Building a startup is exhilarating — but legal challenges often emerge quietly in the background. 62% of startups fail within three years, frequently due to disputes, weak contracts, or compliance oversights. IHL is here to help you grow safely.</p>
+    </div>
+  </section>
+
+  <div class="stat-strip">
+    <div class="container">
+      <div class="stat-strip-inner">
+        <div class="stat-item">
+          <div class="stat-number">62%</div>
+          <div class="stat-label">of startups fail within 3 years</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50%</div>
+          <div class="stat-label">less likely to face legal battles with clear dispute plans</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">+30%</div>
+          <div class="stat-label">valuation boost from strong IP protection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">How We Help</span>
+        </div>
+        <h2>Eight Ways IHL Supports Your Startup</h2>
+        <p>From day one to exit, we provide integrated legal and strategic support across every critical stage of your startup's journey.</p>
+      </div>
+
+      <div class="services-list">
+
+        <div class="service-item reveal">
+          <div class="service-number">01</div>
+          <div class="service-body">
+            <div class="service-tag">Conflict Resolution</div>
+            <h3>Maintain Team Harmony</h3>
+            <p>Internal disagreements — between founders, investors, or key hires — can derail even the most promising startup. We help you prevent and resolve conflicts before they escalate into costly disputes.</p>
+            <ul class="service-bullets">
+              <li>Draft founder and shareholder agreements to prevent arguments</li>
+              <li>Mediate early conflicts with partners, investors, and suppliers</li>
+              <li>Represent in negotiation, arbitration, or litigation</li>
+              <li>Enforce resolutions and implement dispute mechanisms</li>
+            </ul>
+            <div class="insight-stat">
+              <strong>50%</strong> less likely to face costly legal battles with a clear dispute resolution plan
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">02</div>
+          <div class="service-body">
+            <div class="service-tag">Contracts</div>
+            <h3>Build Strong Startup Contracts</h3>
+            <p>A poorly written contract is a liability waiting to materialise. We draft, review, and manage the agreements that form the backbone of your business relationships.</p>
+            <ul class="service-bullets">
+              <li>Investor term sheets, NDAs, and partnership contracts</li>
+              <li>Customer and vendor agreements with clear terms</li>
+              <li>Cross-border deal clarity: payment, liability, responsibilities</li>
+              <li>Contract management for tracking obligations and renewals</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">03</div>
+          <div class="service-body">
+            <div class="service-tag">Risk &amp; Compliance</div>
+            <h3>Identify Risks &amp; Ensure Compliance</h3>
+            <p>Regulatory missteps can halt growth overnight. We build compliance into your startup's DNA from the very beginning — not as an afterthought.</p>
+            <ul class="service-bullets">
+              <li>Spot legal risks in business models and products</li>
+              <li>Build compliance systems: data protection, privacy, ESG</li>
+              <li>Embed legal checks in founder and shareholder structures</li>
+              <li>Stay ahead of regulatory changes affecting international operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">04</div>
+          <div class="service-body">
+            <div class="service-tag">Global Expansion</div>
+            <h3>Expand Globally with Confidence</h3>
+            <p>Entering new markets is one of the most legally complex moves a startup can make. We provide the roadmap and the guardrails to do it safely.</p>
+            <ul class="service-bullets">
+              <li>Craft launch plans for overseas markets</li>
+              <li>Advise on tax-efficient legal structure and entity setup</li>
+              <li>Ensure compliance with data, trade, sanctions, and IP laws</li>
+              <li>Protect your brand, technology, and IP across borders</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">05</div>
+          <div class="service-body">
+            <div class="service-tag">Intellectual Property</div>
+            <h3>Safeguard Innovation with IP Strategy</h3>
+            <p>Your startup's ideas, code, and brand are its most valuable assets. We help you register, protect, and leverage them strategically.</p>
+            <ul class="service-bullets">
+              <li>Register trademarks, patents, and designs in key markets</li>
+              <li>Conduct IP audits to identify risks and opportunities</li>
+              <li>Monitor and enforce IP rights worldwide</li>
+              <li>Structure licensing deals to maximise commercial value</li>
+            </ul>
+            <div class="insight-stat">
+              <strong>+30%</strong> potential valuation boost from strong, well-documented IP protection
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">06</div>
+          <div class="service-body">
+            <div class="service-tag">Investment</div>
+            <h3>Investor Negotiations &amp; Equity Protection</h3>
+            <p>Fundraising is a defining moment for any startup. We ensure you enter every negotiation informed, protected, and in control of your company's future.</p>
+            <ul class="service-bullets">
+              <li>Prepare term sheets, valuations, and equity splits</li>
+              <li>Negotiate investor agreements aligned with founder goals</li>
+              <li>Protect against over-dilution and unfair clauses</li>
+              <li>Preserve founder control while securing the resources to grow</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">07</div>
+          <div class="service-body">
+            <div class="service-tag">Regional Focus</div>
+            <h3>Middle East Market Entry</h3>
+            <p>The Middle East offers exceptional opportunities for startups ready to navigate its unique regulatory and cultural landscape. Our specialist team provides on-the-ground guidance to help you enter with confidence.</p>
+            <ul class="service-bullets">
+              <li>Tailored guidance for market setup and entry strategy</li>
+              <li>Access to a trusted network of local advisors and partners</li>
+              <li>Regional compliance, licensing, and corporate structuring</li>
+              <li>Cultural alignment support for negotiations and partnerships</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-item reveal">
+          <div class="service-number">08</div>
+          <div class="service-body">
+            <div class="service-tag">Exit Planning</div>
+            <h3>Exit Strategies &amp; Project Closures</h3>
+            <p>Whether you're preparing for acquisition, planning an IPO, or winding down a project, a well-structured exit is as important as a strong launch. We ensure every transition is orderly and legally sound.</p>
+            <ul class="service-bullets">
+              <li>Wind down projects while limiting legal and financial risk</li>
+              <li>Structure founder and investor exits fairly</li>
+              <li>Prepare for acquisitions, mergers, and IPOs</li>
+              <li>Manage intellectual property and asset transfer</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Common Questions</span>
+        </div>
+        <h2>Startup Legal FAQ</h2>
+        <p>Answers to the questions founders ask most frequently when navigating legal challenges for the first time.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <h4>Why do startups need legal support from the very beginning?</h4>
+          <p>Early-stage decisions — founder agreements, equity splits, IP ownership — are much harder and more expensive to correct later. Getting the legal foundations right from day one prevents costly disputes and creates a stable base for growth.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <h4>What are the essential contracts every startup should have?</h4>
+          <p>At minimum: a founder agreement, NDAs for sensitive conversations, employment or contractor agreements, investor agreements, and customer or vendor contracts. Each protects a different dimension of your business.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <h4>How does IP protection benefit a startup's valuation?</h4>
+          <p>Registered trademarks, patents, and well-documented IP ownership signal credibility and defensibility to investors. Startups with strong IP portfolios typically command significantly higher valuations during fundraising and exit.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <h4>When should I start thinking about international expansion?</h4>
+          <p>Earlier than you might expect. Regulatory compliance, IP registration, and entity structure decisions made at home directly affect how easily you can expand abroad. Thinking internationally from the start avoids costly restructuring later.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>How can IHL help with investor negotiations?</h4>
+          <p>We review and draft term sheets, identify unfavourable clauses, advise on equity structures, and represent your interests throughout negotiations — ensuring you secure the capital you need without sacrificing more control than is necessary.</p>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <h4>What does compliance mean for a startup?</h4>
+          <p>Compliance means ensuring your operations meet legal requirements — from data protection (GDPR) and employment law to sector-specific regulations. Non-compliance can result in fines, reputational damage, or business shutdown, all of which are preventable with the right guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-pattern"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2>Ready to Build Your Startup on Solid Legal Ground?</h2>
+        <p>IHL works with early-stage founders and growth-stage startups across Europe, the Middle East, and beyond. Let's talk about how we can support your journey.</p>
+        <a href="contact.html" class="cta-btn">
+          Get in Touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <div>
+              <div class="nav-logo-text">International House of Law</div>
+              <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+            </div>
+          </a>
+          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@ihlcon" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+            <a href="https://nl.linkedin.com/company/international-house-of-law" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="updates.html">News &amp; Updates</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Segbroeklaan 110, The Hague<br>Suite 500, Vancouver, BC</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+31 070 22 50 574</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>info@ihlcon.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 International House of Law. All rights reserved.</span>
+        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(el => obs.observe(el));
+
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 80); }, {passive:true});
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('mobile-open');
+      document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { navToggle.classList.remove('open'); navLinks.classList.remove('mobile-open'); document.body.style.overflow = ''; });
+    });
+
+    document.querySelectorAll('.nav-links > li').forEach(function(li) {
+      var menu = li.querySelector('.nav-dropdown-menu');
+      if (!menu) return;
+      var timer;
+      function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
+      function scheduleClose(e) {
+        if (e && li.contains(e.relatedTarget)) return;
+        timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
+      }
+      li.addEventListener('mouseenter', openMenu);
+      li.addEventListener('mouseleave', scheduleClose);
+      menu.addEventListener('mouseenter', openMenu);
+      menu.addEventListener('mouseleave', scheduleClose);
+    });
+  </script>
+</body>
+</html>

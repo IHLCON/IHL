@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate and ESG Litigation — International House of Law</title>
+  <meta name="description" content="In her interview with The Arbitration Club, Dr. Atie Babaie discusses key challenges and developments in climate and ESG litigation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#0A1628;--navy-light:#132038;--navy-mid:#1B2D4A;--gold:#C4A35A;--gold-light:#D4B97A;--gold-pale:#F5ECD7;--cream:#FAF8F4;--white:#FFFFFF;--gray-50:#F7F7F5;--gray-100:#EDECE8;--gray-200:#D8D6D0;--gray-400:#9E9B93;--gray-600:#6B6860;--gray-800:#3A3833;--text:#1A1815;--text-light:#3D3B36;
+      --font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+      --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+      --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;}
+    body{font-family:var(--font-body);color:var(--text);background:var(--cream);line-height:1.7;overflow-x:hidden;}
+    img{max-width:100%;height:auto;display:block;}
+    a{color:inherit;text-decoration:none;}
+    h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.15;color:var(--navy);}
+    h1{font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-0.02em;}
+    h2{font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;}
+    h3{font-size:clamp(1.2rem,2vw,1.7rem);}
+    p{font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--text-light);max-width:680px;}
+    .container{width:100%;max-width:1340px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.9s var(--ease-out-expo),transform 0.9s var(--ease-out-expo);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background 0.4s ease,box-shadow 0.4s ease,padding 0.4s ease;padding:1.5rem 0;}
+    .nav.scrolled{background:rgba(10,22,40,0.97);box-shadow:0 1px 40px rgba(0,0,0,0.15);padding:0.8rem 0;backdrop-filter:blur(20px);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{display:flex;align-items:center;gap:0.75rem;}
+    .nav-logo-img{height:90px;width:auto;flex-shrink:0;}
+    .nav-logo-text{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--white);letter-spacing:0.12em;text-transform:uppercase;}
+    .nav-logo-sub{font-family:var(--font-body);font-size:0.65rem;color:var(--gold-light);letter-spacing:0.2em;text-transform:uppercase;margin-top:-2px;}
+    .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;}
+    .nav-links>li{position:relative;}
+    .nav-links a{font-family:var(--font-body);font-size:0.82rem;font-weight:400;color:rgba(255,255,255,0.7);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s ease;position:relative;}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s var(--ease-out-expo);}
+    .nav-links a:hover{color:var(--white);}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a.active{color:var(--gold);}
+    .nav-cta{font-size:0.8rem!important;letter-spacing:0.1em!important;padding:0.65rem 1.6rem;border:1px solid var(--gold);color:var(--gold)!important;transition:background 0.3s ease,color 0.3s ease!important;}
+    .nav-cta:hover{background:var(--gold);color:var(--navy)!important;}
+    .nav-cta::after{display:none!important;}
+    .nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--navy);border:1px solid rgba(196,163,90,0.15);min-width:220px;padding:0.5rem 0;list-style:none;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.18s ease,visibility 0.18s ease;}
+    .nav-links>li.nav-open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;}
+    .nav-dropdown-menu li a{display:block;padding:0.7rem 1.4rem;font-size:0.78rem;color:rgba(255,255,255,0.65);white-space:nowrap;letter-spacing:0.08em;}
+    .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(196,163,90,0.06);}
+    .nav-dropdown-menu li a::after{display:none;}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav-toggle span{display:block;width:26px;height:2px;background:var(--white);transition:transform 0.3s ease,opacity 0.3s ease;}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-toggle.open span:nth-child(2){opacity:0;}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+    /* HERO */
+    .hero{position:relative;min-height:55vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.18;filter:grayscale(30%);}
+    .hero-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.95) 0%,rgba(10,22,40,0.7) 50%,rgba(10,22,40,0.85) 100%),linear-gradient(to bottom,transparent 60%,var(--navy) 100%);z-index:1;}
+    .hero-pattern{position:absolute;inset:0;z-index:1;opacity:0.04;background-image:linear-gradient(rgba(196,163,90,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.3) 1px,transparent 1px);background-size:60px 60px;}
+    .hero-content{position:relative;z-index:2;padding:10rem 0 5rem;}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
+    .hero-eyebrow-line{width:48px;height:1px;background:var(--gold);}
+    .hero-eyebrow-text{font-family:var(--font-body);font-size:0.78rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);}
+    .hero h1{color:var(--white);margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
+    .hero h1 em{font-style:italic;color:var(--gold-light);}
+    .hero-meta{display:flex;align-items:center;gap:1.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.8s forwards;}
+    .hero-tag{font-family:var(--font-body);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.3rem 0.8rem;border:1px solid rgba(196,163,90,0.4);}
+    .hero-date{font-size:0.82rem;color:rgba(255,255,255,0.5);letter-spacing:0.05em;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+    /* ARTICLE */
+    .article-section{padding:7rem 0;background:var(--cream);}
+    .article-layout{display:grid;grid-template-columns:1fr 320px;gap:5rem;align-items:start;}
+    .article-body h2{margin:2.5rem 0 1rem;color:var(--navy);}
+    .article-body h3{margin:2rem 0 0.8rem;color:var(--navy);}
+    .article-body p{max-width:100%;margin-bottom:1.5rem;font-size:1.05rem;line-height:1.9;color:var(--text-light);}
+    .article-body blockquote{border-left:3px solid var(--gold);padding:1.2rem 1.8rem;margin:2.5rem 0;background:rgba(196,163,90,0.04);}
+    .article-body blockquote p{font-family:var(--font-display);font-size:1.25rem;font-style:italic;color:var(--navy);margin:0;}
+    .article-gold-bar{width:48px;height:2px;background:var(--gold);margin-bottom:2.5rem;}
+    .article-lead{font-family:var(--font-display);font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.7;color:var(--navy);margin-bottom:2rem;font-style:italic;}
+
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:120px;}
+    .sidebar-card{background:var(--white);padding:2rem;border-top:3px solid var(--gold);margin-bottom:2rem;}
+    .sidebar-card h4{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+    .sidebar-author{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;}
+    .sidebar-author-img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center;}
+    .sidebar-author-name{font-family:var(--font-display);font-size:1.05rem;color:var(--navy);}
+    .sidebar-author-role{font-size:0.78rem;color:var(--gray-400);letter-spacing:0.05em;}
+    .sidebar-meta-item{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--gray-100);font-size:0.85rem;}
+    .sidebar-meta-item:last-child{border-bottom:none;}
+    .sidebar-meta-label{color:var(--gray-400);letter-spacing:0.05em;}
+    .sidebar-meta-value{color:var(--text);font-weight:500;}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:3rem;transition:color 0.3s ease;}
+    .back-link svg{width:14px;height:14px;transition:transform 0.3s ease;}
+    .back-link:hover{color:var(--gold);}
+    .back-link:hover svg{transform:translateX(-4px);}
+
+    /* FOOTER */
+    .footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:4rem 0 2rem;border-top:1px solid rgba(196,163,90,0.15);}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;}
+    .footer-brand .nav-logo{margin-bottom:1.2rem;}
+    .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.88rem;line-height:1.7;max-width:300px;}
+    .footer h4{font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:0.7rem;}
+    .footer-links a{font-size:0.88rem;color:rgba(255,255,255,0.45);transition:color 0.3s ease;}
+    .footer-links a:hover{color:var(--white);}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:0.8rem;margin-bottom:1rem;font-size:0.88rem;}
+    .footer-contact-item svg{width:16px;height:16px;margin-top:3px;flex-shrink:0;color:var(--gold);}
+    .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
+
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){
+      .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;backdrop-filter:blur(20px);}
+      .nav-links.mobile-open{display:flex;}
+      .nav-links a{font-size:1.1rem;color:rgba(255,255,255,0.8);}
+      .nav-toggle{display:flex;z-index:1001;}
+      .nav-dropdown-menu{display:none!important;}
+      .footer-grid{grid-template-columns:1fr;}
+      .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+      .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
+    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
+    .footer-social-link svg{width:15px;height:15px;}
+</style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <div>
+          <div class="nav-logo-text">International House of Law</div>
+          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="index.html#services">Services</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="why-ihl.html">About Us</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="updates.html" class="active">Updates</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&q=80" alt="Climate and ESG Litigation" loading="eager">
+    </div>
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="hero-eyebrow-text">ESG &amp; Sustainability</span>
+      </div>
+      <h1>Climate and <em>ESG Litigation</em></h1>
+      <div class="hero-meta">
+        <span class="hero-tag">ESG &amp; Sustainability</span>
+        <span class="hero-date">November 24, 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <div class="container">
+      <a href="updates.html" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to Updates
+      </a>
+      <div class="article-layout">
+        <div class="article-body reveal">
+          <div class="article-gold-bar"></div>
+          <p class="article-lead">In her recent interview with The Arbitration Club, Dr. Atie Babaie explores the evolving landscape of climate and ESG litigation — a field reshaping how international law approaches environmental accountability.</p>
+
+          <h2>Key Challenges in ESG and Climate Disputes</h2>
+          <p>One of the most significant obstacles Dr. Babaie identified is the lack of universally accepted definitions for ESG and climate disputes. This absence creates inconsistent legal frameworks across jurisdictions, hampering effective dispute resolution and making it difficult for parties to anticipate outcomes or structure agreements.</p>
+          <p>She also emphasised the need to address power imbalances between corporations and affected communities. In many ESG-related disputes, communities bear the environmental costs of corporate activity yet lack equivalent legal resources or standing to pursue effective remedies. This asymmetry challenges the fundamental fairness that dispute resolution mechanisms are designed to provide.</p>
+          <p>A further complexity lies in quantifying long-term environmental damage that is not purely economic. Unlike commercial disputes where losses are relatively measurable, climate and ESG cases often involve harms that unfold over decades, affect ecosystems rather than balance sheets, and resist straightforward valuation.</p>
+
+          <h2>The Role of Arbitration</h2>
+          <p>While arbitration offers neutrality and procedural flexibility that make it well-suited to cross-border disputes, Dr. Babaie noted that it remains underdeveloped for ESG cases. The mechanism's inherently private nature limits transparency and accessibility — qualities that are especially important when disputes involve communities and public environmental interests rather than only commercial parties.</p>
+
+          <blockquote>
+            <p>Arbitration must evolve to meet the transparency demands of ESG disputes. The private nature of proceedings, while commercially valuable, can undermine public trust when environmental accountability is at stake.</p>
+          </blockquote>
+
+          <p>However, she suggested that meaningful improvements are achievable. Enhanced transparency measures and the use of amicus curiae briefs — written submissions from non-parties such as NGOs and affected communities — could allow broader participation without fundamentally altering arbitration's character. These reforms would help ensure that ESG arbitration reflects not only the interests of the disputing parties but also the wider public interest in environmental outcomes.</p>
+
+          <h2>Institutional Evolution</h2>
+          <p>International arbitral institutions have a central role to play in advancing ESG dispute resolution. Dr. Babaie highlighted several avenues through which they can adapt: revising procedural rules to accommodate the distinctive features of environmental disputes, integrating ESG principles into arbitrators' decision-making frameworks, and broadening participation mechanisms to address both private commercial interests and public environmental concerns.</p>
+          <p>These institutional changes would position arbitration not just as a commercial tool but as a legitimate forum for resolving the complex, multi-stakeholder disputes that define the ESG era.</p>
+
+          <h2>Guidance for the Next Generation</h2>
+          <p>Dr. Babaie concluded with a message for young lawyers entering the field: adopt multidisciplinary approaches. Climate and ESG litigation cannot be navigated through legal analysis alone. Effective practice requires integrating insights from economics, social sciences, sustainability studies, and international relations — disciplines that together provide the context needed to understand what is at stake and advocate meaningfully for clients.</p>
+          <p>The full interview is available through The Arbitration Club's website.</p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-card reveal">
+            <h4>Author</h4>
+            <div class="sidebar-author">
+              <img src="images/team/atie-babaie.jpg" alt="Dr. Atie Babaie" class="sidebar-author-img">
+              <div>
+                <div class="sidebar-author-name">Dr. Atie Babaie</div>
+                <div class="sidebar-author-role">Counsel</div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-card reveal">
+            <h4>Article Details</h4>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Published</span>
+              <span class="sidebar-meta-value">Nov 24, 2025</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Category</span>
+              <span class="sidebar-meta-value">ESG &amp; Sustainability</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Topic</span>
+              <span class="sidebar-meta-value">Arbitration &amp; Climate</span>
+            </div>
+          </div>
+          <div class="sidebar-card reveal">
+            <h4>Related Services</h4>
+            <ul style="list-style:none;">
+              <li style="margin-bottom:0.7rem;"><a href="dispute-resolution.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Dispute Resolution</a></li>
+              <li style="margin-bottom:0.7rem;"><a href="global-business-solutions.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Global Business Solutions</a></li>
+              <li><a href="international-agreements.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">International Agreements</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <div>
+              <div class="nav-logo-text">International House of Law</div>
+              <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+            </div>
+          </a>
+          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@ihlcon" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+            <a href="https://nl.linkedin.com/company/international-house-of-law" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
+            <li><a href="international-agreements.html">International Agreements</a></li>
+            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
+            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="updates.html">News &amp; Updates</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Segbroeklaan 110, The Hague<br>Suite 500, Vancouver, BC</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+31 070 22 50 574</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>info@ihlcon.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 International House of Law. All rights reserved.</span>
+        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(el => obs.observe(el));
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 80); }, {passive:true});
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('mobile-open');
+      document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { navToggle.classList.remove('open'); navLinks.classList.remove('mobile-open'); document.body.style.overflow = ''; });
+    });
+
+    // Robust dropdown: listeners on both <li> and the menu itself,
+    // relatedTarget guard prevents false-positive mouseleave from absolutely-
+    // positioned children that overflow the parent's layout box.
+    document.querySelectorAll('.nav-links > li').forEach(function(li) {
+      var menu = li.querySelector('.nav-dropdown-menu');
+      if (!menu) return;
+      var timer;
+      function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
+      function scheduleClose(e) {
+        // Ignore if the cursor is simply moving between li and its dropdown
+        if (e && li.contains(e.relatedTarget)) return;
+        timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
+      }
+      li.addEventListener('mouseenter', openMenu);
+      li.addEventListener('mouseleave', scheduleClose);
+      menu.addEventListener('mouseenter', openMenu);
+      menu.addEventListener('mouseleave', scheduleClose);
+    });
+  </script>
+</body>
+</html>
