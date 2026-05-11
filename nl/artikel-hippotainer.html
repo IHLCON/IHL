@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News &amp; Updates — International House of Law</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/updates.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/nieuws.html">
-  <meta name="description" content="The latest thinking from International House of Law on international law, arbitration, global business, and ESG.">
+  <title>Hippotainer — International House of Law</title>
+  <meta name="description" content="IHL werkt samen met Hippotainer om duurzame agri-tech innovatie in het Midden-Oosten te stimuleren, waarbij recht, innovatie en duurzaamheid samenkomen.">
+  <link rel="alternate" hreflang="en" href="https://ihlcon.com/article-hippotainer.html">
+  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/artikel-hippotainer.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
@@ -23,25 +23,20 @@
     img{max-width:100%;height:auto;display:block;}
     a{color:inherit;text-decoration:none;}
     h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.15;color:var(--navy);}
-    h1{font-size:clamp(2.8rem,6vw,5.2rem);letter-spacing:-0.02em;}
-    h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-0.01em;}
-    h3{font-size:clamp(1.4rem,2.5vw,2rem);}
+    h1{font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-0.02em;}
+    h2{font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;}
+    h3{font-size:clamp(1.2rem,2vw,1.7rem);}
     p{font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--text-light);max-width:680px;}
     .container{width:100%;max-width:1340px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
     .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.9s var(--ease-out-expo),transform 0.9s var(--ease-out-expo);}
     .reveal.visible{opacity:1;transform:translateY(0);}
-    .reveal-delay-1{transition-delay:0.1s;}.reveal-delay-2{transition-delay:0.2s;}.reveal-delay-3{transition-delay:0.3s;}
 
     /* NAV */
     .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background 0.4s ease,box-shadow 0.4s ease,padding 0.4s ease;padding:1.5rem 0;}
     .nav.scrolled{background:rgba(10,22,40,0.97);box-shadow:0 1px 40px rgba(0,0,0,0.15);padding:0.8rem 0;backdrop-filter:blur(20px);}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;}
     .nav-logo{display:flex;align-items:center;gap:0.75rem;}
-    .nav-logo-img {
-      height: 90px;
-      width: auto;
-      flex-shrink: 0;
-    }
+    .nav-logo-img{height:90px;width:auto;flex-shrink:0;}
     .nav-logo-text{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--white);letter-spacing:0.12em;text-transform:uppercase;}
     .nav-logo-sub{font-family:var(--font-body);font-size:0.65rem;color:var(--gold-light);letter-spacing:0.2em;text-transform:uppercase;margin-top:-2px;}
     .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;}
@@ -97,50 +92,52 @@
     .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
     /* HERO */
-    .hero{position:relative;min-height:65vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
+    .hero{position:relative;min-height:55vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
     .hero-bg{position:absolute;inset:0;z-index:0;}
     .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.18;filter:grayscale(30%);}
     .hero-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.95) 0%,rgba(10,22,40,0.7) 50%,rgba(10,22,40,0.85) 100%),linear-gradient(to bottom,transparent 60%,var(--navy) 100%);z-index:1;}
     .hero-pattern{position:absolute;inset:0;z-index:1;opacity:0.04;background-image:linear-gradient(rgba(196,163,90,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.3) 1px,transparent 1px);background-size:60px 60px;}
     .hero-content{position:relative;z-index:2;padding:10rem 0 5rem;}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
     .hero-eyebrow-line{width:48px;height:1px;background:var(--gold);}
     .hero-eyebrow-text{font-family:var(--font-body);font-size:0.78rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);}
-    .hero h1{color:var(--white);margin-bottom:1rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
+    .hero h1{color:var(--white);margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
     .hero h1 em{font-style:italic;color:var(--gold-light);}
-    .hero-description{color:rgba(255,255,255,0.65);font-size:clamp(1rem,1.2vw,1.15rem);line-height:1.85;max-width:680px;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.9s forwards;}
+    .hero-meta{display:flex;align-items:center;gap:1.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.8s forwards;}
+    .hero-tag{font-family:var(--font-body);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.3rem 0.8rem;border:1px solid rgba(196,163,90,0.4);}
+    .hero-date{font-size:0.82rem;color:rgba(255,255,255,0.5);letter-spacing:0.05em;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
-    /* POSTS SECTION */
-    .posts-section{padding:7rem 0;background:var(--cream);}
-    .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;}
-    .post-card{background:var(--white);overflow:hidden;transition:transform 0.4s var(--ease-out-expo),box-shadow 0.4s ease;display:flex;flex-direction:column;}
-    .post-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(10,22,40,0.1);}
-    .post-card-image{aspect-ratio:16/9;overflow:hidden;background:var(--navy-mid);}
-    .post-card-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s var(--ease-out-expo);}
-    .post-card:hover .post-card-image img{transform:scale(1.05);}
-    .post-card-body{padding:2rem;flex:1;display:flex;flex-direction:column;}
-    .post-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
-    .post-tag{font-family:var(--font-body);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.3rem 0.8rem;background:rgba(196,163,90,0.08);border:1px solid rgba(196,163,90,0.2);}
-    .post-date{font-size:0.78rem;color:var(--gray-400);letter-spacing:0.05em;}
-    .post-card-body h3{font-size:clamp(1.2rem,1.6vw,1.5rem);margin-bottom:1rem;line-height:1.25;}
-    .post-card-body p{font-size:0.92rem;line-height:1.75;color:var(--text-light);max-width:100%;flex:1;}
-    .post-link{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.5rem;font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);transition:color 0.3s ease;}
-    .post-link svg{width:14px;height:14px;transition:transform 0.3s ease;}
-    .post-link:hover{color:var(--gold);}
-    .post-link:hover svg{transform:translateX(4px);}
-    .post-gold-bar{width:36px;height:2px;background:var(--gold);margin-bottom:1.5rem;transition:width 0.4s ease;}
-    .post-card:hover .post-gold-bar{width:60px;}
+    /* ARTICLE */
+    .article-section{padding:7rem 0;background:var(--cream);}
+    .article-layout{display:grid;grid-template-columns:1fr 320px;gap:5rem;align-items:start;}
+    .article-body h2{margin:2.5rem 0 1rem;color:var(--navy);}
+    .article-body h3{margin:2rem 0 0.8rem;color:var(--navy);}
+    .article-body p{max-width:100%;margin-bottom:1.5rem;font-size:1.05rem;line-height:1.9;color:var(--text-light);}
+    .article-body blockquote{border-left:3px solid var(--gold);padding:1.2rem 1.8rem;margin:2.5rem 0;background:rgba(196,163,90,0.04);}
+    .article-body blockquote p{font-family:var(--font-display);font-size:1.25rem;font-style:italic;color:var(--navy);margin:0;}
+    .article-gold-bar{width:48px;height:2px;background:var(--gold);margin-bottom:2.5rem;}
+    .article-lead{font-family:var(--font-display);font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.7;color:var(--navy);margin-bottom:2rem;font-style:italic;}
+    .article-body ul{margin:1rem 0 1.5rem 1.5rem;}
+    .article-body ul li{font-size:1.05rem;line-height:1.9;color:var(--text-light);margin-bottom:0.5rem;}
+    .contact-box{background:var(--white);border-top:3px solid var(--gold);padding:2rem;margin-top:3rem;}
+    .contact-box h3{margin-bottom:1rem;font-size:1.3rem;}
+    .contact-box p{font-size:0.92rem;margin-bottom:0.5rem;}
+    .contact-box a{color:var(--gold);transition:opacity 0.3s;}
+    .contact-box a:hover{opacity:0.7;}
 
-    /* CTA */
-    .cta-section{padding:6rem 0;background:var(--navy);text-align:center;position:relative;overflow:hidden;}
-    .cta-bg-pattern{position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(rgba(196,163,90,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.4) 1px,transparent 1px);background-size:80px 80px;}
-    .cta-section h2{color:var(--white);margin-bottom:1.2rem;position:relative;z-index:1;}
-    .cta-section p{color:rgba(255,255,255,0.55);margin:0 auto 2.5rem;position:relative;z-index:1;}
-    .cta-btn{display:inline-flex;align-items:center;gap:0.7rem;padding:1.1rem 3rem;background:var(--gold);color:var(--navy);font-family:var(--font-body);font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:background 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease;position:relative;z-index:1;}
-    .cta-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 40px rgba(196,163,90,0.25);}
-    .cta-btn svg{width:16px;height:16px;transition:transform 0.3s ease;}
-    .cta-btn:hover svg{transform:translateX(3px);}
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:120px;}
+    .sidebar-card{background:var(--white);padding:2rem;border-top:3px solid var(--gold);margin-bottom:2rem;}
+    .sidebar-card h4{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+    .sidebar-meta-item{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--gray-100);font-size:0.85rem;}
+    .sidebar-meta-item:last-child{border-bottom:none;}
+    .sidebar-meta-label{color:var(--gray-400);letter-spacing:0.05em;}
+    .sidebar-meta-value{color:var(--text);font-weight:500;}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:3rem;transition:color 0.3s ease;}
+    .back-link svg{width:14px;height:14px;transition:transform 0.3s ease;}
+    .back-link:hover{color:var(--gold);}
+    .back-link:hover svg{transform:translateX(-4px);}
 
     /* FOOTER */
     .footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:4rem 0 2rem;border-top:1px solid rgba(196,163,90,0.15);}
@@ -156,15 +153,13 @@
     .footer-contact-item svg{width:16px;height:16px;margin-top:3px;flex-shrink:0;color:var(--gold);}
     .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
 
-    /* RESPONSIVE */
-    @media(max-width:1024px){.posts-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.footer-grid{grid-template-columns:1fr 1fr;}}
     @media(max-width:768px){
       .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;backdrop-filter:blur(20px);}
       .nav-links.mobile-open{display:flex;}
       .nav-links a{font-size:1.1rem;color:rgba(255,255,255,0.8);}
       .nav-toggle{display:flex;z-index:1001;}
       .nav-dropdown-menu{display:none!important;}
-      .posts-grid{grid-template-columns:1fr;}
       .footer-grid{grid-template-columns:1fr;}
       .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
     }
@@ -179,40 +174,40 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
       </a>
-            <ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li>
-          <a href="#">Services</a>
+          <a href="index.html#services">Diensten</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschillenbeslechting.html">Geschillenbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Operaties</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="waarom-ihl.html">Over Ons</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
             <li><a href="team.html">Team</a></li>
           </ul>
         </li>
-        <li><a href="updates.html" class="active">Updates</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li><a href="nieuws.html" class="active">Nieuws</a></li>
+        <li><a href="carriere.html">Carri&egrave;re</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html" class="nav-cta">Neem Contact Op</a></li>
         <li class="lang-switch">
-          <a href="updates.html" class="lang-active">EN</a>
-          <a href="nl/nieuws.html">NL</a>
+          <a href="../article-hippotainer.html">EN</a>
+          <a href="artikel-hippotainer.html" class="lang-active">NL</a>
         </li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Navigatie openen">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -220,86 +215,91 @@
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1920&q=80" alt="IHL News and Insights" loading="eager">
+      <img src="../images/Hippotainer-logo.png" alt="Hippotainer" loading="eager" style="object-fit:contain;object-position:center;opacity:0.35;">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">IHL Updates</span>
+        <span class="hero-eyebrow-text">Klantupdate</span>
       </div>
-      <h1>News &amp; <em>Insights</em></h1>
-      <p class="hero-description">The latest thinking from International House of Law on international law, arbitration, global business, and ESG.</p>
-    </div>
-  </section>
-
-  <section class="posts-section">
-    <div class="container">
-      <div class="reveal">
-        <h2>Latest Articles</h2>
-      </div>
-      <div class="posts-grid">
-
-        <article class="post-card reveal">
-          <div class="post-card-image">
-            <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800&q=80" alt="Climate and ESG Litigation" loading="lazy">
-          </div>
-          <div class="post-card-body">
-            <div class="post-meta">
-              <span class="post-tag">ESG &amp; Sustainability</span>
-              <span class="post-date">November 24, 2025</span>
-            </div>
-            <div class="post-gold-bar"></div>
-            <h3>Climate and ESG Litigation</h3>
-            <p>The intersection of climate change and litigation is evolving rapidly. IHL examines the latest developments in ESG-related legal proceedings and what they mean for businesses operating across borders.</p>
-            <a href="article-climate-esg.html" class="post-link">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </div>
-        </article>
-
-        <article class="post-card reveal reveal-delay-1">
-          <div class="post-card-image">
-            <img src="images/Hippotainer-logo.png" alt="Hippotainer" loading="lazy" style="object-fit:contain;background:#0d2340;padding:1.5rem;">
-          </div>
-          <div class="post-card-body">
-            <div class="post-meta">
-              <span class="post-tag">Client Update</span>
-              <span class="post-date">October 24, 2025</span>
-            </div>
-            <div class="post-gold-bar"></div>
-            <h3>Hippotainer</h3>
-            <p>An update on IHL's collaboration with Hippotainer — a pioneering initiative at the intersection of innovation and international trade law, redefining how containers are deployed globally.</p>
-            <a href="article-hippotainer.html" class="post-link">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </div>
-        </article>
-
-        <article class="post-card reveal reveal-delay-2">
-          <div class="post-card-image">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="US Tariffs EU Canada Trade" loading="lazy">
-          </div>
-          <div class="post-card-body">
-            <div class="post-meta">
-              <span class="post-tag">Global Business</span>
-              <span class="post-date">March 12, 2025</span>
-            </div>
-            <div class="post-gold-bar"></div>
-            <h3>Exploring New Business Horizons: How U.S. Tariffs Could Boost EU-Canada Trade</h3>
-            <p>As U.S. trade policy shifts, IHL analyses how evolving tariff regimes may create new opportunities for EU-Canada commercial partnerships and what legal frameworks apply.</p>
-            <a href="article-eu-canada-trade.html" class="post-link">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </div>
-        </article>
-
+      <h1>IHL Werkt Samen met <em>Hippotainer</em></h1>
+      <div class="hero-meta">
+        <span class="hero-tag">Klantupdate</span>
+        <span class="hero-date">24 oktober 2025</span>
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <div class="cta-bg-pattern"></div>
+  <section class="article-section">
     <div class="container">
-      <div class="reveal">
-        <h2>Stay Informed</h2>
-        <p>Have a question about a topic covered in our updates? Our team is ready to provide tailored legal guidance.</p>
-        <a href="contact.html" class="cta-btn">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="nieuws.html" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Terug naar Nieuws
+      </a>
+      <div class="article-layout">
+        <div class="article-body reveal">
+          <div class="article-gold-bar"></div>
+          <p class="article-lead">International House of Law heeft een strategisch partnerschap aangekondigd met Hippotainer, een Europees bedrijf dat pionierswerk verricht op het gebied van containergebaseerde slimme landbouw- en waterbeheeroplossingen, om duurzame agri-tech innovatie in het Midden-Oosten te stimuleren.</p>
+
+          <h2>Duurzame Agri-Tech Innovatie Stimuleren</h2>
+          <p>Het partnerschap weerspiegelt een gedeelde inzet voor het verbinden van recht, innovatie en duurzaamheid. De technologie van Hippotainer pakt enkele van de meest urgente uitdagingen van de regio aan — waterschaarste, voedselzekerheid en efficiënt gebruik van hulpbronnen — door het inzetten van gecontaineriseerde slimme landbouwsystemen die snel kunnen worden opgeschaald en aangepast aan lokale omstandigheden.</p>
+          <p>De rol van IHL in deze samenwerking is het bieden van de juridische en regelgevende infrastructuur die het voor Hippotainer's oplossingen mogelijk maakt om efficiënt grenzen te overschrijden. Het partnerschap is opgezet om boeren, investeerders en beleidsmakers te helpen bij het adopteren van technologieën die een tastbaar verschil maken voor voedselsystemen in het Midden-Oosten.</p>
+
+          <h2>Wat het Partnerschap Omvat</h2>
+          <ul>
+            <li>Ondersteuning van grensoverschrijdende investeringen en handel in landbouwtechnologieën</li>
+            <li>Juridische due diligence en contractbeheer voor internationale partners</li>
+            <li>Bevordering van kennisoverdracht en capaciteitsopbouw voor lokale belanghebbenden</li>
+            <li>Navigeren door regelgevende kaders in meerdere jurisdicties in de regio</li>
+          </ul>
+
+          <h2>Recht, Innovatie en Duurzaamheid</h2>
+          <p>Dit initiatief weerspiegelt IHL's bredere inzet om organisaties te helpen bij het navigeren door de complexiteiten van modern internationaal zakendoen — met name daar waar innovatie raakt aan ecologische en maatschappelijke doelstellingen. Nu duurzaamheid een steeds centralere rol speelt in internationale handel en investeringen, positioneert IHL zich aan de voorhoede van de juridische praktijk op dit gebied.</p>
+
+          <blockquote>
+            <p>Ons partnerschap met Hippotainer is een concreet voorbeeld van hoe juridische expertise het potentieel van duurzame technologie kan ontsluiten — door innovatie te verbinden met de markten en gemeenschappen die het het hardst nodig hebben.</p>
+          </blockquote>
+
+          <p>De samenwerking toont tevens aan hoe gespecialiseerde juridische ondersteuning de inzet van technologie met echte milieuimpact kan versnellen, door de juridische en regelgevende wrijving weg te nemen die internationale expansie vaak vertraagt.</p>
+
+          <div class="contact-box">
+            <h3>Neem Contact Op</h3>
+            <p>Voor meer informatie over dit initiatief of het werk van IHL op het gebied van duurzame agri-tech, neem contact met ons op via <a href="mailto:info@ihlcon.com">info@ihlcon.com</a></p>
+            <p>Voor vragen over Hippotainer: <a href="mailto:middleeast@hippotainer.com">middleeast@hippotainer.com</a></p>
+          </div>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-card reveal">
+            <h4>Artikeldetails</h4>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Gepubliceerd</span>
+              <span class="sidebar-meta-value">24 okt 2025</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Auteur</span>
+              <span class="sidebar-meta-value">Hasti Memarian</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Categorie</span>
+              <span class="sidebar-meta-value">Klantupdate</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Regio</span>
+              <span class="sidebar-meta-value">Midden-Oosten</span>
+            </div>
+          </div>
+          <div class="sidebar-card reveal">
+            <h4>Gerelateerde Diensten</h4>
+            <ul style="list-style:none;">
+              <li style="margin-bottom:0.7rem;"><a href="internationale-overeenkomsten.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Internationale Overeenkomsten</a></li>
+              <li style="margin-bottom:0.7rem;"><a href="internationale-bedrijfsoplossingen.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Internationale Bedrijfsoplossingen</a></li>
+              <li><a href="juridische-operaties.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Juridische Operaties</a></li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -309,13 +309,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
-        <div>
-          <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
-        </div>
+            <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
+            <div>
+              <div class="nav-logo-text">International House of Law</div>
+              <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
+            </div>
           </a>
-          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <p>Waar juridische expertise en zakelijke dienstverlening samenkomen onder een dak. Kantoren in Den Haag en Vancouver.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -329,29 +329,29 @@
           </div>
         </div>
         <div>
-          <h4>Services</h4>
+          <h4>Diensten</h4>
           <ul class="footer-links">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschillenbeslechting.html">Geschillenbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Operaties</a></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h4>Bedrijf</h4>
           <ul class="footer-links">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="updates.html">News &amp; Updates</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="nieuws.html">Nieuws &amp; Updates</a></li>
+            <li><a href="carriere.html">Carri&egrave;re</a></li>
+            <li><a href="kennisbank.html">Kennisbank</a></li>
           </ul>
         </div>
         <div>
           <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Segbroeklaan 110, The Hague<br>Suite 500, Vancouver, BC</span>
+            <span>Segbroeklaan 110, Den Haag<br>Suite 500, Vancouver, BC</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -364,8 +364,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>&copy; 2026 International House of Law. Alle rechten voorbehouden.</span>
+        <span>Ma – Vr: 09:00 – 17:00 CET</span>
       </div>
     </div>
   </footer>
@@ -374,7 +374,7 @@
     const revealEls = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
-    }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
     revealEls.forEach(el => obs.observe(el));
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 80); }, {passive:true});
@@ -389,16 +389,12 @@
       link.addEventListener('click', () => { navToggle.classList.remove('open'); navLinks.classList.remove('mobile-open'); document.body.style.overflow = ''; });
     });
 
-    // Robust dropdown: listeners on both <li> and the menu itself,
-    // relatedTarget guard prevents false-positive mouseleave from absolutely-
-    // positioned children that overflow the parent's layout box.
     document.querySelectorAll('.nav-links > li').forEach(function(li) {
       var menu = li.querySelector('.nav-dropdown-menu');
       if (!menu) return;
       var timer;
       function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
       function scheduleClose(e) {
-        // Ignore if the cursor is simply moving between li and its dropdown
         if (e && li.contains(e.relatedTarget)) return;
         timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
       }

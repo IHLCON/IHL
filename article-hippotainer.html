@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hippotainer — International House of Law</title>
+  <link rel="alternate" hreflang="en" href="https://ihlcon.com/article-hippotainer.html">
+  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/artikel-hippotainer.html">
   <meta name="description" content="IHL partners with Hippotainer to drive sustainable agri-tech innovation in the Middle East, combining law, innovation, and sustainability.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +49,37 @@
     .nav-cta{font-size:0.8rem!important;letter-spacing:0.1em!important;padding:0.65rem 1.6rem;border:1px solid var(--gold);color:var(--gold)!important;transition:background 0.3s ease,color 0.3s ease!important;}
     .nav-cta:hover{background:var(--gold);color:var(--navy)!important;}
     .nav-cta::after{display:none!important;}
+    /* Language switcher */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-left: 0.5rem;
+    }
+    .lang-switch a {
+      font-family: var(--font-body);
+      font-size: 0.72rem !important;
+      font-weight: 600;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase;
+      padding: 0.45rem 0.7rem;
+      color: rgba(255,255,255,0.45) !important;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+    .lang-switch a:first-child {
+      border-right: none;
+    }
+    .lang-switch a::after { display: none !important; }
+    .lang-switch a:hover {
+      color: var(--white) !important;
+      border-color: rgba(255,255,255,0.3);
+    }
+    .lang-switch a.lang-active {
+      color: var(--gold) !important;
+      border-color: var(--gold);
+      background: rgba(196,163,90,0.08);
+    }
     .nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--navy);border:1px solid rgba(196,163,90,0.15);min-width:220px;padding:0.5rem 0;list-style:none;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.18s ease,visibility 0.18s ease;}
     .nav-links>li.nav-open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;}
     .nav-dropdown-menu li a{display:block;padding:0.7rem 1.4rem;font-size:0.78rem;color:rgba(255,255,255,0.65);white-space:nowrap;letter-spacing:0.08em;}
@@ -169,6 +202,10 @@
         <li><a href="careers.html">Careers</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li class="lang-switch">
+          <a href="article-hippotainer.html" class="lang-active">EN</a>
+          <a href="nl/artikel-hippotainer.html">NL</a>
+        </li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>

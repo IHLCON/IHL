@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team — IHL</title>
+  <link rel="alternate" hreflang="en" href="https://ihlcon.com/team.html">
+  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/team.html">
   <meta name="description" content="A multidisciplinary team of lawyers, advisors, and specialists united by a shared commitment to exceptional legal service across international borders.">
 
   <!-- Fonts -->
@@ -260,6 +262,37 @@
       color: var(--navy) !important;
     }
     .nav-cta::after { display: none !important; }
+    /* Language switcher */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-left: 0.5rem;
+    }
+    .lang-switch a {
+      font-family: var(--font-body);
+      font-size: 0.72rem !important;
+      font-weight: 600;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase;
+      padding: 0.45rem 0.7rem;
+      color: rgba(255,255,255,0.45) !important;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+    .lang-switch a:first-child {
+      border-right: none;
+    }
+    .lang-switch a::after { display: none !important; }
+    .lang-switch a:hover {
+      color: var(--white) !important;
+      border-color: rgba(255,255,255,0.3);
+    }
+    .lang-switch a.lang-active {
+      color: var(--gold) !important;
+      border-color: var(--gold);
+      background: rgba(196,163,90,0.08);
+    }
     /* Dropdown menus */
     .nav-dropdown-menu {
       position: absolute;
@@ -967,6 +1000,10 @@
         <li><a href="careers.html">Careers</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li class="lang-switch">
+          <a href="team.html" class="lang-active">EN</a>
+          <a href="nl/team.html">NL</a>
+        </li>
       </ul>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">

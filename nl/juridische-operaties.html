@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>International Agreements — IHL</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/international-agreements.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/internationale-overeenkomsten.html">
-  <meta name="description" content="IHL assists clients through contract negotiation, management, and termination — building the well-structured contracts that are the foundation of successful international business.">
+  <title>Juridische Operaties &amp; Zakelijke Ondersteuning — IHL</title>
+  <meta name="description" content="Gestructureerde juridische operaties, zaakbeheer, contractlevenscyclus, compliance en externe general counsel-diensten van International House of Law.">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="../legal-operations-business-support.html">
+  <link rel="alternate" hreflang="nl" href="juridische-operaties.html">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -568,68 +570,51 @@
       padding: 3.5rem 2.5rem;
       text-align: center;
       border-right: 1px solid rgba(255,255,255,0.08);
-      position: relative;
     }
     .intro-stat:last-child { border-right: none; }
-    .intro-stat-icon {
-      width: 36px;
-      height: 36px;
-      margin: 0 auto 1rem;
-      color: var(--gold);
-      opacity: 0.8;
-    }
-    .intro-stat-label {
+    .intro-stat-number {
       font-family: var(--font-display);
-      font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
       font-weight: 300;
-      color: var(--white);
-      line-height: 1.3;
+      color: var(--gold);
+      line-height: 1;
       margin-bottom: 0.5rem;
     }
-    .intro-stat-sub {
-      font-size: 0.72rem;
+    .intro-stat-label {
+      font-size: 0.78rem;
       font-weight: 500;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.5);
     }
 
     /* ═══════════════════════════════════════════
-       SERVICE SECTIONS (alternating layout)
+       SECTION INTRO (after hero)
+    ═══════════════════════════════════════════ */
+    .section-intro {
+      padding: 7rem 0 5rem;
+      text-align: center;
+    }
+    .section-intro p {
+      margin: 0 auto;
+      max-width: 800px;
+      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+      line-height: 2;
+      color: var(--text);
+    }
+
+    /* ═══════════════════════════════════════════
+       SERVICE SECTIONS
     ═══════════════════════════════════════════ */
     .service-section {
       padding: 6rem 0;
       position: relative;
     }
-    .service-section:nth-child(odd) {
-      background: var(--cream);
-    }
     .service-section:nth-child(even) {
       background: var(--white);
     }
-
-    .services-header {
-      text-align: center;
-      margin-bottom: 5rem;
-    }
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .section-eyebrow-line {
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .section-eyebrow-text {
-      font-family: var(--font-body);
-      font-size: 0.74rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
+    .service-section:nth-child(odd) {
+      background: var(--cream);
     }
 
     .service-grid {
@@ -691,7 +676,6 @@
       display: flex;
       gap: 0.5rem;
       margin-bottom: 1.2rem;
-      flex-wrap: wrap;
     }
     .service-tag {
       font-size: 0.7rem;
@@ -711,7 +695,6 @@
     .service-content p {
       line-height: 1.9;
       color: var(--text);
-      max-width: 100%;
     }
 
     .service-divider {
@@ -727,97 +710,16 @@
     }
 
     /* ═══════════════════════════════════════════
-       WHY CHOOSE IHL (4-column grid)
+       FAQ SECTION
     ═══════════════════════════════════════════ */
-    .why-section {
+    .faq-section {
       padding: 8rem 0;
-      background: var(--gray-50);
-    }
-
-    .why-header {
-      text-align: center;
-      margin-bottom: 5rem;
-    }
-    .why-header h2 {
-      color: var(--navy);
-      margin-bottom: 1rem;
-    }
-    .why-header p {
-      margin: 0 auto;
-      max-width: 600px;
-      font-size: clamp(1rem, 1.1vw, 1.1rem);
-      color: var(--text-light);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-
-    .why-card {
-      background: var(--white);
-      border: 1px solid var(--gray-100);
-      padding: 2.5rem 2rem;
-      position: relative;
-      transition: box-shadow 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo), border-color 0.4s ease;
-    }
-    .why-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s var(--ease-out-expo);
-    }
-    .why-card:hover {
-      box-shadow: 0 20px 60px rgba(10,22,40,0.08);
-      transform: translateY(-4px);
-      border-color: rgba(196,163,90,0.2);
-    }
-    .why-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .why-card-icon {
-      width: 44px;
-      height: 44px;
-      margin-bottom: 1.5rem;
-      color: var(--gold);
-    }
-
-    .why-card-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.2rem, 1.6vw, 1.5rem);
-      font-weight: 400;
-      color: var(--navy);
-      margin-bottom: 0.8rem;
-      line-height: 1.2;
-    }
-
-    .why-card-text {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      line-height: 1.8;
-      max-width: 100%;
-    }
-
-    /* ═══════════════════════════════════════════
-       CTA SECTION (navy)
-    ═══════════════════════════════════════════ */
-    .cta-section {
-      padding: 7rem 0;
       background: var(--navy);
-      text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .cta-section::before {
-      content: '';
+
+    .faq-pattern {
       position: absolute;
       inset: 0;
       opacity: 0.03;
@@ -826,26 +728,102 @@
         linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
       background-size: 80px 80px;
     }
-    .cta-section-inner {
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 4rem;
       position: relative;
       z-index: 1;
     }
-    .cta-section h2 {
+    .faq-header h2 {
       color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .faq-header p {
+      color: rgba(255,255,255,0.5);
+      margin: 0 auto;
+    }
+
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.8rem 3rem 1.8rem 0;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+      font-weight: 400;
+      color: var(--white);
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .faq-question:hover {
+      color: var(--gold-light);
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--gold);
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .faq-item.open .faq-question::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease-out-expo), padding 0.5s var(--ease-out-expo);
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding-bottom: 2rem;
+    }
+    .faq-answer p {
+      color: rgba(255,255,255,0.55);
+      line-height: 1.9;
+      max-width: 100%;
+    }
+
+    /* ═══════════════════════════════════════════
+       CTA SECTION
+    ═══════════════════════════════════════════ */
+    .cta-section {
+      padding: 7rem 0;
+      background: var(--white);
+      text-align: center;
+    }
+    .cta-section h2 {
       margin-bottom: 1.5rem;
     }
     .cta-section p {
       margin: 0 auto 2.5rem;
-      color: rgba(255,255,255,0.55);
-      max-width: 560px;
     }
     .cta-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.7rem;
       padding: 1.1rem 3rem;
-      background: var(--gold);
-      color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
       font-family: var(--font-body);
       font-size: 0.82rem;
       font-weight: 600;
@@ -856,9 +834,9 @@
       transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
     .cta-btn:hover {
-      background: var(--gold-light);
+      background: var(--navy-mid);
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px rgba(196,163,90,0.3);
+      box-shadow: 0 10px 40px rgba(10,22,40,0.2);
     }
     .cta-btn svg {
       width: 16px;
@@ -943,12 +921,6 @@
     /* ═══════════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════════ */
-    @media (max-width: 1200px) {
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
     @media (max-width: 1024px) {
       .service-grid {
         grid-template-columns: 1fr;
@@ -1008,24 +980,18 @@
       }
       .intro-stat:last-child { border-bottom: none; }
 
-      .service-section {
-        padding: 4rem 0;
+      .service-number { font-size: 3.5rem; }
+
+      .service-tags {
+        flex-wrap: wrap;
       }
+
       .service-content {
         padding-left: 1.2rem;
       }
-      .service-number { font-size: 3.5rem; }
 
-      .why-section {
-        padding: 5rem 0;
-      }
-      .why-grid {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-      }
-
-      .nav-dropdown-menu {
-        display: none !important;
+      .service-section {
+        padding: 4rem 0;
       }
 
       .footer-grid {
@@ -1048,6 +1014,155 @@
         justify-content: center;
       }
     }
+    /* ═══════════════════════════════════════════
+       PAIN POINTS SECTION
+    ═══════════════════════════════════════════ */
+    .pain-section {
+      padding: 7rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+    .pain-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image:
+        linear-gradient(rgba(196,163,90,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .pain-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+    .pain-header h2 {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .pain-header p {
+      color: rgba(255,255,255,0.5);
+      margin: 0 auto;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .pain-card {
+      padding: 2rem 2rem 2rem 1.6rem;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-left: 3px solid var(--gold);
+      background: rgba(255,255,255,0.025);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .pain-card:hover {
+      background: rgba(255,255,255,0.045);
+    }
+    .pain-card-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .pain-card p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      max-width: 100%;
+    }
+
+    /* ═══════════════════════════════════════════
+       WHO WE HELP SECTION
+    ═══════════════════════════════════════════ */
+    .who-section {
+      padding: 7rem 0;
+      background: var(--gray-50);
+    }
+    .who-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .who-header h2 {
+      margin-bottom: 1rem;
+    }
+    .who-header p {
+      margin: 0 auto;
+      color: var(--text-light);
+    }
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .who-card {
+      padding: 3rem;
+      background: var(--white);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 4px 24px rgba(10,22,40,0.06);
+    }
+    .who-card-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .who-card h3 {
+      font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+      margin-bottom: 1.2rem;
+      color: var(--navy);
+    }
+    .who-card p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--text-light);
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .who-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .who-list li {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .who-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+      .who-grid {
+        grid-template-columns: 1fr;
+      }
+      .who-card {
+        padding: 2rem;
+      }
+    }
+
       .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
     .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
     .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
@@ -1062,42 +1177,42 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
       </a>
 
             <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li>
-          <a href="#">Services</a>
+          <a href="#">Diensten</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html" class="active">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschillenbeslechting.html">Geschillenbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html" class="active">Juridische Operaties</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="#">Over Ons</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
             <li><a href="team.html">Team</a></li>
           </ul>
         </li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="carriere.html">Carri&egrave;re</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html" class="nav-cta">Neem Contact Op</a></li>
         <li class="lang-switch">
-          <a href="international-agreements.html" class="lang-active">EN</a>
-          <a href="nl/internationale-overeenkomsten.html">NL</a>
+          <a href="../legal-operations-business-support.html">EN</a>
+          <a href="juridische-operaties.html" class="lang-active">NL</a>
         </li>
       </ul>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Navigatie openen">
         <span></span>
         <span></span>
         <span></span>
@@ -1110,7 +1225,7 @@
   ═══════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80" alt="International agreements — contract signing" loading="eager">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Modern professioneel kantoor" loading="eager">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
@@ -1118,28 +1233,28 @@
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">IHL Services</span>
+        <span class="hero-eyebrow-text">Juridische Operaties &amp; Zakelijke Ondersteuning</span>
       </div>
 
-      <h1>International<br><em>Agreements</em></h1>
+      <h1>Uw Juridische Functie<br>met <em>Discipline</em> Aansturen</h1>
 
       <div class="hero-tags">
-        <span class="hero-tag">Precision</span>
-        <span class="hero-tag">Structure</span>
-        <span class="hero-tag">Compliance</span>
+        <span class="hero-tag">Overzicht</span>
+        <span class="hero-tag">Effici&euml;ntie</span>
+        <span class="hero-tag">Controle</span>
       </div>
 
       <p class="hero-description">
-        Well-structured contracts are the foundation of successful international business relationships. IHL assists clients through contract negotiation, management, and termination.
+        De meeste bedrijven bereiken een punt waarop juridisch werk niet langer informeel kan worden afgehandeld — contracten stapelen zich op, compliance-deadlines naderen en elk probleem wordt doorgeschoven naar een duur advocatenkantoor zonder kennis van uw onderneming. Zonder structuur wordt juridische zaken de functie die niemand beheert, totdat er iets misgaat. IHL verandert dat.
       </p>
 
       <div class="hero-actions">
         <a href="contact.html" class="btn-primary">
-          Schedule a Consultation
+          Plan een Gesprek
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="index.html#services" class="btn-secondary">
-          Back to Services
+        <a href="#services" class="btn-secondary">
+          Bekijk Diensten
         </a>
       </div>
     </div>
@@ -1157,104 +1272,206 @@
     <div class="container">
       <div class="intro-strip-inner">
         <div class="intro-stat reveal">
-          <svg class="intro-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-          </svg>
-          <div class="intro-stat-label">Contract Negotiation &amp; Drafting</div>
-          <div class="intro-stat-sub">Foundation of every agreement</div>
+          <div class="intro-stat-number">9%</div>
+          <div class="intro-stat-label">Gemiddeld jaarlijks omzetverlies door slecht contractbeheer</div>
         </div>
         <div class="intro-stat reveal reveal-delay-1">
-          <svg class="intro-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-          </svg>
-          <div class="intro-stat-label">Contract Management &amp; Compliance</div>
-          <div class="intro-stat-sub">Ongoing oversight &amp; advisory</div>
+          <div class="intro-stat-number">78%</div>
+          <div class="intro-stat-label">Van de juridische afdelingen noemt kosten als grootste uitdaging</div>
         </div>
         <div class="intro-stat reveal reveal-delay-2">
-          <svg class="intro-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/>
-          </svg>
-          <div class="intro-stat-label">Contract Termination &amp; Project Closure</div>
-          <div class="intro-stat-sub">Structured &amp; protected exits</div>
+          <div class="intro-stat-number">OGC</div>
+          <div class="intro-stat-label">Externe General Counsel — senior juridisch oordeel, zonder vaste aanstelling</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- ═══════════════════════════════════════════
+       SECTION INTRO
+  ═══════════════════════════════════════════ -->
+  <section class="section-intro">
+    <div class="container">
+      <p class="reveal">
+        De meeste organisaties beheren juridisch werk zo lang mogelijk op informele wijze. Dan vermenigvuldigen contracten zich, stapelen compliance-verplichtingen zich op en worden de kosten van externe advocaten onbeheersbaar. Bij International House of Law helpen wij bedrijven dit voor te zijn — door de structuur, processen en het toezicht op te bouwen die van juridische zaken een beheerste functie maken in plaats van een reactief kostencentrum. Of u nu voor het eerst een juridisch operationeel kader opzet, minder afhankelijk wilt worden van dure externe advocaten, of een intern juridisch team runt dat specialistische capaciteit nodig heeft, wij bieden de continu&iuml;teit en expertise die het verschil maakt. Het resultaat is een slankere, voorspelbaardere juridische functie — een die uw belangen beschermt zonder de overhead van een volledige interne afdeling.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PAIN POINTS
+  ═══════════════════════════════════════════ -->
+  <section class="pain-section">
+    <div class="pain-pattern"></div>
+    <div class="container">
+      <div class="pain-header reveal">
+        <h2>Komt Dit U Bekend Voor?</h2>
+        <p>Dit zijn de situaties die onze cli&euml;nten beschrijven wanneer zij voor het eerst contact opnemen.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal">
+          <div class="pain-card-label">Geen Overzicht</div>
+          <p>"We hebben geen idee hoeveel contracten actief zijn, wanneer ze aflopen, of waartoe we feitelijk verplicht zijn."</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-1">
+          <div class="pain-card-label">Reactief Juridisch Werk</div>
+          <p>"We bellen pas een advocaat als er al iets is misgegaan. Dan kost het tien keer meer dan nodig was geweest."</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-2">
+          <div class="pain-card-label">Onbeheersbare Kosten</div>
+          <p>"Onze juridische facturen zijn onvoorspelbaar, moeilijk aan te vechten en altijd hoger dan verwacht. We hebben geen referentiekader voor wat zaken zouden moeten kosten."</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-1">
+          <div class="pain-card-label">Compliance-onzekerheid</div>
+          <p>"We weten dat nieuwe regelgeving op ons van toepassing is, maar we hebben niemand wiens taak het is deze bij te houden, laat staan de processen te bouwen om eraan te voldoen."</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-2">
+          <div class="pain-card-label">Geen Senior Oordeel</div>
+          <p>"Als er een belangrijke commerci&euml;le beslissing op tafel ligt, is er niemand in de kamer die ons een overwogen juridisch advies kan geven voordat we ons vastleggen."</p>
+        </div>
+        <div class="pain-card reveal reveal-delay-3">
+          <div class="pain-card-label">Niet Transactiegereed</div>
+          <p>"We gaan een financieringsronde of overname in en realiseren ons nu pas dat onze contracten niet op orde zijn, ons intellectueel eigendom niet goed is vastgelegd en ons juridisch huis niet op orde is."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHO WE HELP
+  ═══════════════════════════════════════════ -->
+  <section class="who-section">
+    <div class="container">
+      <div class="who-header reveal">
+        <h2>Met Wie Wij Werken</h2>
+        <p>Twee typen organisaties halen de meeste waarde uit onze Juridische Operaties-diensten.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card reveal">
+          <div class="who-card-eyebrow">Profiel Een</div>
+          <h3>Het Bedrijf Zonder Juridische Functie</h3>
+          <p>U bent de informele juridische aanpak ontgroeid. U heeft contracten, leveranciers, werknemers en regelgevende verplichtingen — maar niemand wiens taak het is deze te beheren. Juridisch werk valt toe aan de CEO, de CFO, of wordt tegen volle uurtarieven uitbesteed aan externe advocaten — zonder kennis van uw bedrijf en zonder prikkel om zaken effici&euml;nt af te handelen. IHL verandert dat: als boutique-kantoor met een beperkt cli&euml;ntenbestand leren wij uw bedrijf grondig kennen, zetten wij technologie in om de ineffici&euml;nties te elimineren die traditionele facturen opdrijven, en werken wij op voorspelbare retainer- en vaste-prijsmodellen. Senior juridische capaciteit — zonder de overhead van een groot kantoor of een vaste aanstelling.</p>
+          <ul class="who-list">
+            <li>Middelgrote bedrijven die informele juridische regelingen zijn ontgroeid</li>
+            <li>Scale-ups die nieuwe markten betreden of zich voorbereiden op een transactie</li>
+            <li>Holdinggroepen die meerdere entiteiten en contractrelaties beheren</li>
+            <li>Bedrijven die voor het eerst te maken krijgen met regelgevende verplichtingen</li>
+          </ul>
+        </div>
+        <div class="who-card reveal reveal-delay-1">
+          <div class="who-card-eyebrow">Profiel Twee</div>
+          <h3>Het Interne Team Onder Druk</h3>
+          <p>U heeft een of twee interne juristen, maar zij worden overspoeld door het volume, lopen te veel dossiers tegelijk en hebben geen ruimte om de processen en systemen te bouwen die de organisatie nodig heeft. U wilt specialistische capaciteit en senior advisering zonder de vertraging en kosten van een traditioneel kantoor.</p>
+          <ul class="who-list">
+            <li>Interne juridische teams van een tot drie juristen die te veel hooi op hun vork hebben</li>
+            <li>Bedrijven met een juridische functie maar zonder dedicated legal operations-rol</li>
+            <li>Organisaties waar de General Counsel senior is maar operationele ondersteuning mist</li>
+            <li>Bedrijven in M&amp;A, herstructurering of snelle groei</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        SERVICE SECTIONS
   ═══════════════════════════════════════════ -->
   <div id="services">
 
-    <!-- Section 1 — Contract Negotiation & Drafting -->
+    <!-- Sectie 1 — Zaakbeheer -->
     <section class="service-section">
       <div class="container">
         <div class="service-grid">
           <div class="service-image-wrapper reveal-left">
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Contract negotiation meeting" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Teamoverleg en projectmanagement" loading="lazy">
             </div>
             <div class="service-image-accent"></div>
           </div>
           <div class="service-content reveal-right">
             <div class="service-number">01</div>
             <div class="service-tags">
-              <span class="service-tag">Negotiation</span>
-              <span class="service-tag">Drafting</span>
-              <span class="service-tag">Precision</span>
+              <span class="service-tag">Gecentraliseerd</span>
+              <span class="service-tag">Traceerbaar</span>
+              <span class="service-tag">Opgelost</span>
             </div>
-            <h2>Contract Negotiation &amp; Drafting</h2>
-            <p>We represent clients in negotiations, review contracts for legal loopholes, and leverage dispute resolution expertise to identify potential weak spots. Our services ensure clarity in legal and commercial terms so parties can proceed with confidence in their obligations and rights. Every agreement we draft is built to withstand scrutiny — precise in language, clear in obligations, and structured to protect your position if circumstances change.</p>
+            <h2>Zaakbeheer &amp; Juridisch Overzicht</h2>
+            <p>Zonder een centraal overzicht fragmenteert juridisch werk over inboxen, gedeelde mappen en afzonderlijke advocaatrelaties — en heeft het management geen betrouwbaar beeld van wat er openstaat, wat risicovol is of wat het allemaal kost. IHL brengt al het actieve juridische werk samen in een samenhangend, traceerbaar kader: contracten, geschillen, regelgevende meldingen, compliance-zaken en interne projecten op &eacute;&eacute;n plek, met heldere verantwoordelijkheid voor elk dossier. Voor elke organisatie met een aanzienlijk volume aan lopend juridisch werk is deze structuur vaak de eerste stap van reactieve chaos naar een beheerste functie.</p>
             <div class="service-divider"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2 — Contract Management & Compliance -->
+    <!-- Sectie 2 — Contractlevenscyclus -->
     <section class="service-section">
       <div class="container">
         <div class="service-grid">
           <div class="service-image-wrapper reveal-left">
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Contract management and compliance tracking" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Contractondertekening" loading="lazy">
             </div>
             <div class="service-image-accent"></div>
           </div>
           <div class="service-content reveal-right">
             <div class="service-number">02</div>
             <div class="service-tags">
-              <span class="service-tag">Management</span>
-              <span class="service-tag">Compliance</span>
-              <span class="service-tag">Oversight</span>
+              <span class="service-tag">Opgesteld</span>
+              <span class="service-tag">Bewaakt</span>
+              <span class="service-tag">Gehandhaafd</span>
             </div>
-            <h2>Contract Management &amp; Compliance</h2>
-            <p>We provide comprehensive tracking systems for contractual obligations, automated reminders for key due dates, and legal advisory support to address operational challenges before escalation. Active contract management means you never miss a renewal, a notice deadline, or a compliance obligation. IHL keeps your contract portfolio visible, organised, and proactively managed — reducing the operational and legal risks that accumulate inside untracked agreements.</p>
+            <h2>Contractlevenscyclusbeheer</h2>
+            <p>Uit sectoronderzoek blijkt dat bedrijven circa 9% van hun jaaromzet verliezen door slecht contractbeheer — gemiste verlengingen, onbewaakte verplichtingen en deals die stagneren omdat er geen standaardformulieren of duidelijke goedkeuringsprocessen zijn. IHL beheert de volledige contractlevenscyclus: opstellen van sjablonen, onderhandelingsondersteuning, uitvoering, monitoring van verplichtingen en verlengingsbeheer. Wij cre&euml;ren heldere intake-workflows, organiseren uw contractarchief en sturen proactieve waarschuwingen voordat belangrijke data verstrijken. Het resultaat is een beheerst, gedocumenteerd proces dat commerci&euml;le belangen beschermt — en uw verkoop- en inkoopteams de snelheid geeft die ze nodig hebben zonder juridisch risico.</p>
             <div class="service-divider"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 3 — Contract Termination & Project Closure -->
+    <!-- Sectie 3 — Externe General Counsel -->
     <section class="service-section">
       <div class="container">
         <div class="service-grid">
           <div class="service-image-wrapper reveal-left">
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80" alt="Contract termination and project closure documents" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80" alt="Professioneel juridisch overleg" loading="lazy">
             </div>
             <div class="service-image-accent"></div>
           </div>
           <div class="service-content reveal-right">
             <div class="service-number">03</div>
             <div class="service-tags">
-              <span class="service-tag">Termination</span>
-              <span class="service-tag">Closure</span>
-              <span class="service-tag">Protection</span>
+              <span class="service-tag">Toegankelijk</span>
+              <span class="service-tag">Senior</span>
+              <span class="service-tag">Doorlopend</span>
             </div>
-            <h2>Contract Termination &amp; Project Closure</h2>
-            <p>We structure termination strategies complying with legal requirements while protecting financial and reputational interests — including managing unforeseen circumstances like sanctions, war, and force majeure situations. Ending a contract poorly can be as costly as a poorly drafted one. IHL ensures that exits are clean, documented, and legally sound, whether the termination is consensual, contested, or triggered by circumstances outside either party's control.</p>
+            <h2>Externe General Counsel &amp; Juridisch Advies op Retainerbasis</h2>
+            <p>Elk bedrijf heeft senior juridisch oordeel nodig bij commerci&euml;le beslissingen — maar niet elk bedrijf kan een General Counsel-salaris rechtvaardigen. IHL biedt externe general counsel-ondersteuning op retainer- of projectbasis, waardoor uw directie rechtstreeks toegang krijgt tot ervaren juridisch advies voor dagelijks advies, contractbeoordeling, regelgevingsbegeleiding en strategische inbreng. Wij leren uw bedrijf kennen, nemen deel aan belangrijke vergaderingen en bieden het juridische perspectief dat besluitvorming versnelt en toekomstige problemen voorkomt. IHL werkt met cli&euml;nten in elke fase van bedrijfsgroei, waar ze ook actief zijn.</p>
+            <div class="service-divider"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectie 4 — Juridische Kosten -->
+    <section class="service-section">
+      <div class="container">
+        <div class="service-grid">
+          <div class="service-image-wrapper reveal-left">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Bedrijfsfinanciering en rapportage" loading="lazy">
+            </div>
+            <div class="service-image-accent"></div>
+          </div>
+          <div class="service-content reveal-right">
+            <div class="service-number">04</div>
+            <div class="service-tags">
+              <span class="service-tag">Beheerst</span>
+              <span class="service-tag">Transparant</span>
+              <span class="service-tag">Verantwoord</span>
+            </div>
+            <h2>Beheer van Juridische Kosten &amp; Operationele Effici&euml;ntie</h2>
+            <p>De juridische uitgaven zijn de afgelopen drie jaar met bijna 30% gestegen, maar de meeste bedrijven hebben geen proces om facturen kritisch te beoordelen, geen referentiekader voor wat zaken zouden moeten kosten en geen protocol om te bepalen wanneer externe advocaten daadwerkelijk nodig zijn. IHL brengt structuur aan: kaders voor het inschakelen van externe advocaten, zaakbudgettering, factuurbeoordeling en kostenbenchmarking tegen markttarieven. Voor groeiende bedrijven — die doorgaans verhoudingsgewijs veel meer aan juridische kosten besteden dan grotere organisaties — levert het beheersen van juridische kosten vaak het duidelijkste en snelste rendement op.</p>
             <div class="service-divider"></div>
           </div>
         </div>
@@ -1264,54 +1481,78 @@
   </div>
 
   <!-- ═══════════════════════════════════════════
-       WHY CHOOSE IHL
+       FAQ SECTION
   ═══════════════════════════════════════════ -->
-  <section class="why-section">
+  <section class="faq-section">
+    <div class="faq-pattern"></div>
     <div class="container">
-      <div class="why-header reveal">
-        <div class="section-eyebrow">
-          <span class="section-eyebrow-line"></span>
-          <span class="section-eyebrow-text">Our Advantage</span>
-          <span class="section-eyebrow-line"></span>
-        </div>
-        <h2>Why Choose IHL</h2>
-        <p>Four pillars that define our approach to international contract work.</p>
+      <div class="faq-header reveal">
+        <h2>Veelgestelde Vragen</h2>
       </div>
 
-      <div class="why-grid">
-
-        <div class="why-card reveal">
-          <svg class="why-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-            <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-          </svg>
-          <div class="why-card-title">Comprehensive Expertise</div>
-          <p class="why-card-text">Legal knowledge combined with business insight. We understand not just the legal mechanics of a contract, but the commercial realities and strategic objectives behind it.</p>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Moet ik een intern juridisch team hebben om deze diensten te gebruiken?
+          </button>
+          <div class="faq-answer">
+            <p>Nee. Veel van onze cli&euml;nten hebben helemaal geen interne juridische functie. Wij fungeren als de juridische operatielaag voor bedrijven die gestructureerde juridische ondersteuning nodig hebben zonder zelf juristen in dienst te nemen. Voor bedrijven met bestaande interne teams bieden wij aanvullende capaciteit of specialistische expertise.</p>
+          </div>
         </div>
 
-        <div class="why-card reveal reveal-delay-1">
-          <svg class="why-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-          <div class="why-card-title">Proactive Risk Management</div>
-          <p class="why-card-text">Dispute resolution experience to foresee contract risks. We identify the clauses and gaps that generate disputes before they cause problems.</p>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            Welke typen bedrijven profiteren het meest van juridische operatie-ondersteuning?
+          </button>
+          <div class="faq-answer">
+            <p>Elk bedrijf dat voorbij de vroege startupfase is en een aanzienlijk volume aan contracten, compliance-verplichtingen, regelgevingsvereisten of actieve juridische zaken heeft. Juridische operaties is de overkoepelende term — het omvat zaakbeheer, contractlevenscyclusbeheer, externe general counsel en beheersing van juridische kosten als ge&iuml;ntegreerde diensten. Een bedrijf kan er &eacute;&eacute;n nodig hebben of alle vier, afhankelijk van omvang en complexiteit. Dit betreft doorgaans middelgrote bedrijven, holdinggroepen, bedrijven die opschalen naar nieuwe markten en organisaties die te maken hebben met transacties, herstructurering of verscherpt regelgevend toezicht.</p>
+          </div>
         </div>
 
-        <div class="why-card reveal reveal-delay-2">
-          <svg class="why-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
-          </svg>
-          <div class="why-card-title">Global Perspective</div>
-          <p class="why-card-text">International legal network for cross-border contracts. We operate across jurisdictions, understanding the legal and cultural context on both sides of every agreement.</p>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            Hoe verschilt zaakbeheer van een eenmalig juridisch consult?
+          </button>
+          <div class="faq-answer">
+            <p>Een eenmalig consult behandelt &eacute;&eacute;n ge&iuml;soleerde vraag — u belt een advocaat, krijgt antwoord en de opdracht eindigt. Zaakbeheer is fundamenteel anders: het geeft u een gestructureerd, doorlopend overzicht van alle juridische activiteiten binnen uw organisatie — lopend, in behandeling en afgerond — zodat u kosten, risico's en voortgang over uw gehele juridische portefeuille kunt volgen, niet alleen het punt dat toevallig voor u ligt. Beschouw het als het verschil tussen een bezoek aan de huisartsenpost en een vaste huisarts die uw volledige medische geschiedenis kent.</p>
+          </div>
         </div>
 
-        <div class="why-card reveal reveal-delay-3">
-          <svg class="why-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
-          </svg>
-          <div class="why-card-title">Tailored Strategies</div>
-          <p class="why-card-text">Personalised solutions aligned with business objectives. Every client situation is different — we design contract structures and management approaches that fit your specific commercial model.</p>
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            Kan IHL het beheer van onze bestaande contracten en compliance-verplichtingen overnemen?
+          </button>
+          <div class="faq-answer">
+            <p>Ja — en we maken het gemakkelijk om te beginnen. Wij bieden een gratis 3-daagse Juridische Gezondheidscheck: ons team beoordeelt uw bestaande contracten, compliance-positie en openstaande zaken en levert een helder overzicht van hiaten, risico's en prioriteiten. Er zijn geen kosten en geen verplichtingen — aan het einde van die drie dagen beslist u of u wilt doorgaan. Zo ja, dan stellen wij een gestructureerd ondersteuningsmodel voor dat is afgestemd op uw organisatie en nemen wij het lopende beheer over op retainerbasis. Zo niet, dan behoudt u de beoordeling.</p>
+          </div>
         </div>
 
+        <div class="faq-item reveal reveal-delay-4">
+          <button class="faq-question" aria-expanded="false">
+            Wat is het verschil tussen externe general counsel en een eenmalig juridisch consult?
+          </button>
+          <div class="faq-answer">
+            <p>Een eenmalig consult lost &eacute;&eacute;n afgebakend probleem op — u krijgt advies en de opdracht eindigt. Externe general counsel is een doorlopende relatie: wij blijven op de hoogte van uw bedrijf, uw contracten en uw risicoprofiel en bieden continu senior juridisch oordeel. Omdat wij uw commerci&euml;le context al kennen, reageren wij sneller, signaleren wij problemen eerder en geven wij advies dat rekening houdt met het totaalbeeld — niet alleen met de vraag die u toevallig stelde.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Hoe helpt IHL bij regelgevende compliance-verplichtingen?
+          </button>
+          <div class="faq-answer">
+            <p>Regelgevende eisen nemen in elk rechtsgebied toe — nieuwe rapportageverplichtingen, gegevensbeschermingsregels, sectorspecifieke voorschriften en wijzigingen in arbeidsrecht. Zonder een dedicated functie om deze bij te houden, ontdekken bedrijven compliance-hiaten op het slechtst mogelijke moment. IHL helpt organisaties te identificeren welke verplichtingen op hen van toepassing zijn, de interne processen te bouwen om deadlines te halen en de kostbare paniek te voorkomen die ontstaat wanneer men er te laat achter komt.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            Werkt IHL met bedrijven in verschillende markten en rechtsgebieden?
+          </button>
+          <div class="faq-answer">
+            <p>Ja. IHL werkt met bedrijven die lokaal, regionaal en in meerdere rechtsgebieden actief zijn. Juridische operatie-uitdagingen — gefragmenteerde contracten, onbeheersbare kosten, compliance-hiaten en het ontbreken van senior juridisch oordeel — komen in elke markt voor. Onze aanpak is ontworpen om consistent te worden toegepast, ongeacht waar uw bedrijf opereert of welke juridische kaders van toepassing zijn.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1320,12 +1561,12 @@
        CTA SECTION
   ═══════════════════════════════════════════ -->
   <section class="cta-section">
-    <div class="container cta-section-inner">
+    <div class="container">
       <div class="reveal">
-        <h2>Need Expert Contract Guidance?</h2>
-        <p>Speak with IHL about structuring, managing, or closing your international agreements.</p>
+        <h2>Stop met Juridisch Werk<br>op de Automatische Piloot</h2>
+        <p>Begin met onze gratis 3-daagse Juridische Gezondheidscheck. Wij beoordelen uw contracten, compliance-positie en openstaande zaken — en leveren een helder overzicht van hiaten, risico's en prioriteiten. Geen kosten, geen verplichtingen. U beslist of u wilt doorgaan.</p>
         <a href="contact.html" class="cta-btn">
-          Get in Touch
+          Vraag Uw Gratis Juridische Gezondheidscheck Aan
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -1340,13 +1581,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
           </a>
-          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <p>Waar juridische expertise en zakelijke dienstverlening samenkomen onder &eacute;&eacute;n dak. Kantoren in Den Haag en Vancouver.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1361,23 +1602,22 @@
         </div>
 
         <div>
-          <h4>Services</h4>
+          <h4>Diensten</h4>
           <ul class="footer-links">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschillenbeslechting.html">Geschillenbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="juridische-operaties.html">Juridische Operaties</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Company</h4>
+          <h4>Bedrijf</h4>
           <ul class="footer-links">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="updates.html">News &amp; Updates</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="nieuws.html">Nieuws &amp; Updates</a></li>
+            <li><a href="carriere.html">Carri&egrave;re</a></li>
+            <li><a href="kennisbank.html">Kennisbank</a></li>
           </ul>
         </div>
 
@@ -1385,7 +1625,7 @@
           <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>The Hague, Netherlands<br>Vancouver, Canada</span>
+            <span>Den Haag, Nederland<br>Vancouver, Canada</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -1399,8 +1639,8 @@
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>&copy; 2026 International House of Law. Alle rechten voorbehouden.</span>
+        <span>Ma &ndash; Vr: 09:00 &ndash; 17:00 CET</span>
       </div>
     </div>
   </footer>
@@ -1418,13 +1658,16 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     revealElements.forEach(el => revealObserver.observe(el));
 
     // ── Sticky Nav ──
     const nav = document.getElementById('mainNav');
+    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.pageYOffset > 80);
+      const currentScroll = window.pageYOffset;
+      nav.classList.toggle('scrolled', currentScroll > 80);
+      lastScroll = currentScroll;
     }, { passive: true });
 
     // ── Mobile Nav Toggle ──
@@ -1440,6 +1683,26 @@
         navToggle.classList.remove('open');
         navLinks.classList.remove('mobile-open');
         document.body.style.overflow = '';
+      });
+    });
+
+    // ── FAQ Accordion ──
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+
+        // Close all others
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
       });
     });
 

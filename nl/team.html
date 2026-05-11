@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers &amp; Collaboration — IHL</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/careers.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/carriere.html">
-  <meta name="description" content="International House of Law invites connections with professionals interested in international law, arbitration, dispute resolution, and global business.">
+  <title>Ons Team — IHL</title>
+  <meta name="description" content="Een multidisciplinair team van juristen, adviseurs en specialisten, verenigd door een gedeelde toewijding aan uitzonderlijke juridische dienstverlening over internationale grenzen heen.">
+
+  <link rel="alternate" hreflang="en" href="https://ihlcon.com/team.html">
+  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/team.html">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,6 +133,8 @@
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
 
     .reveal-left {
       opacity: 0;
@@ -211,6 +214,10 @@
       list-style: none;
     }
 
+    .nav-links > li {
+      position: relative;
+    }
+
     .nav-links a {
       font-family: var(--font-body);
       font-size: 0.82rem;
@@ -240,6 +247,8 @@
     .nav-links a.active {
       color: var(--gold);
     }
+
+    /* Nav Dropdown */
 
     .nav-cta {
       font-size: 0.8rem !important;
@@ -496,27 +505,6 @@
       transform: translateX(3px);
     }
 
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 1rem 2.4rem;
-      background: transparent;
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border: 1px solid rgba(255,255,255,0.25);
-      cursor: pointer;
-      transition: border-color 0.3s ease, background 0.3s ease;
-    }
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.5);
-      background: rgba(255,255,255,0.05);
-    }
-
     .hero-scroll-indicator {
       position: absolute;
       bottom: 2.5rem;
@@ -554,62 +542,220 @@
     }
 
     /* ═══════════════════════════════════════════
-       ABOUT / INTRO SECTION
+       TEAM SECTION
     ═══════════════════════════════════════════ */
-    .about-section {
-      padding: 7rem 0;
+    .team-section {
+      padding: 7rem 0 5rem;
       background: var(--cream);
     }
 
-    .about-inner {
-      max-width: 860px;
-      margin: 0 auto;
+    .team-section-header {
       text-align: center;
+      margin-bottom: 5rem;
     }
-
-    .section-eyebrow {
+    .team-section-header .section-label {
       display: inline-flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
-    .section-eyebrow-line {
-      width: 32px;
+    .section-label-line {
+      width: 36px;
       height: 1px;
       background: var(--gold);
     }
-    .section-eyebrow-text {
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
+    .section-label-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--gold);
     }
 
-    .about-inner h2 {
-      margin-bottom: 2rem;
+    /* Group label inside team section */
+    .team-group-label {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .team-group-label h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .team-group-label-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200);
     }
 
-    .about-inner p {
-      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-      line-height: 2;
-      color: var(--text);
-      max-width: 100%;
-      margin: 0 auto;
+    /* Founder Cards — large 2-col */
+    .founder-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    /* Counsel Cards — 3-col */
+    .counsel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    /* Individual Card */
+    .team-card {
+      background: var(--navy);
+      border: 1px solid rgba(196,163,90,0.12);
+      padding: 2.5rem 2.2rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s ease;
+    }
+    .team-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      border-color: rgba(196,163,90,0.28);
+    }
+    .team-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Founder card is slightly taller / more spacious */
+    .team-card--founder {
+      padding: 3rem 2.8rem 2.5rem;
+    }
+
+    /* Team member photo */
+    .team-avatar {
+      width: calc(100% + 5rem);          /* bleed past card padding */
+      margin: -2.5rem -2.5rem 1.8rem;   /* pull to card edges */
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .team-card--founder .team-avatar {
+      aspect-ratio: 3 / 2;
+    }
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(10%);
+      transition: transform 0.7s var(--ease-out-expo), filter 0.5s ease;
+      display: block;
+    }
+    .team-card:hover .team-avatar img {
+      transform: scale(1.06);
+      filter: grayscale(0%);
+    }
+    /* Gold accent line at bottom of photo */
+    .team-avatar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.5s var(--ease-out-expo);
+    }
+    .team-card:hover .team-avatar::after {
+      width: 100%;
+    }
+
+    .team-card-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .team-card-title {
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+
+    .team-card-divider {
+      width: 32px;
+      height: 1px;
+      background: rgba(196,163,90,0.35);
+      margin-bottom: 1.2rem;
+    }
+
+    .team-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.2rem;
+    }
+
+    .team-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.3s ease;
+    }
+    .team-linkedin:hover {
+      color: var(--gold);
+    }
+    .team-linkedin svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* Background decorative element on founder cards */
+    .team-card--founder .team-card-bg {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,163,90,0.06) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     /* ═══════════════════════════════════════════
-       OPPORTUNITIES SECTION (dark cards)
+       JOIN SECTION
     ═══════════════════════════════════════════ */
-    .opportunities-section {
+    .join-section {
       padding: 7rem 0;
       background: var(--navy);
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
-
-    .opp-pattern {
+    .join-pattern {
       position: absolute;
       inset: 0;
       opacity: 0.03;
@@ -618,172 +764,49 @@
         linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
       background-size: 80px 80px;
     }
-
-    .opp-header {
-      text-align: center;
-      margin-bottom: 4rem;
+    .join-section .container {
       position: relative;
       z-index: 1;
     }
-    .opp-header h2 {
+    .join-section h2 {
       color: var(--white);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
-    .opp-header p {
-      color: rgba(255,255,255,0.5);
-      margin: 0 auto;
-    }
-
-    .opp-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .opp-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-top: 3px solid var(--gold);
-      padding: 2.5rem 2rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .opp-card:hover {
-      background: rgba(255,255,255,0.06);
-      transform: translateY(-4px);
-    }
-
-    .opp-card-number {
-      font-family: var(--font-display);
-      font-size: 3rem;
-      font-weight: 300;
-      color: var(--gold);
-      opacity: 0.25;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .opp-card-title {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--white);
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .opp-card-divider {
-      width: 36px;
-      height: 1px;
-      background: var(--gold);
-      margin-bottom: 1.2rem;
-    }
-
-    .opp-card p {
+    .join-section p {
       color: rgba(255,255,255,0.55);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      max-width: 100%;
+      margin: 0 auto 2.8rem;
+      font-size: clamp(1rem, 1.2vw, 1.15rem);
+      line-height: 1.85;
     }
 
-    /* ═══════════════════════════════════════════
-       APPLICATION FORM SECTION
-    ═══════════════════════════════════════════ */
-    .application-section {
-      padding: 7rem 0;
-      background: var(--white);
-    }
-
-    .application-inner {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .application-inner h2 {
-      margin-bottom: 0.75rem;
-      text-align: center;
-    }
-
-    .application-inner > p {
-      text-align: center;
-      margin: 0 auto 3rem;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .form-field {
-      position: relative;
-    }
-
-    .form-field label {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 0.5rem;
-    }
-
-    .form-field input,
-    .form-field textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--gray-200);
-      padding: 0.75rem 0;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--text);
-      outline: none;
-      transition: border-color 0.3s ease;
-      resize: none;
-    }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: var(--gray-400);
-    }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-bottom-color: var(--gold);
-    }
-
-    .form-field textarea {
-      min-height: 140px;
-    }
-
-    .form-submit {
-      width: 100%;
-      padding: 1.1rem 2rem;
-      background: var(--navy);
-      color: var(--white);
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1.1rem 3rem;
+      background: var(--gold);
+      color: var(--navy);
       font-family: var(--font-body);
       font-size: 0.82rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       border: none;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      margin-top: 0.5rem;
     }
-    .form-submit:hover {
-      background: var(--gold);
-      color: var(--navy);
+    .cta-btn:hover {
+      background: var(--gold-light);
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(196,163,90,0.25);
+      box-shadow: 0 10px 40px rgba(196,163,90,0.3);
+    }
+    .cta-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .cta-btn:hover svg {
+      transform: translateX(3px);
     }
 
     /* ═══════════════════════════════════════════
@@ -861,10 +884,8 @@
        RESPONSIVE
     ═══════════════════════════════════════════ */
     @media (max-width: 1024px) {
-      .opp-grid {
-        grid-template-columns: 1fr;
-        max-width: 640px;
-        margin: 0 auto;
+      .counsel-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -906,6 +927,13 @@
         gap: 0.8rem;
       }
 
+      .founder-grid {
+        grid-template-columns: 1fr;
+      }
+      .counsel-grid {
+        grid-template-columns: 1fr;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -915,6 +943,10 @@
         gap: 1rem;
         text-align: center;
       }
+
+      .nav-dropdown-menu {
+        display: none;
+      }
     }
 
     @media (max-width: 480px) {
@@ -922,7 +954,7 @@
         flex-direction: column;
         align-items: stretch;
       }
-      .btn-primary, .btn-secondary {
+      .btn-primary {
         justify-content: center;
       }
     }
@@ -940,42 +972,42 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
       </a>
 
             <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li>
-          <a href="#">Services</a>
+          <a href="#">Diensten</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschillenbeslechting.html">Geschillenbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Operaties</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="#">Over Ons</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Team</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html" class="active">Team</a></li>
           </ul>
         </li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="careers.html" class="active">Careers</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="carriere.html">Carri&egrave;re</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html" class="nav-cta">Neem Contact Op</a></li>
         <li class="lang-switch">
-          <a href="careers.html" class="lang-active">EN</a>
-          <a href="nl/carriere.html">NL</a>
+          <a href="../team.html">EN</a>
+          <a href="team.html" class="lang-active">NL</a>
         </li>
       </ul>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Navigatie openen">
         <span></span>
         <span></span>
         <span></span>
@@ -988,7 +1020,7 @@
   ═══════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80" alt="Professionals collaborating in a modern office" loading="eager">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80" alt="Professioneel juridisch team" loading="eager">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
@@ -996,28 +1028,25 @@
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">Join IHL</span>
+        <span class="hero-eyebrow-text">Over IHL</span>
       </div>
 
-      <h1>Careers &amp; <em>Collaboration</em></h1>
+      <h1>Ons <em>Team</em></h1>
 
       <div class="hero-tags">
-        <span class="hero-tag">International Law</span>
-        <span class="hero-tag">Arbitration</span>
-        <span class="hero-tag">Growth</span>
+        <span class="hero-tag">Ervaring</span>
+        <span class="hero-tag">Expertise</span>
+        <span class="hero-tag">Integriteit</span>
       </div>
 
       <p class="hero-description">
-        International House of Law invites connections with professionals interested in international law, arbitration, dispute resolution, and global business.
+        Een multidisciplinair team van juristen, adviseurs en specialisten, verenigd door een gedeelde toewijding aan uitzonderlijke juridische dienstverlening over internationale grenzen heen.
       </p>
 
       <div class="hero-actions">
-        <a href="#apply" class="btn-primary">
-          Send Your Application
+        <a href="contact.html" class="btn-primary">
+          Neem Contact Op
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#opportunities" class="btn-secondary">
-          See Opportunities
         </a>
       </div>
     </div>
@@ -1029,91 +1058,163 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       ABOUT / INTRO SECTION
+       TEAM SECTION
   ═══════════════════════════════════════════ -->
-  <section class="about-section">
+  <section class="team-section" id="team">
     <div class="container">
-      <div class="about-inner">
-        <div class="section-eyebrow reveal">
-          <span class="section-eyebrow-line"></span>
-          <span class="section-eyebrow-text">Working at IHL</span>
-          <span class="section-eyebrow-line"></span>
+
+      <div class="team-section-header reveal">
+        <div class="section-label">
+          <span class="section-label-line"></span>
+          <span class="section-label-text">De Mensen Achter IHL</span>
         </div>
-        <h2 class="reveal reveal-delay-1">A Platform for<br><em>International Talent</em></h2>
-        <p class="reveal reveal-delay-2">
-          We welcome legal professionals, researchers, and trainees seeking growth in an international environment. Whether you are an experienced practitioner or an emerging talent, IHL offers a dynamic platform to engage with complex international matters across multiple jurisdictions.
-        </p>
+        <h2>Maak Kennis met het Team</h2>
       </div>
+
+      <!-- LEADERSHIP -->
+      <div class="team-group-label reveal">
+        <h3>Leiderschap</h3>
+        <div class="team-group-label-rule"></div>
+      </div>
+
+      <div class="founder-grid">
+
+        <!-- Dr. Mohsen Mohebi -->
+        <div class="team-card team-card--founder reveal reveal-delay-1">
+          <div class="team-card-bg"></div>
+          <div class="team-avatar">
+            <img src="../images/team/mohsen-mohebi.png" alt="Dr. Mohsen Mohebi" loading="lazy">
+          </div>
+          <div class="team-card-name">Dr. Mohsen Mohebi</div>
+          <div class="team-card-title">Oprichter &amp; Partner</div>
+          <div class="team-card-divider"></div>
+          <p style="color: rgba(255,255,255,0.45); max-width: 100%; font-size: 0.9rem; line-height: 1.8;">
+            Oprichter en Partner van International House of Law, met tientallen jaren ervaring in internationale arbitrage, grensoverschrijdende geschillenbeslechting en advisering op het gebied van internationaal recht in meerdere rechtsgebieden.
+          </p>
+          <div class="team-card-footer">
+            <a href="https://www.linkedin.com/in/mohsen-mohebi-932605114/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Hosein S. Mohebi -->
+        <div class="team-card team-card--founder reveal reveal-delay-2">
+          <div class="team-card-bg"></div>
+          <div class="team-avatar">
+            <img src="../images/team/hosein-mohebi.png" alt="Hosein S. Mohebi, LL.M." loading="lazy">
+          </div>
+          <div class="team-card-name">Hosein S. Mohebi, LL.M.</div>
+          <div class="team-card-title">Directeur</div>
+          <div class="team-card-divider"></div>
+          <p style="color: rgba(255,255,255,0.45); max-width: 100%; font-size: 0.9rem; line-height: 1.8;">
+            Oprichter, Partner en Directeur van International House of Law. Hij leidt de strategische ontwikkeling en internationale praktijk van het kantoor, met diepgaande expertise in internationaal handelsrecht, geschillenbeslechting en wereldwijd zakelijk advies.
+          </p>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/hosein-mohebi" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SENIOR COUNSEL -->
+      <div class="team-group-label reveal">
+        <h3>Juridisch Adviseurs</h3>
+        <div class="team-group-label-rule"></div>
+      </div>
+
+      <div class="counsel-grid">
+
+        <!-- Dr. Atie Babaie -->
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">
+            <img src="../images/team/atie-babaie.jpg" alt="Dr. Atie Babaie" loading="lazy" style="object-position: top center;">
+          </div>
+          <div class="team-card-name">Dr. Atie Babaie</div>
+          <div class="team-card-title">Of Counsel</div>
+          <div class="team-card-divider"></div>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/atiebabaie/" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Dr. Hamidreza Aslani -->
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar">
+            <img src="../images/team/hamidreza-aslani.jpg" alt="Dr. Hamidreza Aslani" loading="lazy">
+          </div>
+          <div class="team-card-name">Dr. Hamidreza Aslani</div>
+          <div class="team-card-title">Juridisch Adviseur &ndash; Internationale Geschillenbeslechting</div>
+          <div class="team-card-divider"></div>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/dr-hamid-reza-aslani-5a7721336" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Dr. Azar Safari -->
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-avatar">
+            <img src="../images/team/azar-safari.jpg" alt="Dr. Azar Safari" loading="lazy">
+          </div>
+          <div class="team-card-name">Dr. Azar Safari</div>
+          <div class="team-card-title">Duurzaamheidsadviseur</div>
+          <div class="team-card-divider"></div>
+        </div>
+
+        <!-- Lavanya Viswanathan -->
+        <div class="team-card reveal reveal-delay-5">
+          <div class="team-avatar">
+            <img src="../images/team/lavanya-viswanathan.png" alt="Lavanya Viswanathan" loading="lazy" style="object-position: top center;">
+          </div>
+          <div class="team-card-name">Lavanya Viswanathan</div>
+          <div class="team-card-title">Of Counsel</div>
+          <div class="team-card-divider"></div>
+          <div class="team-card-footer">
+            <a href="https://linkedin.com/in/lavanya-viswanathan-76907bb7" class="team-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Shahrzad Asadi -->
+        <div class="team-card reveal reveal-delay-6">
+          <div class="team-avatar">
+            <img src="../images/team/shahrzad-asadi.jpg" alt="Shahrzad Asadi" loading="lazy" style="object-position: top center;">
+          </div>
+          <div class="team-card-name">Shahrzad Asadi</div>
+          <div class="team-card-title">Kantoormanager Vancouver</div>
+          <div class="team-card-divider"></div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       OPPORTUNITIES SECTION
+       JOIN SECTION
   ═══════════════════════════════════════════ -->
-  <section class="opportunities-section" id="opportunities">
-    <div class="opp-pattern"></div>
+  <section class="join-section">
+    <div class="join-pattern"></div>
     <div class="container">
-      <div class="opp-header reveal">
-        <h2>How to Connect with IHL</h2>
-        <p>Three ways to become part of the International House of Law ecosystem.</p>
-      </div>
-
-      <div class="opp-grid">
-        <div class="opp-card reveal">
-          <div class="opp-card-number">01</div>
-          <div class="opp-card-title">Career Opportunities</div>
-          <div class="opp-card-divider"></div>
-          <p>Submit your résumé for upcoming positions. We recruit lawyers, legal researchers, and business advisors with a passion for international practice and cross-border matters.</p>
-        </div>
-
-        <div class="opp-card reveal reveal-delay-1">
-          <div class="opp-card-number">02</div>
-          <div class="opp-card-title">Collaboration &amp; Partnerships</div>
-          <div class="opp-card-divider"></div>
-          <p>Organisations aligned with IHL's work are welcome to explore collaboration opportunities. We engage with law firms, academic institutions, and international organisations on joint initiatives.</p>
-        </div>
-
-        <div class="opp-card reveal reveal-delay-2">
-          <div class="opp-card-number">03</div>
-          <div class="opp-card-title">Traineeships &amp; Internships</div>
-          <div class="opp-card-divider"></div>
-          <p>We offer internships for law students and recent graduates seeking international exposure. Gain hands-on experience working alongside senior practitioners on real international matters.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       APPLICATION FORM SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="application-section" id="apply">
-    <div class="container">
-      <div class="application-inner">
-        <h2 class="reveal">Send Your Application</h2>
-        <p class="reveal reveal-delay-1">Whether you are applying for a role, exploring a collaboration, or seeking an internship — we would love to hear from you.</p>
-
-        <form class="contact-form reveal reveal-delay-2" action="#" method="POST">
-          <div class="form-field">
-            <label for="cr-name">Full Name</label>
-            <input type="text" id="cr-name" name="name" placeholder="Your full name">
-          </div>
-          <div class="form-field">
-            <label for="cr-phone">Phone</label>
-            <input type="tel" id="cr-phone" name="phone" placeholder="+1 000 000 0000">
-          </div>
-          <div class="form-field">
-            <label for="cr-email">Email Address *</label>
-            <input type="email" id="cr-email" name="email" placeholder="you@example.com" required>
-          </div>
-          <div class="form-field">
-            <label for="cr-message">About You &amp; Your Interest</label>
-            <textarea id="cr-message" name="message" placeholder="Tell us about yourself and your interest in IHL"></textarea>
-          </div>
-          <button type="submit" class="form-submit">
-            Submit Now
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
+      <div class="reveal">
+        <h2>Word Deel van Ons Team</h2>
+        <p>Wij verwelkomen juridische professionals, onderzoekers en stagiairs die willen groeien in een internationale omgeving. IHL biedt een samenwerkingsgerichte, intellectueel uitdagende werkomgeving aan de frontlinie van het internationaal recht.</p>
+        <a href="carriere.html" class="cta-btn">
+          Bekijk Mogelijkheden
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -1126,13 +1227,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
           </a>
-          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <p>Waar juridische expertise en zakelijke dienstverlening samenkomen onder &eacute;&eacute;n dak. Kantoren in Den Haag en Vancouver.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1147,23 +1248,23 @@
         </div>
 
         <div>
-          <h4>Services</h4>
+          <h4>Diensten</h4>
           <ul class="footer-links">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschillenbeslechting.html">Geschillenbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Operaties</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Company</h4>
+          <h4>Bedrijf</h4>
           <ul class="footer-links">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="updates.html">News &amp; Updates</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="nieuws.html">Nieuws &amp; Updates</a></li>
+            <li><a href="carriere.html">Carri&egrave;re</a></li>
+            <li><a href="kennisbank.html">Kennisbank</a></li>
           </ul>
         </div>
 
@@ -1171,7 +1272,7 @@
           <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>The Hague, Netherlands<br>Vancouver, Canada</span>
+            <span>Den Haag, Nederland<br>Vancouver, Canada</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -1185,8 +1286,8 @@
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>&copy; 2026 International House of Law. Alle rechten voorbehouden.</span>
+        <span>Ma &ndash; Vr: 09:00 &ndash; 17:00 CET</span>
       </div>
     </div>
   </footer>
@@ -1235,10 +1336,8 @@
     // ── Smooth scroll for anchor links ──
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
-        const href = anchor.getAttribute('href');
-        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(href);
+        const target = document.querySelector(anchor.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
