@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers &amp; Collaboration — IHL</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/careers.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/carriere.html">
-  <meta name="description" content="International House of Law invites connections with professionals interested in international law, arbitration, dispute resolution, and global business.">
+  <title>Neem Contact Op — IHL</title>
+  <meta name="description" content="Bereik International House of Law via onze kantoren in Den Haag of Vancouver. Wij reageren binnen één werkdag.">
+  <link rel="alternate" hreflang="en" href="https://ihlcon.com/contact.html">
+  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/contact.html">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -351,7 +351,7 @@
     ═══════════════════════════════════════════ */
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       background: var(--navy);
@@ -394,7 +394,7 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 10rem 0 6rem;
+      padding: 10rem 0 5rem;
     }
 
     .hero-eyebrow {
@@ -430,44 +430,55 @@
       color: var(--gold-light);
     }
 
-    .hero-tags {
-      display: flex;
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease-out-expo) 0.7s forwards;
-    }
-    .hero-tag {
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      padding: 0.5rem 1.2rem;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.03);
-    }
-
     .hero-description {
       color: rgba(255,255,255,0.65);
       font-size: clamp(1rem, 1.2vw, 1.15rem);
       line-height: 1.85;
-      max-width: 720px;
-      margin-bottom: 3rem;
+      max-width: 620px;
+      margin-bottom: 0;
       opacity: 0;
       animation: fadeUp 0.8s var(--ease-out-expo) 0.9s forwards;
     }
 
-    .hero-actions {
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
       display: flex;
-      gap: 1.2rem;
+      flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
+      gap: 0.6rem;
       opacity: 0;
-      animation: fadeUp 0.8s var(--ease-out-expo) 1.1s forwards;
+      animation: fadeUp 0.8s var(--ease-out-expo) 1.5s forwards;
+    }
+    .hero-scroll-indicator span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
     }
 
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -519,197 +530,28 @@
       background: rgba(255,255,255,0.05);
     }
 
-    .hero-scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease-out-expo) 1.5s forwards;
-    }
-    .hero-scroll-indicator span {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-    }
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-      50% { opacity: 1; transform: scaleY(1); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     /* ═══════════════════════════════════════════
-       ABOUT / INTRO SECTION
+       CONTACT SECTION
     ═══════════════════════════════════════════ */
-    .about-section {
+    .contact-section {
       padding: 7rem 0;
       background: var(--cream);
     }
 
-    .about-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .section-eyebrow-line {
-      width: 32px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .section-eyebrow-text {
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .about-inner h2 {
-      margin-bottom: 2rem;
-    }
-
-    .about-inner p {
-      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-      line-height: 2;
-      color: var(--text);
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    /* ═══════════════════════════════════════════
-       OPPORTUNITIES SECTION (dark cards)
-    ═══════════════════════════════════════════ */
-    .opportunities-section {
-      padding: 7rem 0;
-      background: var(--navy);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .opp-pattern {
-      position: absolute;
-      inset: 0;
-      opacity: 0.03;
-      background-image:
-        linear-gradient(rgba(196,163,90,0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
-      background-size: 80px 80px;
-    }
-
-    .opp-header {
-      text-align: center;
-      margin-bottom: 4rem;
-      position: relative;
-      z-index: 1;
-    }
-    .opp-header h2 {
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-    .opp-header p {
-      color: rgba(255,255,255,0.5);
-      margin: 0 auto;
-    }
-
-    .opp-grid {
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
     }
 
-    .opp-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-top: 3px solid var(--gold);
-      padding: 2.5rem 2rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .opp-card:hover {
-      background: rgba(255,255,255,0.06);
-      transform: translateY(-4px);
-    }
-
-    .opp-card-number {
-      font-family: var(--font-display);
-      font-size: 3rem;
-      font-weight: 300;
-      color: var(--gold);
-      opacity: 0.25;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .opp-card-title {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--white);
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .opp-card-divider {
-      width: 36px;
-      height: 1px;
-      background: var(--gold);
-      margin-bottom: 1.2rem;
-    }
-
-    .opp-card p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      max-width: 100%;
-    }
-
-    /* ═══════════════════════════════════════════
-       APPLICATION FORM SECTION
-    ═══════════════════════════════════════════ */
-    .application-section {
-      padding: 7rem 0;
-      background: var(--white);
-    }
-
-    .application-inner {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .application-inner h2 {
+    /* Contact Form */
+    .contact-form-wrap h2 {
       margin-bottom: 0.75rem;
-      text-align: center;
     }
-
-    .application-inner > p {
-      text-align: center;
-      margin: 0 auto 3rem;
+    .contact-form-wrap > p {
+      margin-bottom: 2.5rem;
+      max-width: 100%;
     }
 
     .contact-form {
@@ -759,7 +601,7 @@
     }
 
     .form-field textarea {
-      min-height: 140px;
+      min-height: 130px;
     }
 
     .form-submit {
@@ -786,6 +628,145 @@
       color: var(--navy);
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(196,163,90,0.25);
+    }
+
+    /* Contact Info */
+    .contact-info {
+      padding-top: 1rem;
+    }
+
+    .contact-info-header {
+      margin-bottom: 3rem;
+    }
+
+    .contact-info-header h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    .office-block {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .office-block:last-of-type {
+      border-bottom: none;
+    }
+
+    .office-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .office-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .office-address {
+      font-size: 0.93rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      max-width: 100%;
+    }
+
+    .office-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      font-size: 0.93rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .contact-detail-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.93rem;
+      color: var(--text-light);
+    }
+    .contact-detail-row svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+    .contact-detail-row strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .social-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--gray-200);
+      color: var(--gray-600);
+      transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+    }
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(196,163,90,0.06);
+    }
+    .social-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Map Placeholder */
+    .map-placeholder {
+      margin-top: 3rem;
+      height: 140px;
+      background: var(--navy);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .map-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image:
+        linear-gradient(rgba(196,163,90,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .map-placeholder-text {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      position: relative;
+      z-index: 1;
+    }
+    .map-placeholder-text span {
+      color: rgba(255,255,255,0.4);
+      font-size: 1rem;
+      letter-spacing: 0.3em;
     }
 
     /* ═══════════════════════════════════════════
@@ -863,10 +844,9 @@
        RESPONSIVE
     ═══════════════════════════════════════════ */
     @media (max-width: 1200px) {
-      .opp-grid {
+      .contact-grid {
         grid-template-columns: 1fr;
-        max-width: 640px;
-        margin: 0 auto;
+        gap: 4rem;
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -922,11 +902,11 @@
       }
 
       .hero-content {
-        padding: 8rem 0 5rem;
+        padding: 8rem 0 4rem;
       }
-      .hero-tags {
-        flex-wrap: wrap;
-        gap: 0.8rem;
+
+      .contact-section {
+        padding: 5rem 0;
       }
 
       .footer-grid {
@@ -941,19 +921,57 @@
     }
 
     @media (max-width: 480px) {
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .btn-primary, .btn-secondary {
-        justify-content: center;
+      .social-row {
+        flex-wrap: wrap;
       }
     }
-      .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
-    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
-    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
-    .footer-social-link svg{width:15px;height:15px;}
-</style>
+
+    /* ═══════════════════════════════════════════
+       FORM STATUS MESSAGES
+    ═══════════════════════════════════════════ */
+    .form-status {
+      display: none;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .form-status.active {
+      display: block;
+    }
+    .form-status-success {
+      background: rgba(196,163,90,0.08);
+      border: 1px solid var(--gold);
+      color: var(--text);
+    }
+    .form-status-success .form-status-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .form-status-success p {
+      color: var(--text-light);
+      max-width: 100%;
+    }
+    .form-status-error {
+      background: rgba(180,60,60,0.06);
+      border: 1px solid rgba(180,60,60,0.3);
+      color: var(--text);
+    }
+    .form-status-error .form-status-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #8B2020;
+      margin-bottom: 0.4rem;
+    }
+    .form-status-error p {
+      color: var(--text-light);
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
 
@@ -963,42 +981,38 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
       </a>
 
             <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li class="nav-has-dropdown">
-          <a href="#">Services</a>
+          <a href="#">Diensten</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschilbeslechting.html">Geschilbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Dienstverlening</a></li>
           </ul>
         </li>
         <li class="nav-has-dropdown">
-          <a href="#">About Us</a>
+          <a href="#">Over Ons</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
             <li><a href="team.html">Team</a></li>
           </ul>
         </li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="careers.html" class="active">Careers</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-        <li class="lang-switch">
-          <a href="careers.html" class="lang-active">EN</a>
-          <a href="nl/carriere.html">NL</a>
-        </li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="carriere.html">Carri&egrave;re</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html" class="nav-cta active">Contact</a></li>
       </ul>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Navigatie openen">
         <span></span>
         <span></span>
         <span></span>
@@ -1011,7 +1025,7 @@
   ═══════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80" alt="Professionals collaborating in a modern office" loading="eager">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Modern professioneel kantoor" loading="eager">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
@@ -1019,30 +1033,14 @@
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">Join IHL</span>
+        <span class="hero-eyebrow-text">Neem Contact Op</span>
       </div>
 
-      <h1>Careers &amp; <em>Collaboration</em></h1>
-
-      <div class="hero-tags">
-        <span class="hero-tag">International Law</span>
-        <span class="hero-tag">Arbitration</span>
-        <span class="hero-tag">Growth</span>
-      </div>
+      <h1>Neem Contact <em>Op</em></h1>
 
       <p class="hero-description">
-        International House of Law invites connections with professionals interested in international law, arbitration, dispute resolution, and global business.
+        Bereik onze kantoren in Den Haag of Vancouver. Wij reageren binnen &eacute;&eacute;n werkdag.
       </p>
-
-      <div class="hero-actions">
-        <a href="#apply" class="btn-primary">
-          Send Your Application
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#opportunities" class="btn-secondary">
-          See Opportunities
-        </a>
-      </div>
     </div>
 
     <div class="hero-scroll-indicator">
@@ -1052,91 +1050,114 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       ABOUT / INTRO SECTION
+       CONTACT SECTION
   ═══════════════════════════════════════════ -->
-  <section class="about-section">
+  <section class="contact-section">
     <div class="container">
-      <div class="about-inner">
-        <div class="section-eyebrow reveal">
-          <span class="section-eyebrow-line"></span>
-          <span class="section-eyebrow-text">Working at IHL</span>
-          <span class="section-eyebrow-line"></span>
-        </div>
-        <h2 class="reveal reveal-delay-1">A Platform for<br><em>International Talent</em></h2>
-        <p class="reveal reveal-delay-2">
-          We welcome legal professionals, researchers, and trainees seeking growth in an international environment. Whether you are an experienced practitioner or an emerging talent, IHL offers a dynamic platform to engage with complex international matters across multiple jurisdictions.
-        </p>
-      </div>
-    </div>
-  </section>
+      <div class="contact-grid">
 
-  <!-- ═══════════════════════════════════════════
-       OPPORTUNITIES SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="opportunities-section" id="opportunities">
-    <div class="opp-pattern"></div>
-    <div class="container">
-      <div class="opp-header reveal">
-        <h2>How to Connect with IHL</h2>
-        <p>Three ways to become part of the International House of Law ecosystem.</p>
-      </div>
+        <!-- LEFT: Contact Form -->
+        <div class="contact-form-wrap reveal-left">
+          <h2>Stuur Ons een Bericht</h2>
+          <p>Vul het formulier in en een lid van ons team neemt zo spoedig mogelijk contact met u op.</p>
 
-      <div class="opp-grid">
-        <div class="opp-card reveal">
-          <div class="opp-card-number">01</div>
-          <div class="opp-card-title">Career Opportunities</div>
-          <div class="opp-card-divider"></div>
-          <p>Submit your résumé for upcoming positions. We recruit lawyers, legal researchers, and business advisors with a passion for international practice and cross-border matters.</p>
-        </div>
-
-        <div class="opp-card reveal reveal-delay-1">
-          <div class="opp-card-number">02</div>
-          <div class="opp-card-title">Collaboration &amp; Partnerships</div>
-          <div class="opp-card-divider"></div>
-          <p>Organisations aligned with IHL's work are welcome to explore collaboration opportunities. We engage with law firms, academic institutions, and international organisations on joint initiatives.</p>
-        </div>
-
-        <div class="opp-card reveal reveal-delay-2">
-          <div class="opp-card-number">03</div>
-          <div class="opp-card-title">Traineeships &amp; Internships</div>
-          <div class="opp-card-divider"></div>
-          <p>We offer internships for law students and recent graduates seeking international exposure. Gain hands-on experience working alongside senior practitioners on real international matters.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       APPLICATION FORM SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="application-section" id="apply">
-    <div class="container">
-      <div class="application-inner">
-        <h2 class="reveal">Send Your Application</h2>
-        <p class="reveal reveal-delay-1">Whether you are applying for a role, exploring a collaboration, or seeking an internship — we would love to hear from you.</p>
-
-        <form class="contact-form reveal reveal-delay-2" action="#" method="POST">
-          <div class="form-field">
-            <label for="cr-name">Full Name</label>
-            <input type="text" id="cr-name" name="name" placeholder="Your full name">
+          <div class="form-status form-status-success" id="formSuccess">
+            <div class="form-status-title">Bedankt voor uw bericht</div>
+            <p>Uw aanvraag is ontvangen. Een lid van ons team zal uw bericht beoordelen en zo spoedig mogelijk reageren — doorgaans binnen &eacute;&eacute;n werkdag.</p>
           </div>
-          <div class="form-field">
-            <label for="cr-phone">Phone</label>
-            <input type="tel" id="cr-phone" name="phone" placeholder="+1 000 000 0000">
+
+          <div class="form-status form-status-error" id="formError">
+            <div class="form-status-title">Er is iets misgegaan</div>
+            <p>Uw bericht kon niet worden verzonden. Probeer het opnieuw of neem rechtstreeks contact met ons op via <strong>info@ihlcon.com</strong>.</p>
           </div>
-          <div class="form-field">
-            <label for="cr-email">Email Address *</label>
-            <input type="email" id="cr-email" name="email" placeholder="you@example.com" required>
+
+          <form class="contact-form" id="contactForm" action="../send-contact-nl.php" method="POST">
+            <div class="form-field">
+              <label for="ct-name">Volledige Naam</label>
+              <input type="text" id="ct-name" name="name" placeholder="Uw volledige naam">
+            </div>
+            <div class="form-field">
+              <label for="ct-phone">Telefoon</label>
+              <input type="tel" id="ct-phone" name="phone" placeholder="+31 000 000 0000">
+            </div>
+            <div class="form-field">
+              <label for="ct-email">E-mailadres *</label>
+              <input type="email" id="ct-email" name="email" placeholder="u@voorbeeld.nl" required>
+            </div>
+            <div class="form-field">
+              <label for="ct-message">Bericht</label>
+              <textarea id="ct-message" name="message" placeholder="Hoe kunnen wij u helpen?"></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Versturen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT: Office Info -->
+        <div class="contact-info reveal-right">
+          <div class="contact-info-header">
+            <h2>Onze Kantoren</h2>
+            <p>Twee kantoren. &Eacute;&eacute;n team. Wereldwijd bereik.</p>
           </div>
-          <div class="form-field">
-            <label for="cr-message">About You &amp; Your Interest</label>
-            <textarea id="cr-message" name="message" placeholder="Tell us about yourself and your interest in IHL"></textarea>
+
+          <div class="office-block">
+            <div class="office-label">Hoofdkantoor</div>
+            <div class="office-name">Den Haag</div>
+            <p class="office-address">
+              Segbroeklaan 110<br>
+              2565DN, Den Haag<br>
+              Nederland
+            </p>
+            <div class="office-phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +31 070 22 50 574
+            </div>
           </div>
-          <button type="submit" class="form-submit">
-            Submit Now
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
+
+          <div class="office-block">
+            <div class="office-label">Kantoor Canada</div>
+            <div class="office-name">Vancouver</div>
+            <p class="office-address">
+              Suite 500, Park Place Building<br>
+              666 Burrard Street<br>
+              Vancouver, BC V6C3P6
+            </p>
+            <div class="office-phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +1 778 522 9119
+            </div>
+          </div>
+
+          <div class="contact-detail-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span><strong>E-mail:</strong>&nbsp; info@ihlcon.com</span>
+          </div>
+          <div class="contact-detail-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span><strong>Openingstijden:</strong>&nbsp; Ma – Vr &nbsp;09:00 – 17:00 CET</span>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="social-row">
+            <a href="https://www.instagram.com/ihlcon/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@ihlcon" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+            <a href="https://nl.linkedin.com/company/international-house-of-law" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>          <!-- Map Placeholder -->
+          <div class="map-placeholder">
+            <div class="map-placeholder-text">
+              <span>DEN HAAG</span> &nbsp;•&nbsp; <span>VANCOUVER</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1149,44 +1170,33 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
           </a>
-          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
-          <div class="footer-social">
-            <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@ihlcon" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            </a>
-            <a href="https://nl.linkedin.com/company/international-house-of-law" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-          </div>
+          <p>Waar juridische expertise en zakelijke dienstverlening samenkomen onder &eacute;&eacute;n dak. Kantoren in Den Haag en Vancouver.</p>
         </div>
 
         <div>
-          <h4>Services</h4>
+          <h4>Diensten</h4>
           <ul class="footer-links">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschilbeslechting.html">Geschilbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Dienstverlening</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Company</h4>
+          <h4>Bedrijf</h4>
           <ul class="footer-links">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="updates.html">News &amp; Updates</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="nieuws.html">Nieuws &amp; Publicaties</a></li>
+            <li><a href="carriere.html">Carri&egrave;re</a></li>
+            <li><a href="kennisbank.html">Kennisbank</a></li>
           </ul>
         </div>
 
@@ -1194,7 +1204,7 @@
           <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>The Hague, Netherlands<br>Vancouver, Canada</span>
+            <span>Den Haag, Nederland<br>Vancouver, Canada</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -1208,8 +1218,8 @@
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>&copy; 2026 International House of Law. Alle rechten voorbehouden.</span>
+        <span>Ma – Vr: 09:00 – 17:00 CET</span>
       </div>
     </div>
   </footer>
@@ -1278,6 +1288,21 @@
         }
       });
     });
+
+    // ── Form status messages ──
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var status = params.get('status');
+      if (status === 'success') {
+        document.getElementById('formSuccess').classList.add('active');
+        document.getElementById('contactForm').style.display = 'none';
+      } else if (status === 'error') {
+        document.getElementById('formError').classList.add('active');
+      }
+      if (status) {
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    })();
 
     // Robust dropdown: listeners on both <li> and the menu itself,
     // relatedTarget guard prevents false-positive mouseleave from absolutely-

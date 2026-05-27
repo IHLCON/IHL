@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exploring New Business Horizons: How U.S. Tariffs Could Boost EU-Canada Trade — International House of Law</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/article-eu-canada-trade.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/artikel-eu-canada-handel.html">
-  <meta name="description" content="As U.S. trade policy shifts, IHL analyses how evolving tariff regimes may create new opportunities for EU-Canada commercial partnerships.">
+  <title>International Trade Due Diligence: How to Verify a Foreign Company Before Signing — International House of Law</title>
+  <meta name="description" content="Before signing an MOU with a foreign company, verify their credibility. Learn the due diligence steps for international trade partnerships — and how IHL can help.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
@@ -49,37 +47,12 @@
     .nav-cta{font-size:0.73rem!important;letter-spacing:0.08em!important;padding:0.55rem 1.2rem;white-space:nowrap;border:1px solid var(--gold);color:var(--gold)!important;transition:background 0.3s ease,color 0.3s ease!important;}
     .nav-cta:hover{background:var(--gold);color:var(--navy)!important;}
     .nav-cta::after{display:none!important;}
-    /* Language switcher */
-    .lang-switch {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin-left: 0.5rem;
-    }
-    .lang-switch a {
-      font-family: var(--font-body);
-      font-size: 0.72rem !important;
-      font-weight: 600;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase;
-      padding: 0.45rem 0.7rem;
-      color: rgba(255,255,255,0.45) !important;
-      border: 1px solid rgba(255,255,255,0.12);
-      transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
-    }
-    .lang-switch a:first-child {
-      border-right: none;
-    }
-    .lang-switch a::after { display: none !important; }
-    .lang-switch a:hover {
-      color: var(--white) !important;
-      border-color: rgba(255,255,255,0.3);
-    }
-    .lang-switch a.lang-active {
-      color: var(--gold) !important;
-      border-color: var(--gold);
-      background: rgba(196,163,90,0.08);
-    }
+    .lang-switch{display:flex;align-items:center;gap:0;margin-left:0.5rem;}
+    .lang-switch a{font-family:var(--font-body);font-size:0.72rem!important;font-weight:600;letter-spacing:0.08em!important;text-transform:uppercase;padding:0.45rem 0.7rem;color:rgba(255,255,255,0.45)!important;border:1px solid rgba(255,255,255,0.12);transition:color 0.3s ease,background 0.3s ease,border-color 0.3s ease;}
+    .lang-switch a:first-child{border-right:none;}
+    .lang-switch a::after{display:none!important;}
+    .lang-switch a:hover{color:var(--white)!important;border-color:rgba(255,255,255,0.3);}
+    .lang-switch a.lang-active{color:var(--gold)!important;border-color:var(--gold);background:rgba(196,163,90,0.08);}
     .nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--navy);border:1px solid rgba(196,163,90,0.15);min-width:220px;padding:0.5rem 0;list-style:none;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.18s ease,visibility 0.18s ease;}
     .nav-links>li.nav-open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;}
     .nav-dropdown-menu li a{display:block;padding:0.7rem 1.4rem;font-size:0.78rem;color:rgba(255,255,255,0.65);white-space:nowrap;letter-spacing:0.08em;}
@@ -118,10 +91,36 @@
     .article-body blockquote p{font-family:var(--font-display);font-size:1.25rem;font-style:italic;color:var(--navy);margin:0;}
     .article-gold-bar{width:48px;height:2px;background:var(--gold);margin-bottom:2.5rem;}
     .article-lead{font-family:var(--font-display);font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.7;color:var(--navy);margin-bottom:2rem;font-style:italic;}
-    .sector-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0;}
-    .sector-card{background:var(--white);padding:1.8rem;border-top:2px solid var(--gold);}
-    .sector-card h3{font-size:1.1rem;margin-bottom:0.6rem;color:var(--navy);}
-    .sector-card p{font-size:0.9rem;line-height:1.7;color:var(--text-light);max-width:100%;margin:0;}
+    .article-body ul,.article-body ol{margin:1rem 0 1.5rem 1.5rem;max-width:100%;}
+    .article-body li{font-size:1.05rem;line-height:1.9;color:var(--text-light);margin-bottom:0.6rem;}
+    .article-body .step-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--navy);color:var(--gold);font-family:var(--font-body);font-size:0.75rem;font-weight:600;margin-right:0.8rem;flex-shrink:0;vertical-align:middle;}
+    .article-body .registry-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;}
+    .article-body .registry-table th,.article-body .registry-table td{text-align:left;padding:0.75rem 1rem;font-size:0.95rem;border-bottom:1px solid var(--gray-100);}
+    .article-body .registry-table th{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);background:var(--gray-50);}
+    .article-body .registry-table td{color:var(--text-light);}
+    .article-body .red-flag-list{list-style:none;margin-left:0;padding:0;}
+    .article-body .red-flag-list li{position:relative;padding-left:1.8rem;margin-bottom:1rem;}
+    .article-body .red-flag-list li::before{content:'';position:absolute;left:0;top:0.7rem;width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
+
+    /* FAQ */
+    .faq-section{padding:5rem 0;background:var(--gray-50);border-top:1px solid var(--gray-100);}
+    .faq-header{text-align:center;margin-bottom:3rem;}
+    .faq-header h2{margin-bottom:0.5rem;}
+    .faq-list{max-width:800px;margin:0 auto;}
+    .faq-item{border-bottom:1px solid var(--gray-200);padding:1.5rem 0;}
+    .faq-question{font-family:var(--font-display);font-size:1.2rem;color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+    .faq-question::after{content:'+';font-family:var(--font-body);font-size:1.4rem;color:var(--gold);transition:transform 0.3s ease;flex-shrink:0;}
+    .faq-item.open .faq-question::after{transform:rotate(45deg);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;}
+    .faq-item.open .faq-answer{max-height:500px;padding-top:1rem;}
+    .faq-answer p{font-size:0.95rem;line-height:1.8;color:var(--text-light);max-width:100%;}
+
+    /* CTA BANNER */
+    .cta-banner{background:var(--navy);padding:4rem 0;text-align:center;}
+    .cta-banner h2{color:var(--white);margin-bottom:1rem;}
+    .cta-banner p{color:rgba(255,255,255,0.6);margin:0 auto 2rem;max-width:600px;}
+    .cta-btn{display:inline-block;font-family:var(--font-body);font-size:0.82rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.5rem;border:1px solid var(--gold);color:var(--gold);transition:background 0.3s ease,color 0.3s ease;}
+    .cta-btn:hover{background:var(--gold);color:var(--navy);}
 
     /* SIDEBAR */
     .article-sidebar{position:sticky;top:120px;}
@@ -131,6 +130,10 @@
     .sidebar-meta-item:last-child{border-bottom:none;}
     .sidebar-meta-label{color:var(--gray-400);letter-spacing:0.05em;}
     .sidebar-meta-value{color:var(--text);font-weight:500;}
+    .sidebar-toc{list-style:none;}
+    .sidebar-toc li{margin-bottom:0.6rem;}
+    .sidebar-toc a{font-size:0.85rem;color:var(--text-light);transition:color 0.3s ease;display:block;padding:0.3rem 0;border-left:2px solid transparent;padding-left:0.8rem;}
+    .sidebar-toc a:hover{color:var(--gold);border-left-color:var(--gold);}
     .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:3rem;transition:color 0.3s ease;}
     .back-link svg{width:14px;height:14px;transition:transform 0.3s ease;}
     .back-link:hover{color:var(--gold);}
@@ -149,8 +152,12 @@
     .footer-contact-item{display:flex;align-items:flex-start;gap:0.8rem;margin-bottom:1rem;font-size:0.88rem;}
     .footer-contact-item svg{width:16px;height:16px;margin-top:3px;flex-shrink:0;color:var(--gold);}
     .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
+    .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
+    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
+    .footer-social-link svg{width:15px;height:15px;}
 
-    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.sector-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}}
     @media (max-width:1200px) {
       .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;backdrop-filter:blur(20px);}
       .nav-links.mobile-open{display:flex;}
@@ -179,11 +186,7 @@
       .footer-grid{grid-template-columns:1fr;}
       .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
     }
-      .footer-social{display:flex;gap:0.75rem;margin-top:1.2rem;}
-    .footer-social-link{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(196,163,90,0.2);color:rgba(255,255,255,0.4);transition:border-color 0.3s ease,color 0.3s ease,background 0.3s ease;}
-    .footer-social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(196,163,90,0.08);}
-    .footer-social-link svg{width:15px;height:15px;}
-</style>
+  </style>
 </head>
 <body>
 
@@ -219,8 +222,8 @@
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
         <li class="lang-switch">
-          <a href="article-eu-canada-trade.html" class="lang-active">EN</a>
-          <a href="nl/artikel-eu-canada-handel.html">NL</a>
+          <a href="article-due-diligence.html" class="lang-active">EN</a>
+          <a href="nl/artikel-due-diligence.html">NL</a>
         </li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -231,19 +234,19 @@
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80" alt="EU Canada Trade" loading="eager">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80" alt="International Trade Due Diligence" loading="eager">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">Global Business</span>
+        <span class="hero-eyebrow-text">International Trade Advisory</span>
       </div>
-      <h1>Exploring New <em>Business Horizons</em></h1>
+      <h1>International Trade <em>Due Diligence</em></h1>
       <div class="hero-meta">
-        <span class="hero-tag">Global Business</span>
-        <span class="hero-date">March 12, 2025</span>
+        <span class="hero-tag">Due Diligence</span>
+        <span class="hero-date">May 22, 2026</span>
       </div>
     </div>
   </section>
@@ -257,44 +260,95 @@
       <div class="article-layout">
         <div class="article-body reveal">
           <div class="article-gold-bar"></div>
-          <p class="article-lead">The world of international trade is shifting fast. The United States has introduced new tariffs that are reshaping commercial relationships across the globe — and for businesses in Canada and Europe, this moment presents a significant opportunity to deepen their own partnership under CETA.</p>
+          <p class="article-lead">Before signing an MOU or cooperation agreement with a foreign company, the single most important step is verification. A well-presented counterpart with official-looking documents is not the same as a credible, financially stable, and operationally active one.</p>
 
-          <h2>A Pivotal Moment for EU-Canada Trade</h2>
-          <p>As businesses face higher costs and mounting trade barriers in the American market, many are turning their attention to the Comprehensive Economic and Trade Agreement (CETA) between the European Union and Canada. The agreement provides a ready-made legal framework for expanding commercial ties — and the current trade climate is accelerating the case for using it.</p>
-          <p>For companies that have long relied on the United States as a primary market or transit point, the shifting tariff landscape is prompting a strategic reassessment. Those that move quickly to establish or deepen EU-Canada relationships stand to gain a meaningful competitive advantage.</p>
+          <p>This guide explains what to check, where to check it, and what red flags to look for when entering a new international trade partnership.</p>
+
+          <h2>Why Due Diligence Matters in International Trade</h2>
+          <p>The pressure to move quickly on a promising partnership is real. But skipping verification creates legal, financial, and reputational exposure that can far outlast the opportunity.</p>
+          <p>A legalization stamp from a foreign ministry &mdash; a common document shared during MOU negotiations &mdash; confirms only the authenticity of the signature on the document, not the accuracy of its contents. This is explicitly stated on Belgian Foreign Affairs legalization certificates, for example, and the same principle applies across jurisdictions. Official-looking does not mean verified.</p>
 
           <blockquote>
-            <p>Companies adapting quickly to these market shifts — building EU-Canada relationships now — will gain competitive advantages that may prove durable long after trade policy stabilises.</p>
+            <p>Due diligence is the process of independently confirming what a counterpart claims about itself before you commit.</p>
           </blockquote>
 
-          <h2>Key Sectors and Opportunities</h2>
+          <h2 id="step1"><span class="step-number">1</span>Check the Official Business Registry</h2>
+          <p>The first and most important step is always the official company registry of the counterpart's country. These are public databases that confirm whether a company legally exists, is currently active, and who holds management authority.</p>
 
-          <div class="sector-grid">
-            <div class="sector-card">
-              <h3>Green Energy &amp; Sustainability</h3>
-              <p>Hydrogen energy, battery technologies, and sustainable mining represent significant growth areas. Europe's Green Deal and Canada's net-zero commitments create strong alignment and collaboration potential for businesses in this space.</p>
-            </div>
-            <div class="sector-card">
-              <h3>Technology &amp; Digital Business</h3>
-              <p>Canadian AI and fintech sectors are positioning for European expansion. As the U.S. becomes a less predictable partner, European businesses are increasingly receptive to Canadian technology firms as trusted alternatives.</p>
-            </div>
-            <div class="sector-card">
-              <h3>Aerospace &amp; Manufacturing</h3>
-              <p>Rising U.S. trade barriers are prompting both regions to strengthen partnerships in aviation, defence, and clean transportation — sectors where both Canada and the EU have established industrial depth.</p>
-            </div>
-            <div class="sector-card">
-              <h3>Financial Services</h3>
-              <p>Canada's emergence as a financial hub is attracting European investors, with evolving EU regulations potentially facilitating easier cross-border investment flows in both directions.</p>
-            </div>
-          </div>
+          <table class="registry-table">
+            <thead>
+              <tr><th>Country</th><th>Registry</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Belgium</td><td>Banque-Carrefour des Entreprises (BCE/KBO)</td></tr>
+              <tr><td>Netherlands</td><td>Kamer van Koophandel (KVK)</td></tr>
+              <tr><td>Germany</td><td>Handelsregister</td></tr>
+              <tr><td>France</td><td>Infogreffe / Registre du Commerce</td></tr>
+              <tr><td>United Kingdom</td><td>Companies House</td></tr>
+            </tbody>
+          </table>
 
-          <h2>Navigating the Compliance Landscape</h2>
-          <p>Pursuing EU-Canada opportunities is not without complexity. Businesses must carefully navigate a layered regulatory environment on both sides of the Atlantic. The EU's General Data Protection Regulation (GDPR) establishes strict requirements for data handling that affect any company operating in or serving European markets. On the Canadian side, businesses must understand the country's own privacy regulations and the Foreign Investment Review Process, which governs significant foreign investments in Canada.</p>
-          <p>These compliance requirements make specialist legal support essential — not just to avoid risk, but to structure transactions, partnerships, and market entry strategies in ways that are both efficient and durable.</p>
+          <p>A registration number provided by the counterpart should match the registry record exactly. Discrepancies in name, address, or management details are an immediate red flag.</p>
 
-          <h2>The Broader Picture</h2>
-          <p>The current tariff environment represents more than a short-term disruption. It reflects a broader realignment of global trade relationships that is likely to persist in some form regardless of near-term policy changes. Businesses that treat this moment as an opportunity to build diversified international partnerships — rather than simply waiting for stability to return — will be better positioned for the decade ahead.</p>
-          <p>IHL's international legal and business advisory services are designed precisely for moments like this: helping organisations navigate complex cross-border environments, structure compliant commercial relationships, and move with confidence in markets that are still taking shape.</p>
+          <h2 id="step2"><span class="step-number">2</span>Request Financial Documentation</h2>
+          <p>Registration confirms legal existence &mdash; it says nothing about financial health. Request recent annual accounts filed with the relevant national authority. In Belgium, companies are required to file annual accounts with the National Bank, and these are publicly accessible.</p>
+          <p>What to look for:</p>
+          <ul>
+            <li>Revenue trends over the past 2&ndash;3 years</li>
+            <li>Outstanding liabilities or signs of insolvency</li>
+            <li>Whether accounts have been filed on time (late filings indicate management issues)</li>
+            <li>Capital structure &mdash; is the company adequately capitalised for the transaction you're considering?</li>
+          </ul>
+          <p>A counterpart that refuses to share financial documentation, or claims exemption without justification, should be treated with caution.</p>
+
+          <h2 id="step3"><span class="step-number">3</span>Verify the Business Scope and Actual Operations</h2>
+          <p>Many companies &mdash; particularly in Belgium and other European jurisdictions &mdash; include extremely broad object clauses in their articles of incorporation. It is common to see a single company's founding documents list sectors as diverse as medical supplies, construction, precious metals trading, event management, and import/export. This is a legal formality allowing flexibility, not a business profile.</p>
+          <p>Always ask specifically: What does the company actually do today? Then verify it independently through their website, LinkedIn presence, sector-specific references, and public records.</p>
+          <p>A mismatch between claimed activity and verifiable evidence of operations is a key due diligence finding.</p>
+
+          <h2 id="step4"><span class="step-number">4</span>Request Operational References and a Project Portfolio</h2>
+          <p>Ask for:</p>
+          <ul>
+            <li>Two or three references from current or recent clients, preferably in regions or sectors relevant to your cooperation</li>
+            <li>A credentials document outlining major completed projects</li>
+            <li>Any relevant certifications, licences, or sector accreditations</li>
+          </ul>
+          <p>Legitimate companies with operational history will have these available. Difficulty producing them after a reasonable period is informative.</p>
+
+          <h2 id="step5"><span class="step-number">5</span>Establish Beneficial Ownership</h2>
+          <p>Know who ultimately controls the entity. In cross-border transactions, the individual behind the company matters as much as the legal structure. Request:</p>
+          <ul>
+            <li>The name and background of the beneficial owner(s)</li>
+            <li>Confirmation that the signatory has authority to enter agreements on behalf of the company</li>
+            <li>Disclosure of any related entities or group structures</li>
+          </ul>
+
+          <h2 id="red-flags">Red Flags That Warrant Closer Scrutiny</h2>
+          <p>The following do not automatically disqualify a counterpart, but each warrants a direct follow-up before any agreement is signed:</p>
+          <ul class="red-flag-list">
+            <li>Documents legalized but not independently verified for content accuracy</li>
+            <li>Reluctance or delay in providing financial statements or client references</li>
+            <li>A registered address that does not match the claimed operational base</li>
+            <li>An extremely broad business scope with no verifiable core activity</li>
+            <li>Inconsistent answers about operational history or key personnel</li>
+            <li>A company registered for only a short time relative to the size of the proposed agreement</li>
+            <li>Management mandates listed as unpaid (gratuit) in jurisdictions where this is unusual for the scale claimed</li>
+          </ul>
+
+          <h2 id="ihl-support">How IHL Supports Your Due Diligence Process</h2>
+          <p>IHL works with companies entering new international partnerships to structure the verification process before it becomes a liability. Our advisory support covers:</p>
+          <ul>
+            <li>Guiding registry checks across relevant jurisdictions</li>
+            <li>Reviewing incorporation documents, legalization certificates, and corporate structures for completeness and consistency</li>
+            <li>Identifying the right documentation to request &mdash; and flagging what's missing</li>
+            <li>Drafting pre-agreement correspondence, including formal information request letters, that protect your position while maintaining a professional tone</li>
+            <li>Providing an independent assessment before you commit</li>
+          </ul>
+          <p>Whether you are evaluating a first-time partner in Europe, the Middle East, or beyond, IHL helps you move forward with confidence rather than assumption.</p>
+
+          <blockquote>
+            <p>Contact IHL before signing. A structured due diligence review at the start costs a fraction of what a problematic agreement costs later.</p>
+          </blockquote>
         </div>
 
         <aside class="article-sidebar">
@@ -302,20 +356,28 @@
             <h4>Article Details</h4>
             <div class="sidebar-meta-item">
               <span class="sidebar-meta-label">Published</span>
-              <span class="sidebar-meta-value">Mar 12, 2025</span>
+              <span class="sidebar-meta-value">May 22, 2026</span>
             </div>
             <div class="sidebar-meta-item">
               <span class="sidebar-meta-label">Category</span>
-              <span class="sidebar-meta-value">Global Business</span>
+              <span class="sidebar-meta-value">Due Diligence</span>
             </div>
             <div class="sidebar-meta-item">
-              <span class="sidebar-meta-label">Topic</span>
-              <span class="sidebar-meta-value">Trade &amp; Tariffs</span>
+              <span class="sidebar-meta-label">Reading Time</span>
+              <span class="sidebar-meta-value">5 min</span>
             </div>
-            <div class="sidebar-meta-item">
-              <span class="sidebar-meta-label">Framework</span>
-              <span class="sidebar-meta-value">CETA</span>
-            </div>
+          </div>
+          <div class="sidebar-card reveal">
+            <h4>In This Article</h4>
+            <ul class="sidebar-toc">
+              <li><a href="#step1">1. Check the Business Registry</a></li>
+              <li><a href="#step2">2. Request Financial Docs</a></li>
+              <li><a href="#step3">3. Verify Business Scope</a></li>
+              <li><a href="#step4">4. Request References</a></li>
+              <li><a href="#step5">5. Establish Ownership</a></li>
+              <li><a href="#red-flags">Red Flags</a></li>
+              <li><a href="#ihl-support">How IHL Helps</a></li>
+            </ul>
           </div>
           <div class="sidebar-card reveal">
             <h4>Related Services</h4>
@@ -325,13 +387,70 @@
               <li><a href="legal-operations-business-support.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Legal Operations</a></li>
             </ul>
           </div>
-          <div class="sidebar-card reveal">
-            <h4>Need Guidance?</h4>
-            <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:1.2rem;max-width:100%;">Our team advises businesses on navigating the EU-Canada trade landscape under CETA.</p>
-            <a href="contact.html" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--navy)'">Contact Us →</a>
-          </div>
         </aside>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-header reveal">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-question">What is due diligence in international trade?</div>
+          <div class="faq-answer">
+            <p>Due diligence in international trade is the process of independently verifying a foreign company's legal status, financial health, operational history, and ownership structure before entering into a contract, MOU, or partnership agreement.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">How do I verify a foreign company is legitimate?</div>
+          <div class="faq-answer">
+            <p>Start with the official business registry of the company's country. Confirm the registration number, active status, registered address, and management details. Then request financial accounts, client references, and beneficial ownership information.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">What documents should I request before signing an MOU?</div>
+          <div class="faq-answer">
+            <p>At minimum: a company registration certificate cross-checked against the official registry, recent financial accounts, client references from current or recent projects, and confirmation of who holds signing authority.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">What does a legalization stamp on a foreign document mean?</div>
+          <div class="faq-answer">
+            <p>A legalization stamp (or apostille) confirms the authenticity of the signature on the document &mdash; not the accuracy of the content. It should be treated as a starting point for verification, not a conclusion.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">What is a red flag in a company's articles of incorporation?</div>
+          <div class="faq-answer">
+            <p>An extremely broad object clause covering many unrelated sectors is common in some jurisdictions and not automatically suspicious. However, if a company's claimed activities cannot be verified through independent sources (website, references, sector records), the gap between stated scope and actual operations is a due diligence concern.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">Why does a company's business scope matter for due diligence?</div>
+          <div class="faq-answer">
+            <p>Because the legal object clause and actual business operations can be entirely different. Due diligence verifies what a company genuinely does, not just what its founding documents permit it to do.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">How can IHL help with international trade due diligence?</div>
+          <div class="faq-answer">
+            <p>IHL provides structured due diligence advisory for companies considering new international partnerships. This includes registry verification, document review, reference assessment, and pre-agreement correspondence &mdash; ensuring you enter any cooperation from an informed position.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Considering a New International Partnership?</h2>
+      <p>A structured due diligence review at the start costs a fraction of what a problematic agreement costs later.</p>
+      <a href="contact.html" class="cta-btn">Contact IHL</a>
     </div>
   </section>
 
@@ -396,19 +515,24 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>Mon &ndash; Fri: 09:00 &ndash; 17:00 CET</span>
       </div>
     </div>
   </footer>
 
   <script>
+    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
     }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
     revealEls.forEach(el => obs.observe(el));
+
+    // Nav scroll
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 80); }, {passive:true});
+
+    // Mobile nav
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => {
@@ -435,16 +559,13 @@
       });
     });
 
-    // Robust dropdown: listeners on both <li> and the menu itself,
-    // relatedTarget guard prevents false-positive mouseleave from absolutely-
-    // positioned children that overflow the parent's layout box.
+    // Dropdown menus
     document.querySelectorAll('.nav-links > li').forEach(function(li) {
       var menu = li.querySelector('.nav-dropdown-menu');
       if (!menu) return;
       var timer;
       function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
       function scheduleClose(e) {
-        // Ignore if the cursor is simply moving between li and its dropdown
         if (e && li.contains(e.relatedTarget)) return;
         timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
       }
@@ -452,6 +573,16 @@
       li.addEventListener('mouseleave', scheduleClose);
       menu.addEventListener('mouseenter', openMenu);
       menu.addEventListener('mouseleave', scheduleClose);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = this.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      });
     });
   </script>
 </body>

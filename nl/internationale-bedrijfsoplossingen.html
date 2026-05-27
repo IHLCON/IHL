@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers &amp; Collaboration — IHL</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/careers.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/carriere.html">
-  <meta name="description" content="International House of Law invites connections with professionals interested in international law, arbitration, dispute resolution, and global business.">
+  <title>Internationale Bedrijfsoplossingen — IHL</title>
+  <meta name="description" content="IHL levert op maat gemaakte internationale bedrijfsoplossingen waarmee organisaties internationale markten kunnen betreden, risico's kunnen beheersen en hun bedrijfsvoering kunnen stroomlijnen met behoud van juridische naleving en duurzame groei.">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="../global-business-solutions.html">
+  <link rel="alternate" hreflang="nl" href="internationale-bedrijfsoplossingen.html">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,6 +214,10 @@
       list-style: none;
     }
 
+    .nav-links > li {
+      position: relative;
+    }
+
     .nav-links a {
       font-family: var(--font-body);
       font-size: 0.7rem;
@@ -241,6 +247,8 @@
     .nav-links a.active {
       color: var(--gold);
     }
+
+    /* Nav Dropdown */
 
     .nav-cta {
       font-size: 0.73rem !important;
@@ -556,236 +564,194 @@
     }
 
     /* ═══════════════════════════════════════════
-       ABOUT / INTRO SECTION
+       INTRO STRIP
     ═══════════════════════════════════════════ */
-    .about-section {
-      padding: 7rem 0;
-      background: var(--cream);
-    }
-
-    .about-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .section-eyebrow-line {
-      width: 32px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .section-eyebrow-text {
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .about-inner h2 {
-      margin-bottom: 2rem;
-    }
-
-    .about-inner p {
-      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-      line-height: 2;
-      color: var(--text);
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    /* ═══════════════════════════════════════════
-       OPPORTUNITIES SECTION (dark cards)
-    ═══════════════════════════════════════════ */
-    .opportunities-section {
-      padding: 7rem 0;
+    .intro-strip {
       background: var(--navy);
-      position: relative;
-      overflow: hidden;
+      border-bottom: none;
     }
-
-    .opp-pattern {
-      position: absolute;
-      inset: 0;
-      opacity: 0.03;
-      background-image:
-        linear-gradient(rgba(196,163,90,0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(196,163,90,0.4) 1px, transparent 1px);
-      background-size: 80px 80px;
-    }
-
-    .opp-header {
-      text-align: center;
-      margin-bottom: 4rem;
-      position: relative;
-      z-index: 1;
-    }
-    .opp-header h2 {
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-    .opp-header p {
-      color: rgba(255,255,255,0.5);
-      margin: 0 auto;
-    }
-
-    .opp-grid {
+    .intro-strip-inner {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
     }
-
-    .opp-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-top: 3px solid var(--gold);
-      padding: 2.5rem 2rem;
-      transition: background 0.3s ease, transform 0.3s ease;
+    .intro-stat {
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
     }
-    .opp-card:hover {
-      background: rgba(255,255,255,0.06);
-      transform: translateY(-4px);
-    }
-
-    .opp-card-number {
+    .intro-stat:last-child { border-right: none; }
+    .intro-stat-number {
       font-family: var(--font-display);
-      font-size: 3rem;
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
       font-weight: 300;
       color: var(--gold);
-      opacity: 0.25;
       line-height: 1;
       margin-bottom: 0.5rem;
     }
-
-    .opp-card-title {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
+    .intro-stat-label {
+      font-size: 0.78rem;
       font-weight: 500;
-      color: var(--white);
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .opp-card-divider {
-      width: 36px;
-      height: 1px;
-      background: var(--gold);
-      margin-bottom: 1.2rem;
-    }
-
-    .opp-card p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      max-width: 100%;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
     }
 
     /* ═══════════════════════════════════════════
-       APPLICATION FORM SECTION
+       SECTION INTRO
     ═══════════════════════════════════════════ */
-    .application-section {
-      padding: 7rem 0;
-      background: var(--white);
+    .section-intro {
+      padding: 7rem 0 5rem;
+      text-align: center;
     }
-
-    .application-inner {
-      max-width: 720px;
+    .section-intro p {
       margin: 0 auto;
+      max-width: 800px;
+      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+      line-height: 2;
+      color: var(--text);
     }
 
-    .application-inner h2 {
-      margin-bottom: 0.75rem;
+    /* ═══════════════════════════════════════════
+       SERVICE CARDS SECTION
+    ═══════════════════════════════════════════ */
+    .services-section {
+      padding: 6rem 0 8rem;
+      background: var(--cream);
+    }
+
+    .services-header {
       text-align: center;
+      margin-bottom: 4rem;
+    }
+    .services-header .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-label-line {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .section-label-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
     }
 
-    .application-inner > p {
-      text-align: center;
-      margin: 0 auto 3rem;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
     }
 
-    .form-field {
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      padding: 3rem 2.8rem;
       position: relative;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s ease;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(10,22,40,0.10);
+      border-color: var(--gray-200);
+    }
+    .service-card:hover::before {
+      transform: scaleX(1);
     }
 
-    .form-field label {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 0.5rem;
+    .service-card-number {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 300;
+      color: var(--gold);
+      opacity: 0.15;
+      line-height: 1;
+      margin-bottom: -0.5rem;
     }
 
-    .form-field input,
-    .form-field textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--gray-200);
-      padding: 0.75rem 0;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--text);
-      outline: none;
-      transition: border-color 0.3s ease;
-      resize: none;
+    .service-card h3 {
+      font-size: clamp(1.3rem, 2vw, 1.75rem);
+      margin-bottom: 1.2rem;
+      color: var(--navy);
     }
 
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: var(--gray-400);
+    .service-card p {
+      max-width: 100%;
+      line-height: 1.9;
+      color: var(--text-light);
     }
 
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-bottom-color: var(--gold);
+    .service-card-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.8rem 0 0;
+      transition: width 0.4s var(--ease-out-expo);
+    }
+    .service-card:hover .service-card-divider {
+      width: 70px;
     }
 
-    .form-field textarea {
-      min-height: 140px;
+    /* ═══════════════════════════════════════════
+       CTA SECTION
+    ═══════════════════════════════════════════ */
+    .cta-section {
+      padding: 7rem 0;
+      background: var(--white);
+      text-align: center;
     }
-
-    .form-submit {
-      width: 100%;
-      padding: 1.1rem 2rem;
+    .cta-section h2 {
+      margin-bottom: 1.5rem;
+    }
+    .cta-section p {
+      margin: 0 auto 2.5rem;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1.1rem 3rem;
       background: var(--navy);
       color: var(--white);
       font-family: var(--font-body);
       font-size: 0.82rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       border: none;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      margin-top: 0.5rem;
     }
-    .form-submit:hover {
-      background: var(--gold);
-      color: var(--navy);
+    .cta-btn:hover {
+      background: var(--navy-mid);
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(196,163,90,0.25);
+      box-shadow: 0 10px 40px rgba(10,22,40,0.2);
+    }
+    .cta-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .cta-btn:hover svg {
+      transform: translateX(3px);
     }
 
     /* ═══════════════════════════════════════════
@@ -863,10 +829,8 @@
        RESPONSIVE
     ═══════════════════════════════════════════ */
     @media (max-width: 1200px) {
-      .opp-grid {
+      .services-grid {
         grid-template-columns: 1fr;
-        max-width: 640px;
-        margin: 0 auto;
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -929,6 +893,20 @@
         gap: 0.8rem;
       }
 
+      .intro-strip-inner {
+        grid-template-columns: 1fr;
+      }
+      .intro-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 2rem 1.5rem;
+      }
+      .intro-stat:last-child { border-bottom: none; }
+
+      .service-card {
+        padding: 2rem 1.8rem;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -937,6 +915,10 @@
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+      }
+
+      .nav-dropdown-menu {
+        display: none;
       }
     }
 
@@ -963,42 +945,42 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
       </a>
 
             <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li class="nav-has-dropdown">
-          <a href="#">Services</a>
+          <a href="#">Diensten</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschilbeslechting.html">Geschilbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html" class="active">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Dienstverlening</a></li>
           </ul>
         </li>
         <li class="nav-has-dropdown">
-          <a href="#">About Us</a>
+          <a href="#">Over Ons</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
             <li><a href="team.html">Team</a></li>
           </ul>
         </li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="careers.html" class="active">Careers</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="carriere.html">Carri&egrave;re</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
         <li class="lang-switch">
-          <a href="careers.html" class="lang-active">EN</a>
-          <a href="nl/carriere.html">NL</a>
+          <a href="../global-business-solutions.html">EN</a>
+          <a href="internationale-bedrijfsoplossingen.html" class="lang-active">NL</a>
         </li>
       </ul>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Navigatie openen">
         <span></span>
         <span></span>
         <span></span>
@@ -1011,7 +993,7 @@
   ═══════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80" alt="Professionals collaborating in a modern office" loading="eager">
+      <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80" alt="Internationaal zakendoen en wereldwijde markten" loading="eager">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
@@ -1019,28 +1001,28 @@
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">Join IHL</span>
+        <span class="hero-eyebrow-text">IHL Diensten</span>
       </div>
 
-      <h1>Careers &amp; <em>Collaboration</em></h1>
+      <h1>Internationale<br>Bedrijfs<em>oplossingen</em></h1>
 
       <div class="hero-tags">
-        <span class="hero-tag">International Law</span>
-        <span class="hero-tag">Arbitration</span>
-        <span class="hero-tag">Growth</span>
+        <span class="hero-tag">Strategie</span>
+        <span class="hero-tag">Risicobeheer</span>
+        <span class="hero-tag">Duurzaamheid</span>
       </div>
 
       <p class="hero-description">
-        International House of Law invites connections with professionals interested in international law, arbitration, dispute resolution, and global business.
+        IHL levert op maat gemaakte internationale bedrijfsoplossingen waarmee organisaties internationale markten kunnen betreden, risico's kunnen beheersen en hun bedrijfsvoering kunnen stroomlijnen — met behoud van juridische naleving en bevordering van duurzame groei.
       </p>
 
       <div class="hero-actions">
-        <a href="#apply" class="btn-primary">
-          Send Your Application
+        <a href="contact.html" class="btn-primary">
+          Plan een Gesprek
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#opportunities" class="btn-secondary">
-          See Opportunities
+        <a href="juridische-operaties.html" class="btn-secondary">
+          Terug naar Diensten
         </a>
       </div>
     </div>
@@ -1052,91 +1034,103 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       ABOUT / INTRO SECTION
+       INTRO STRIP
   ═══════════════════════════════════════════ -->
-  <section class="about-section">
+  <div class="intro-strip">
     <div class="container">
-      <div class="about-inner">
-        <div class="section-eyebrow reveal">
-          <span class="section-eyebrow-line"></span>
-          <span class="section-eyebrow-text">Working at IHL</span>
-          <span class="section-eyebrow-line"></span>
+      <div class="intro-strip-inner">
+        <div class="intro-stat reveal">
+          <div class="intro-stat-number">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="width:2.8rem;height:2.8rem;display:inline-block;vertical-align:middle;">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="intro-stat-label">Internationale Markten</div>
         </div>
-        <h2 class="reveal reveal-delay-1">A Platform for<br><em>International Talent</em></h2>
-        <p class="reveal reveal-delay-2">
-          We welcome legal professionals, researchers, and trainees seeking growth in an international environment. Whether you are an experienced practitioner or an emerging talent, IHL offers a dynamic platform to engage with complex international matters across multiple jurisdictions.
-        </p>
+        <div class="intro-stat reveal reveal-delay-1">
+          <div class="intro-stat-number">&uarr;</div>
+          <div class="intro-stat-label">Risico &amp; Compliance</div>
+        </div>
+        <div class="intro-stat reveal reveal-delay-2">
+          <div class="intro-stat-number">&oplus;</div>
+          <div class="intro-stat-label">Duurzame Groei</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION INTRO
+  ═══════════════════════════════════════════ -->
+  <section class="section-intro">
+    <div class="container">
+      <p class="reveal">
+        Bij International House of Law overbrugt onze praktijk voor Internationale Bedrijfsoplossingen de kloof tussen juridische expertise en commerci&euml;le strategie. Wij werken met bedrijven in elke fase — van eerste markttoetreding tot complexe grensoverschrijdende expansie — en bieden ge&iuml;ntegreerde juridische, regelgevende en strategische ondersteuning die zelfverzekerde besluitvorming in onbekende rechtsgebieden mogelijk maakt. Of u nu nieuwe markten betreedt, uw bedrijfsstructuur herorganiseert of ESG-principes in uw organisatie integreert, IHL biedt de begeleiding om met helderheid en vertrouwen vooruit te gaan.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES CARDS
+  ═══════════════════════════════════════════ -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label">
+          <span class="section-label-line"></span>
+          <span class="section-label-text">Wat Wij Bieden</span>
+        </div>
+        <h2>Onze Kerngebieden</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-number">01</div>
+          <h3>Marktexpansie &amp; Bedrijfsstructurering</h3>
+          <p>Wij ondersteunen bedrijven bij het kiezen van de juiste bedrijfsstructuren, fiscale kaders en rechtsgebieden voor naleving en operationele effici&euml;ntie — inclusief oprichting van dochterondernemingen, joint ventures en internationale herstructurering.</p>
+          <div class="service-card-divider"></div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-number">02</div>
+          <h3>Naleving van Wet- en Regelgeving &amp; Risicobeheer</h3>
+          <p>Wij behandelen internationale regelgevingskaders, handelswetten, financi&euml;le regelgeving en fiscale verplichtingen. Aandachtsgebieden zijn onder meer anti-witwasbeleid (AML), gegevensbeschermingswetten, sancties en handelsbeperkingen.</p>
+          <div class="service-card-divider"></div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-number">03</div>
+          <h3>Contracten, Onderhandelingen &amp; Geschilpreventie</h3>
+          <p>IHL structureert en onderhandelt grensoverschrijdende overeenkomsten, joint ventures, toeleveringsketencontracten en commerci&euml;le partnerschappen om juridische duidelijkheid en afdwingbaarheid te waarborgen.</p>
+          <div class="service-card-divider"></div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-card-number">04</div>
+          <h3>ESG &amp; Duurzame Bedrijfsstrategieën</h3>
+          <p>Wij helpen bedrijven bij het integreren van Environmental, Social en Governance-principes in hun bedrijfsvoering, door het ontwikkelen van ESG-compliant beleid, verantwoord bestuur en milieubewuste praktijken.</p>
+          <div class="service-card-divider"></div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       OPPORTUNITIES SECTION
+       CTA SECTION
   ═══════════════════════════════════════════ -->
-  <section class="opportunities-section" id="opportunities">
-    <div class="opp-pattern"></div>
+  <section class="cta-section">
     <div class="container">
-      <div class="opp-header reveal">
-        <h2>How to Connect with IHL</h2>
-        <p>Three ways to become part of the International House of Law ecosystem.</p>
-      </div>
-
-      <div class="opp-grid">
-        <div class="opp-card reveal">
-          <div class="opp-card-number">01</div>
-          <div class="opp-card-title">Career Opportunities</div>
-          <div class="opp-card-divider"></div>
-          <p>Submit your résumé for upcoming positions. We recruit lawyers, legal researchers, and business advisors with a passion for international practice and cross-border matters.</p>
-        </div>
-
-        <div class="opp-card reveal reveal-delay-1">
-          <div class="opp-card-number">02</div>
-          <div class="opp-card-title">Collaboration &amp; Partnerships</div>
-          <div class="opp-card-divider"></div>
-          <p>Organisations aligned with IHL's work are welcome to explore collaboration opportunities. We engage with law firms, academic institutions, and international organisations on joint initiatives.</p>
-        </div>
-
-        <div class="opp-card reveal reveal-delay-2">
-          <div class="opp-card-number">03</div>
-          <div class="opp-card-title">Traineeships &amp; Internships</div>
-          <div class="opp-card-divider"></div>
-          <p>We offer internships for law students and recent graduates seeking international exposure. Gain hands-on experience working alongside senior practitioners on real international matters.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       APPLICATION FORM SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="application-section" id="apply">
-    <div class="container">
-      <div class="application-inner">
-        <h2 class="reveal">Send Your Application</h2>
-        <p class="reveal reveal-delay-1">Whether you are applying for a role, exploring a collaboration, or seeking an internship — we would love to hear from you.</p>
-
-        <form class="contact-form reveal reveal-delay-2" action="#" method="POST">
-          <div class="form-field">
-            <label for="cr-name">Full Name</label>
-            <input type="text" id="cr-name" name="name" placeholder="Your full name">
-          </div>
-          <div class="form-field">
-            <label for="cr-phone">Phone</label>
-            <input type="tel" id="cr-phone" name="phone" placeholder="+1 000 000 0000">
-          </div>
-          <div class="form-field">
-            <label for="cr-email">Email Address *</label>
-            <input type="email" id="cr-email" name="email" placeholder="you@example.com" required>
-          </div>
-          <div class="form-field">
-            <label for="cr-message">About You &amp; Your Interest</label>
-            <textarea id="cr-message" name="message" placeholder="Tell us about yourself and your interest in IHL"></textarea>
-          </div>
-          <button type="submit" class="form-submit">
-            Submit Now
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
+      <div class="reveal">
+        <h2>Klaar om Internationaal te Groeien?</h2>
+        <p>Neem contact op met ons team om uw internationale bedrijfsdoelstellingen te bespreken. Wij bieden strategische juridische ondersteuning op maat van uw markt, sector en jurisdictie.</p>
+        <a href="contact.html" class="cta-btn">
+          Neem Contact Op
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -1149,13 +1143,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+            <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
           </a>
-          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <p>Waar juridische expertise en zakelijke dienstverlening samenkomen onder &eacute;&eacute;n dak. Kantoren in Den Haag en Vancouver.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1170,23 +1164,23 @@
         </div>
 
         <div>
-          <h4>Services</h4>
+          <h4>Diensten</h4>
           <ul class="footer-links">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschilbeslechting.html">Geschilbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Dienstverlening</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Company</h4>
+          <h4>Bedrijf</h4>
           <ul class="footer-links">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="updates.html">News &amp; Updates</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="nieuws.html">Nieuws &amp; Publicaties</a></li>
+            <li><a href="carriere.html">Carri&egrave;re</a></li>
+            <li><a href="kennisbank.html">Kennisbank</a></li>
           </ul>
         </div>
 
@@ -1194,7 +1188,7 @@
           <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>The Hague, Netherlands<br>Vancouver, Canada</span>
+            <span>Den Haag, Nederland<br>Vancouver, Canada</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -1208,8 +1202,8 @@
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>&copy; 2026 International House of Law. Alle rechten voorbehouden.</span>
+        <span>Ma &ndash; Vr: 09:00 &ndash; 17:00 CET</span>
       </div>
     </div>
   </footer>
@@ -1269,10 +1263,8 @@
     // ── Smooth scroll for anchor links ──
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
-        const href = anchor.getAttribute('href');
-        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(href);
+        const target = document.querySelector(anchor.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }

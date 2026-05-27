@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources — International House of Law</title>
-  <link rel="alternate" hreflang="en" href="https://ihlcon.com/resources.html">
-  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/kennisbank.html">
-  <meta name="description" content="Discover IHL's legal resources across industries. Protect your brand, resolve disputes, expand into global markets, and stay compliant.">
+  <title>Klimaat- en ESG-Geschillen — International House of Law</title>
+  <meta name="description" content="In haar interview met The Arbitration Club bespreekt Dr. Atie Babaie de belangrijkste uitdagingen en ontwikkelingen op het gebied van klimaat- en ESG-procesvoering.">
+  <link rel="alternate" hreflang="en" href="https://ihlcon.com/article-climate-esg.html">
+  <link rel="alternate" hreflang="nl" href="https://ihlcon.com/nl/artikel-klimaat-esg.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy:#0A1628;--navy-light:#132038;--navy-mid:#1B2D4A;--gold:#C4A35A;--gold-light:#D4B97A;--gold-pale:#F5ECD7;--cream:#FAF8F4;--white:#FFFFFF;--gray-50:#F7F7F5;--gray-100:#EDECE8;--gray-200:#D8D6D0;--gray-400:#9E9B93;--gray-600:#6B6860;--text:#1A1815;--text-light:#3D3B36;
+      --navy:#0A1628;--navy-light:#132038;--navy-mid:#1B2D4A;--gold:#C4A35A;--gold-light:#D4B97A;--gold-pale:#F5ECD7;--cream:#FAF8F4;--white:#FFFFFF;--gray-50:#F7F7F5;--gray-100:#EDECE8;--gray-200:#D8D6D0;--gray-400:#9E9B93;--gray-600:#6B6860;--gray-800:#3A3833;--text:#1A1815;--text-light:#3D3B36;
       --font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
       --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
       --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
@@ -23,25 +23,20 @@
     img{max-width:100%;height:auto;display:block;}
     a{color:inherit;text-decoration:none;}
     h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.15;color:var(--navy);}
-    h1{font-size:clamp(2.8rem,6vw,5.2rem);letter-spacing:-0.02em;}
-    h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-0.01em;}
-    h3{font-size:clamp(1.4rem,2.5vw,2rem);}
+    h1{font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-0.02em;}
+    h2{font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;}
+    h3{font-size:clamp(1.2rem,2vw,1.7rem);}
     p{font-size:clamp(0.95rem,1.1vw,1.1rem);color:var(--text-light);max-width:680px;}
     .container{width:100%;max-width:1340px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
     .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.9s var(--ease-out-expo),transform 0.9s var(--ease-out-expo);}
     .reveal.visible{opacity:1;transform:translateY(0);}
-    .reveal-delay-1{transition-delay:0.1s;}.reveal-delay-2{transition-delay:0.2s;}.reveal-delay-3{transition-delay:0.3s;}
 
     /* NAV */
     .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background 0.4s ease,box-shadow 0.4s ease,padding 0.4s ease;padding: 1rem 0;}
     .nav.scrolled{background:rgba(10,22,40,0.97);box-shadow:0 1px 40px rgba(0,0,0,0.15);padding:0.5rem 0;backdrop-filter:blur(20px);}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;}
     .nav-logo{display:flex;align-items:center;gap: 0.5rem;}
-    .nav-logo-img {
-      height: 50px;
-      width: auto;
-      flex-shrink: 0;
-    }
+    .nav-logo-img{height:50px;width:auto;flex-shrink:0;}
     .nav-logo-text{font-family:var(--font-display);font-size:0.95rem;font-weight:500;color:var(--white);letter-spacing:0.1em;text-transform:uppercase;}
     .nav-logo-sub{font-family:var(--font-body);font-size:0.65rem;color:var(--gold-light);letter-spacing:0.2em;text-transform:uppercase;margin-top:-2px;}
     .nav-links{display:flex;align-items:center;gap:0.9rem;list-style:none;}
@@ -97,56 +92,49 @@
     .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
     /* HERO */
-    .hero{position:relative;min-height:65vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
+    .hero{position:relative;min-height:55vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
     .hero-bg{position:absolute;inset:0;z-index:0;}
     .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.18;filter:grayscale(30%);}
     .hero-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.95) 0%,rgba(10,22,40,0.7) 50%,rgba(10,22,40,0.85) 100%),linear-gradient(to bottom,transparent 60%,var(--navy) 100%);z-index:1;}
     .hero-pattern{position:absolute;inset:0;z-index:1;opacity:0.04;background-image:linear-gradient(rgba(196,163,90,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.3) 1px,transparent 1px);background-size:60px 60px;}
     .hero-content{position:relative;z-index:2;padding:10rem 0 5rem;}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:1rem;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.3s forwards;}
     .hero-eyebrow-line{width:48px;height:1px;background:var(--gold);}
     .hero-eyebrow-text{font-family:var(--font-body);font-size:0.78rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);}
-    .hero h1{color:var(--white);margin-bottom:1rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
+    .hero h1{color:var(--white);margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards;}
     .hero h1 em{font-style:italic;color:var(--gold-light);}
-    .hero-subtitle{font-family:var(--font-display);font-size:clamp(1.2rem,2vw,1.6rem);color:rgba(255,255,255,0.6);font-style:italic;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.7s forwards;}
-    .hero-description{color:rgba(255,255,255,0.65);font-size:clamp(1rem,1.2vw,1.15rem);line-height:1.85;max-width:680px;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.9s forwards;}
+    .hero-meta{display:flex;align-items:center;gap:1.5rem;opacity:0;animation:fadeUp 0.8s var(--ease-out-expo) 0.8s forwards;}
+    .hero-tag{font-family:var(--font-body);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.3rem 0.8rem;border:1px solid rgba(196,163,90,0.4);}
+    .hero-date{font-size:0.82rem;color:rgba(255,255,255,0.5);letter-spacing:0.05em;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
-    /* RESOURCES SECTION */
-    .resources-section{padding:7rem 0;background:var(--cream);}
-    .resources-header{margin-bottom:4rem;}
-    .resources-header h2{margin-bottom:1rem;}
-    .resources-header p{max-width:600px;}
-    .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
-    .resource-card{background:var(--white);padding:3rem 2.5rem;position:relative;overflow:hidden;transition:transform 0.4s var(--ease-out-expo),box-shadow 0.4s ease;display:flex;flex-direction:column;}
-    .resource-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.4s var(--ease-out-expo);}
-    .resource-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(10,22,40,0.1);}
-    .resource-card:hover::before{transform:scaleX(1);}
-    .resource-label{font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.6rem;}
-    .resource-label::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
-    .resource-card h3{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:1.2rem;line-height:1.1;}
-    .resource-card p{font-size:0.95rem;line-height:1.8;max-width:100%;flex:1;}
-    .resource-link{display:inline-flex;align-items:center;gap:0.6rem;margin-top:2rem;padding:0.85rem 2rem;background:var(--navy);color:var(--white);font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:background 0.3s ease,transform 0.3s ease;}
-    .resource-link:hover{background:var(--navy-mid);transform:translateY(-2px);}
-    .resource-link svg{width:14px;height:14px;transition:transform 0.3s ease;}
-    .resource-link:hover svg{transform:translateX(3px);}
-    .resource-card.coming-soon{border:1px dashed var(--gray-200);background:var(--gray-50);}
-    .resource-card.coming-soon::before{background:var(--gray-200);}
-    .resource-card.coming-soon .resource-label{color:var(--gray-400);}
-    .resource-card.coming-soon .resource-label::before{background:var(--gray-400);}
-    .resource-card.coming-soon h3{color:var(--gray-600);}
-    .resource-card.coming-soon .resource-link{background:var(--gray-600);}
+    /* ARTICLE */
+    .article-section{padding:7rem 0;background:var(--cream);}
+    .article-layout{display:grid;grid-template-columns:1fr 320px;gap:5rem;align-items:start;}
+    .article-body h2{margin:2.5rem 0 1rem;color:var(--navy);}
+    .article-body h3{margin:2rem 0 0.8rem;color:var(--navy);}
+    .article-body p{max-width:100%;margin-bottom:1.5rem;font-size:1.05rem;line-height:1.9;color:var(--text-light);}
+    .article-body blockquote{border-left:3px solid var(--gold);padding:1.2rem 1.8rem;margin:2.5rem 0;background:rgba(196,163,90,0.04);}
+    .article-body blockquote p{font-family:var(--font-display);font-size:1.25rem;font-style:italic;color:var(--navy);margin:0;}
+    .article-gold-bar{width:48px;height:2px;background:var(--gold);margin-bottom:2.5rem;}
+    .article-lead{font-family:var(--font-display);font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.7;color:var(--navy);margin-bottom:2rem;font-style:italic;}
 
-    /* SUBSCRIBE STRIP */
-    .subscribe-strip{background:var(--navy);padding:5rem 0;position:relative;overflow:hidden;}
-    .sub-pattern{position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(rgba(196,163,90,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(196,163,90,0.4) 1px,transparent 1px);background-size:80px 80px;}
-    .subscribe-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem;position:relative;z-index:1;}
-    .subscribe-inner h2{color:var(--white);margin-bottom:0.8rem;}
-    .subscribe-inner p{color:rgba(255,255,255,0.55);max-width:580px;}
-    .cta-btn{display:inline-flex;align-items:center;gap:0.7rem;padding:1.1rem 3rem;background:var(--gold);color:var(--navy);font-family:var(--font-body);font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;transition:background 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease;}
-    .cta-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 40px rgba(196,163,90,0.25);}
-    .cta-btn svg{width:16px;height:16px;transition:transform 0.3s ease;}
-    .cta-btn:hover svg{transform:translateX(3px);}
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:120px;}
+    .sidebar-card{background:var(--white);padding:2rem;border-top:3px solid var(--gold);margin-bottom:2rem;}
+    .sidebar-card h4{font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+    .sidebar-author{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;}
+    .sidebar-author-img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center;}
+    .sidebar-author-name{font-family:var(--font-display);font-size:1.05rem;color:var(--navy);}
+    .sidebar-author-role{font-size:0.78rem;color:var(--gray-400);letter-spacing:0.05em;}
+    .sidebar-meta-item{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--gray-100);font-size:0.85rem;}
+    .sidebar-meta-item:last-child{border-bottom:none;}
+    .sidebar-meta-label{color:var(--gray-400);letter-spacing:0.05em;}
+    .sidebar-meta-value{color:var(--text);font-weight:500;}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:3rem;transition:color 0.3s ease;}
+    .back-link svg{width:14px;height:14px;transition:transform 0.3s ease;}
+    .back-link:hover{color:var(--gold);}
+    .back-link:hover svg{transform:translateX(-4px);}
 
     /* FOOTER */
     .footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:4rem 0 2rem;border-top:1px solid rgba(196,163,90,0.15);}
@@ -162,8 +150,7 @@
     .footer-contact-item svg{width:16px;height:16px;margin-top:3px;flex-shrink:0;color:var(--gold);}
     .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
 
-    /* RESPONSIVE */
-    @media(max-width:1024px){.resources-grid{grid-template-columns:1fr 1fr;}.subscribe-inner{grid-template-columns:1fr;gap:2rem;}.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.footer-grid{grid-template-columns:1fr 1fr;}}
     @media (max-width:1200px) {
       .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,22,40,0.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem;backdrop-filter:blur(20px);}
       .nav-links.mobile-open{display:flex;}
@@ -189,7 +176,6 @@
         font-size: 0.88rem;
         padding: 0.5rem 1rem;
       }
-      .resources-grid{grid-template-columns:1fr;}
       .footer-grid{grid-template-columns:1fr;}
       .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
     }
@@ -204,40 +190,40 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
+        <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
         <div>
           <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
+          <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
         </div>
       </a>
-            <ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li class="nav-has-dropdown">
-          <a href="#">Services</a>
+          <a href="index.html#services">Diensten</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschilbeslechting.html">Geschilbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Dienstverlening</a></li>
           </ul>
         </li>
         <li class="nav-has-dropdown">
-          <a href="#">About Us</a>
+          <a href="waarom-ihl.html">Over Ons</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="why-ihl.html">Why IHL</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
             <li><a href="team.html">Team</a></li>
           </ul>
         </li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="resources.html" class="active">Resources</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+        <li><a href="nieuws.html" class="active">Nieuws</a></li>
+        <li><a href="carriere.html">Carri&egrave;re</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
         <li class="lang-switch">
-          <a href="resources.html" class="lang-active">EN</a>
-          <a href="nl/kennisbank.html">NL</a>
+          <a href="../article-climate-esg.html">EN</a>
+          <a href="artikel-klimaat-esg.html" class="lang-active">NL</a>
         </li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Navigatie openen">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -245,87 +231,108 @@
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80" alt="IHL Legal Resources" loading="eager">
+      <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&q=80" alt="Klimaat- en ESG-Geschillen" loading="eager">
     </div>
     <div class="hero-gradient"></div>
     <div class="hero-pattern"></div>
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-line"></span>
-        <span class="hero-eyebrow-text">Knowledge Hub</span>
+        <span class="hero-eyebrow-text">ESG &amp; Duurzaamheid</span>
       </div>
-      <h1>A House Full of <em>Resources</em></h1>
-      <div class="hero-subtitle">Resources and checklists for businesses</div>
-      <p class="hero-description">Discover IHL's legal resources across industries. Protect your brand, resolve disputes, expand into global markets, and stay compliant.</p>
-    </div>
-  </section>
-
-  <section class="resources-section">
-    <div class="container">
-      <div class="resources-header reveal">
-        <h2>Industry Resources</h2>
-        <p>Practical legal guides and checklists tailored to the specific challenges of each industry. Every month we add a new resource.</p>
-      </div>
-      <div class="resources-grid">
-
-        <div class="resource-card reveal">
-          <div class="resource-label">Industry Resource</div>
-          <h3>Startup</h3>
-          <p>The Startup World is Full of Energy But Also Legal Risks. We're Here to Help You Grow Safely. From incorporation and IP protection to investor agreements and employment law, our startup guide covers the legal foundations every founder needs.</p>
-          <a href="resource-startups.html" class="resource-link">
-            Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="resource-card reveal reveal-delay-1">
-          <div class="resource-label">Industry Resource</div>
-          <h3>Coffee</h3>
-          <p>The Coffee Industry is Full of Opportunities, But Also Legal Hurdles. We're Here to Help You Handle Them. From trade agreements and import regulations to supplier contracts and brand protection, our coffee industry guide is built for operators at every scale.</p>
-          <a href="resource-coffee.html" class="resource-link">
-            Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <div class="resource-card coming-soon reveal reveal-delay-2">
-          <div class="resource-label">Coming Soon</div>
-          <h3>New Resources</h3>
-          <p>Every month we add a new industry resource. Check back regularly for the latest legal guides and checklists across sectors including finance, technology, real estate, and international trade.</p>
-          <a href="updates.html" class="resource-link">
-            Stay Updated <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
+      <h1>Klimaat- en <em>ESG-Procesvoering</em></h1>
+      <div class="hero-meta">
+        <span class="hero-tag">ESG &amp; Duurzaamheid</span>
+        <span class="hero-date">24 november 2025</span>
       </div>
     </div>
   </section>
 
-  <div class="subscribe-strip">
-    <div class="sub-pattern"></div>
+  <section class="article-section">
     <div class="container">
-      <div class="subscribe-inner reveal">
-        <div>
-          <h2>New Industry Guides Monthly</h2>
-          <p>Every month we add resources for a new industry. Contact us to request a specific industry guide or to discuss your organisation's particular legal needs.</p>
+      <a href="nieuws.html" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Terug naar Nieuws
+      </a>
+      <div class="article-layout">
+        <div class="article-body reveal">
+          <div class="article-gold-bar"></div>
+          <p class="article-lead">In haar recente interview met The Arbitration Club verkent Dr. Atie Babaie het veranderende landschap van klimaat- en ESG-procesvoering — een vakgebied dat de manier waarop het internationaal recht milieu-aansprakelijkheid benadert fundamenteel hervormt.</p>
+
+          <h2>Belangrijkste uitdagingen bij ESG- en klimaatgeschillen</h2>
+          <p>Een van de meest significante obstakels die Dr. Babaie identificeerde is het ontbreken van universeel geaccepteerde definities voor ESG- en klimaatgeschillen. Dit gebrek zorgt voor inconsistente juridische kaders in verschillende rechtsgebieden, belemmert effectieve geschilbeslechting en maakt het voor partijen moeilijk om uitkomsten te voorspellen of overeenkomsten te structureren.</p>
+          <p>Zij benadrukte ook de noodzaak om machtsongelijkheden tussen bedrijven en getroffen gemeenschappen aan te pakken. Bij veel ESG-gerelateerde geschillen dragen gemeenschappen de milieukosten van bedrijfsactiviteiten, maar beschikken zij niet over vergelijkbare juridische middelen of procesbevoegdheid om effectieve rechtsmiddelen in te zetten. Deze asymmetrie ondermijnt de fundamentele eerlijkheid die geschilbeslechtingsmechanismen beogen te bieden.</p>
+          <p>Een verdere complexiteit ligt in het kwantificeren van langetermijn-milieuschade die niet zuiver economisch van aard is. Anders dan bij commerciele geschillen waar verliezen relatief meetbaar zijn, gaat het bij klimaat- en ESG-zaken vaak om schade die zich over tientallen jaren ontvouwt, ecosystemen treft in plaats van balansen, en zich niet leent voor eenvoudige waardering.</p>
+
+          <h2>De rol van arbitrage</h2>
+          <p>Hoewel arbitrage neutraliteit en procedurele flexibiliteit biedt die het geschikt maken voor grensoverschrijdende geschillen, merkte Dr. Babaie op dat het voor ESG-zaken nog onderontwikkeld is. Het inherent besloten karakter van het mechanisme beperkt transparantie en toegankelijkheid — kwaliteiten die bijzonder belangrijk zijn wanneer geschillen gemeenschappen en publieke milieubelangen betreffen in plaats van alleen commerciele partijen.</p>
+
+          <blockquote>
+            <p>Arbitrage moet zich ontwikkelen om te voldoen aan de transparantie-eisen van ESG-geschillen. Het besloten karakter van procedures, hoewel commercieel waardevol, kan het publieke vertrouwen ondermijnen wanneer milieu-aansprakelijkheid op het spel staat.</p>
+          </blockquote>
+
+          <p>Zij suggereerde echter dat zinvolle verbeteringen haalbaar zijn. Verbeterde transparantiemaatregelen en het gebruik van amicus curiae-brieven — schriftelijke inbreng van niet-partijen zoals ngo's en getroffen gemeenschappen — zouden bredere participatie mogelijk kunnen maken zonder het karakter van arbitrage fundamenteel te veranderen. Deze hervormingen zouden ervoor zorgen dat ESG-arbitrage niet alleen de belangen van de geschilpartijen weerspiegelt, maar ook het bredere publieke belang bij milieuuitkomsten.</p>
+
+          <h2>Institutionele evolutie</h2>
+          <p>Internationale arbitrage-instituten spelen een centrale rol bij het bevorderen van ESG-geschilbeslechting. Dr. Babaie benadrukte verschillende manieren waarop zij zich kunnen aanpassen: het herzien van procedurele regels om de onderscheidende kenmerken van milieugeschillen te accommoderen, het integreren van ESG-principes in de besluitvormingskaders van arbiters, en het verbreden van participatiemechanismen om zowel private commerciele belangen als publieke milieubelangen te adresseren.</p>
+          <p>Deze institutionele veranderingen zouden arbitrage positioneren als niet slechts een commercieel instrument, maar als een legitiem forum voor het oplossen van de complexe, multi-stakeholder geschillen die het ESG-tijdperk kenmerken.</p>
+
+          <h2>Begeleiding voor de volgende generatie</h2>
+          <p>Dr. Babaie sloot af met een boodschap voor jonge juristen die het vakgebied betreden: omarm multidisciplinaire benaderingen. Klimaat- en ESG-geschillen kan niet worden beoefend door juridische analyse alleen. Effectieve praktijkvoering vereist het integreren van inzichten uit economie, sociale wetenschappen, duurzaamheidsstudies en internationale betrekkingen — disciplines die samen de context bieden die nodig is om te begrijpen wat er op het spel staat en zinvol te pleiten voor clienten.</p>
+          <p>Het volledige interview is beschikbaar via de website van The Arbitration Club.</p>
         </div>
-        <a href="contact.html" class="cta-btn">
-          Request a Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-card reveal">
+            <h4>Auteur</h4>
+            <div class="sidebar-author">
+              <img src="../images/team/atie-babaie.jpg" alt="Dr. Atie Babaie" class="sidebar-author-img">
+              <div>
+                <div class="sidebar-author-name">Dr. Atie Babaie</div>
+                <div class="sidebar-author-role">Counsel</div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-card reveal">
+            <h4>Artikeldetails</h4>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Gepubliceerd</span>
+              <span class="sidebar-meta-value">24 nov 2025</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Categorie</span>
+              <span class="sidebar-meta-value">ESG &amp; Duurzaamheid</span>
+            </div>
+            <div class="sidebar-meta-item">
+              <span class="sidebar-meta-label">Onderwerp</span>
+              <span class="sidebar-meta-value">Arbitrage &amp; Klimaat</span>
+            </div>
+          </div>
+          <div class="sidebar-card reveal">
+            <h4>Gerelateerde Diensten</h4>
+            <ul style="list-style:none;">
+              <li style="margin-bottom:0.7rem;"><a href="geschilbeslechting.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Geschilbeslechting</a></li>
+              <li style="margin-bottom:0.7rem;"><a href="internationale-bedrijfsoplossingen.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Internationale Bedrijfsoplossingen</a></li>
+              <li><a href="internationale-overeenkomsten.html" style="font-size:0.88rem;color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'">Internationale Overeenkomsten</a></li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </div>
-  </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img class="nav-logo-img" src="images/ihl-logo.png" alt="International House of Law">
-        <div>
-          <div class="nav-logo-text">International House of Law</div>
-          <div class="nav-logo-sub">Legal &amp; Business Advisory</div>
-        </div>
+            <img class="nav-logo-img" src="../images/ihl-logo.png" alt="International House of Law">
+            <div>
+              <div class="nav-logo-text">International House of Law</div>
+              <div class="nav-logo-sub">Juridisch &amp; Zakelijk Advies</div>
+            </div>
           </a>
-          <p>Where legal expertise and business services meet under one roof. Offices in The Hague and Vancouver.</p>
+          <p>Waar juridische expertise en zakelijke dienstverlening samenkomen onder een dak. Kantoren in Den Haag en Vancouver.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/ihlcon/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -339,29 +346,29 @@
           </div>
         </div>
         <div>
-          <h4>Services</h4>
+          <h4>Diensten</h4>
           <ul class="footer-links">
-            <li><a href="dispute-resolution.html">Dispute Resolution</a></li>
-            <li><a href="international-agreements.html">International Agreements</a></li>
-            <li><a href="global-business-solutions.html">Global Business Solutions</a></li>
-            <li><a href="legal-operations-business-support.html">Legal Operations</a></li>
+            <li><a href="geschilbeslechting.html">Geschilbeslechting</a></li>
+            <li><a href="internationale-overeenkomsten.html">Internationale Overeenkomsten</a></li>
+            <li><a href="internationale-bedrijfsoplossingen.html">Internationale Bedrijfsoplossingen</a></li>
+            <li><a href="juridische-operaties.html">Juridische Dienstverlening</a></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h4>Bedrijf</h4>
           <ul class="footer-links">
-            <li><a href="why-ihl.html">Why IHL</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="updates.html">News &amp; Updates</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <li><a href="waarom-ihl.html">Waarom IHL</a></li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="nieuws.html">Nieuws &amp; Publicaties</a></li>
+            <li><a href="carriere.html">Carri&egrave;re</a></li>
+            <li><a href="kennisbank.html">Kennisbank</a></li>
           </ul>
         </div>
         <div>
           <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Segbroeklaan 110, The Hague<br>Suite 500, Vancouver, BC</span>
+            <span>Segbroeklaan 110, Den Haag<br>Suite 500, Vancouver, BC</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -374,8 +381,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 International House of Law. All rights reserved.</span>
-        <span>Mon – Fri: 09:00 – 17:00 CET</span>
+        <span>&copy; 2026 International House of Law. Alle rechten voorbehouden.</span>
+        <span>Ma – Vr: 09:00 – 17:00 CET</span>
       </div>
     </div>
   </footer>
@@ -384,7 +391,7 @@
     const revealEls = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
-    }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
     revealEls.forEach(el => obs.observe(el));
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.pageYOffset > 80); }, {passive:true});
@@ -414,16 +421,12 @@
       });
     });
 
-    // Robust dropdown: listeners on both <li> and the menu itself,
-    // relatedTarget guard prevents false-positive mouseleave from absolutely-
-    // positioned children that overflow the parent's layout box.
     document.querySelectorAll('.nav-links > li').forEach(function(li) {
       var menu = li.querySelector('.nav-dropdown-menu');
       if (!menu) return;
       var timer;
       function openMenu() { clearTimeout(timer); li.classList.add('nav-open'); }
       function scheduleClose(e) {
-        // Ignore if the cursor is simply moving between li and its dropdown
         if (e && li.contains(e.relatedTarget)) return;
         timer = setTimeout(function() { li.classList.remove('nav-open'); }, 300);
       }
